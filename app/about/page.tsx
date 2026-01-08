@@ -24,16 +24,14 @@ export default async function AboutPage() {
 
         {/* Qualifications */}
         <section className="mt-20">
-          <h2 className="text-2xl font-bold mb-8 text-center">
-            Qualifications
-          </h2>
+          <h2 className="text-2xl font-bold mb-8 text-center">資格</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {[
               "基本情報技術者",
               "TOEIC L&R 750点",
-              "日本習字 (学生の部八段 / 成人の部準初段)",
-              "日商簿記3級",
+              "日本習字 (学生の部 八段 / 成人の部 準一段)",
               "普通自動車第一種運転免許",
+              "日商簿記3級",
             ].map((q, i) => (
               <div
                 key={i}

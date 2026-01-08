@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function LifePage() {
   const items = [
@@ -37,7 +38,7 @@ export default function LifePage() {
       date: "2025",
       type: "Tech",
       size: "col-span-2 row-span-1",
-      img: "/insight-tech.png",
+      img: "https://placehold.co/600x400/222/fff?text=Desk+Setup",
     },
   ];
 
@@ -58,10 +59,12 @@ export default function LifePage() {
               transition={{ delay: idx * 0.1 }}
               className={`${item.size} relative group overflow-hidden bg-gray-200 cursor-pointer`}
             >
-              <img
+              <Image
                 src={item.img}
                 alt={item.title}
-                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                fill
+                className="object-cover transform group-hover:scale-105 transition-transform duration-500"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
 
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
