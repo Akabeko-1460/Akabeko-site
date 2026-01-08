@@ -1,11 +1,11 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas, useFrame, ThreeElements } from "@react-three/fiber";
 import { useCursor, ContactShadows, Float } from "@react-three/drei";
 import * as THREE from "three";
 
-function AkabekoModel(props: JSX.IntrinsicElements["group"]) {
+function AkabekoModel(props: ThreeElements["group"]) {
   const headRef = useRef<THREE.Group>(null);
   const [hovered, setHover] = useState(false);
 
