@@ -10,14 +10,18 @@ import {
   SiReact,
   SiDjango,
   SiUnity,
+  SiBlender,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
+import Image from "next/image";
 
 const CustomCLogo = ({ className }: { className?: string }) => (
   <div
-    className={`w-8 h-8 flex items-center justify-center ${className || ""}`}
+    className={`w-8 h-8 flex items-center justify-center relative ${
+      className || ""
+    }`}
   >
-    <img src="/c-logo.png" alt="C" className="w-full h-full object-contain" />
+    <Image src="/c-logo.png" alt="C" fill className="object-contain" />
   </div>
 );
 
@@ -80,12 +84,17 @@ const TECH_ITEMS = [
   {
     icon: CustomCLogo,
     name: "C",
-    color: "text-[#A8B9CC]",
+    color: "text-[#00599C]",
   },
   {
     icon: SiUnity,
     name: "Unity",
     color: "text-[#000000]",
+  },
+  {
+    icon: SiBlender,
+    name: "Blender",
+    color: "text-[#F5792A]",
   },
 ];
 

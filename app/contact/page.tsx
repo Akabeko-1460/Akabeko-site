@@ -11,13 +11,13 @@ export default function Contact() {
         transition={{ duration: 0.8 }}
       >
         <h1 className="text-4xl font-serif text-center mb-16 text-[#ffd1dc] drop-shadow-sm">
-          Contact
+          お問い合わせ
         </h1>
 
         <form className="space-y-8" onSubmit={(e) => e.preventDefault()}>
           <div className="flex flex-col gap-2">
             <label className="text-xs uppercase tracking-widest text-[#5d5d5d]">
-              Name
+              お名前
             </label>
             <input
               type="text"
@@ -27,7 +27,7 @@ export default function Contact() {
 
           <div className="flex flex-col gap-2">
             <label className="text-xs uppercase tracking-widest text-[#5d5d5d]">
-              Email
+              メールアドレス
             </label>
             <input
               type="email"
@@ -37,7 +37,7 @@ export default function Contact() {
 
           <div className="flex flex-col gap-2">
             <label className="text-xs uppercase tracking-widest text-[#5d5d5d]">
-              Message
+              メッセージ
             </label>
             <textarea
               rows={6}
@@ -47,7 +47,7 @@ export default function Contact() {
 
           <div className="text-center pt-8">
             <button className="px-12 py-3 border border-[#ffd1dc] text-[#5d5d5d] hover:bg-[#ffd1dc] hover:text-white transition-all duration-300 rounded-full text-sm tracking-widest uppercase">
-              Send
+              送信
             </button>
           </div>
         </form>

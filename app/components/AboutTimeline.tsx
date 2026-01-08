@@ -40,7 +40,7 @@ export default function AboutTimeline() {
   return (
     <>
       <h2 className="text-2xl font-bold mb-10 text-center relative inline-block left-1/2 transform -translate-x-1/2">
-        History
+        略歴
         <span className="absolute -bottom-2 left-0 w-full h-1 bg-bain-red/20" />
       </h2>
 
