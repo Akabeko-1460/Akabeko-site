@@ -41,7 +41,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-12 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <nav className="hidden md:flex items-center gap-12 absolute left-[48%] top-1/2 transform -translate-x-1/2 -translate-y-1/2">
           {/* Split links into two groups for visual balance if needed, or mapping normally. 
               The original design had 2 on left, 2 on right. 
               We can just map them all linearly or keep the split if strictly required.
@@ -49,7 +49,7 @@ export default function Header() {
               Original had space-x-10 between pairs and gap-12 between groups.
               Let's maximize simplicity while maintaining the look.
           */}
-          <div className="flex items-center gap-10">
+          <div className="flex items-center gap-14">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.href}
