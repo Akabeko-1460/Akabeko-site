@@ -2,51 +2,78 @@
 
 import { motion } from "framer-motion";
 
-const lifeEvents = [
-  {
-    date: "2025.12.31",
-    title: "年越し",
-    desc: "会津で年越し蕎麦を食べました。",
-  },
-  { date: "2025.10.15", title: "紅葉狩り", desc: "磐梯山の紅葉が綺麗でした。" },
-  { date: "2025.08.20", title: "夏祭り", desc: "地元の夏祭りに参加。" },
-];
+export default function LifePage() {
+  const items = [
+    {
+      title: "Travel to Kyoto",
+      date: "2024.11",
+      type: "Travel",
+      size: "col-span-2 row-span-2",
+      img: "/hero-office.png",
+    },
+    {
+      title: "Coffee Brewing",
+      date: "Weekend Routine",
+      type: "Hobby",
+      size: "col-span-1 row-span-1",
+      img: "https://placehold.co/400x400/efe/aaa?text=Coffee",
+    },
+    {
+      title: "Film Photography",
+      date: "Collection",
+      type: "Hobby",
+      size: "col-span-1 row-span-2",
+      img: "https://placehold.co/400x800/eef/aaa?text=Camera",
+    },
+    {
+      title: "Museum Visit",
+      date: "2024.10",
+      type: "Art",
+      size: "col-span-1 row-span-1",
+      img: "https://placehold.co/400x400/fee/aaa?text=Art",
+    },
+    {
+      title: "My Desk Setup",
+      date: "2025",
+      type: "Tech",
+      size: "col-span-2 row-span-1",
+      img: "/insight-tech.png",
+    },
+  ];
 
-export default function Life() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
-      <div className="mb-12 text-center">
-        <h1 className="text-4xl font-bold mb-4">Life</h1>
-        <p className="text-muted">日々の記録、趣味、その他。</p>
-      </div>
+    <div className="pt-24 pb-20 bg-warm-bg min-h-screen">
+      <div className="container-custom">
+        <h1 className="text-4xl font-bold mb-4 text-center">Life & Gallery</h1>
+        <p className="text-center text-gray-500 mb-12">
+          プライベートの記録や趣味の世界。
+        </p>
 
-      <div className="space-y-8">
-        {lifeEvents.map((event, i) => (
-          <motion.article
-            key={i}
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: i * 0.1 }}
-            className="flex flex-col md:flex-row gap-8 box-soft p-8 items-start"
-          >
-            <div className="md:w-32 flex-shrink-0 pt-1">
-              <span className="text-xs font-serif font-bold text-primary/60 tracking-widest block mb-1">
-                DATE
-              </span>
-              <span className="text-lg font-serif font-medium text-foreground">
-                {event.date}
-              </span>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold mb-3 font-serif text-primary">
-                {event.title}
-              </h3>
-              <p className="text-muted leading-relaxed font-serif text-sm">
-                {event.desc}
-              </p>
-            </div>
-          </motion.article>
-        ))}
+        <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[200px] gap-4">
+          {items.map((item, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: idx * 0.1 }}
+              className={`${item.size} relative group overflow-hidden bg-gray-200 cursor-pointer`}
+            >
+              <img
+                src={item.img}
+                alt={item.title}
+                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+              />
+
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
+                <span className="text-xs font-bold uppercase tracking-wider mb-1 text-bain-red">
+                  {item.type}
+                </span>
+                <h3 className="text-xl font-bold">{item.title}</h3>
+                <p className="text-xs text-gray-300">{item.date}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </div>
   );
