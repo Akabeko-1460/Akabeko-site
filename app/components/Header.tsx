@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
+import { NAV_LINKS } from "../lib/constants";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -40,38 +41,25 @@ export default function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-12 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          <div className="flex items-center space-x-10">
-            <Link
-              href="/"
-              className="text-sm font-bold uppercase tracking-wider text-gray-600 hover:text-bain-red transition-colors relative group"
-            >
-              Home
-              <span className="absolute bottom-[-4px] left-0 w-0 h-0.5 bg-bain-red transition-all group-hover:w-full" />
-            </Link>
-            <Link
-              href="/about"
-              className="text-sm font-bold uppercase tracking-wider text-gray-600 hover:text-bain-red transition-colors relative group"
-            >
-              About
-              <span className="absolute bottom-[-4px] left-0 w-0 h-0.5 bg-bain-red transition-all group-hover:w-full" />
-            </Link>
-          </div>
-          <div className="flex items-center space-x-10">
-            <Link
-              href="/books"
-              className="text-sm font-bold uppercase tracking-wider text-gray-600 hover:text-bain-red transition-colors relative group"
-            >
-              Books
-              <span className="absolute bottom-[-4px] left-0 w-0 h-0.5 bg-bain-red transition-all group-hover:w-full" />
-            </Link>
-            <Link
-              href="/life"
-              className="text-sm font-bold uppercase tracking-wider text-gray-600 hover:text-bain-red transition-colors relative group"
-            >
-              Life
-              <span className="absolute bottom-[-4px] left-0 w-0 h-0.5 bg-bain-red transition-all group-hover:w-full" />
-            </Link>
+        <nav className="hidden md:flex items-center gap-12 absolute left-[48%] top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          {/* Split links into two groups for visual balance if needed, or mapping normally. 
+              The original design had 2 on left, 2 on right. 
+              We can just map them all linearly or keep the split if strictly required.
+              However, to simplify maintenance, let's map them.
+              Original had space-x-10 between pairs and gap-12 between groups.
+              Let's maximize simplicity while maintaining the look.
+          */}
+          <div className="flex items-center gap-14">
+            {NAV_LINKS.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-sm font-bold uppercase tracking-wider text-gray-600 hover:text-bain-red transition-colors relative group"
+              >
+                {link.label}
+                <span className="absolute bottom-[-4px] left-0 w-0 h-0.5 bg-bain-red transition-all group-hover:w-full" />
+              </Link>
+            ))}
           </div>
         </nav>
 
@@ -90,34 +78,16 @@ export default function Header() {
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
         <div className="absolute top-[70px] right-4 bg-white/95 backdrop-blur-md shadow-xl rounded-xl border border-white/20 p-4 w-48 flex flex-col space-y-3 md:hidden animate-in fade-in zoom-in-95 duration-200 z-[50]">
-          <Link
-            href="/"
-            className="text-sm font-bold text-gray-700 hover:text-bain-red hover:bg-gray-50 px-3 py-2 rounded-lg transition-all"
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            HOME
-          </Link>
-          <Link
-            href="/about"
-            className="text-sm font-bold text-gray-700 hover:text-bain-red hover:bg-gray-50 px-3 py-2 rounded-lg transition-all"
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            ABOUT
-          </Link>
-          <Link
-            href="/books"
-            className="text-sm font-bold text-gray-700 hover:text-bain-red hover:bg-gray-50 px-3 py-2 rounded-lg transition-all"
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            BOOKS
-          </Link>
-          <Link
-            href="/life"
-            className="text-sm font-bold text-gray-700 hover:text-bain-red hover:bg-gray-50 px-3 py-2 rounded-lg transition-all"
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            LIFE
-          </Link>
+          {NAV_LINKS.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-sm font-bold text-gray-700 hover:text-bain-red hover:bg-gray-50 px-3 py-2 rounded-lg transition-all uppercase"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              {link.label}
+            </Link>
+          ))}
         </div>
       )}
     </header>

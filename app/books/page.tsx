@@ -46,9 +46,9 @@ export default function BooksPage() {
   return (
     <div className="pt-24 pb-20 bg-warm-bg min-h-screen">
       <div className="container-custom">
-        <h1 className="text-4xl font-bold mb-4 text-center">Bookshelf</h1>
+        <h1 className="text-4xl font-bold mb-4 text-center">紅べこの本棚</h1>
         <p className="text-center text-gray-500 mb-12">
-          私が感銘を受けた書籍たち。
+          私が読ませてもらった書籍たち。
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">

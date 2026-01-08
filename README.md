@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Akabeko Site (Curenaibeko)
 
-## Getting Started
+IT コンサルタント、PM を目指す情報科学専攻の学生 **Akabeko (紅べこ)** のポートフォリオサイトです。
 
-First, run the development server:
+## 特徴
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **3D ヒーローセクション**: `@react-three/fiber` を使用したインタラクティブな赤べこの 3D モデル。
+- **テックスタック表示**: Next.js, React, TypeScript, Python などのスキル一覧。
+- **ナビゲーションカード**: "Books" と "Life" セクションへのビジュアルリンク。
+- **レスポンシブデザイン**: Tailwind CSS を使用し、モバイルとデスクトップに対応。
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 使用技術 (Tech Stack)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **フレームワーク**: [Next.js](https://nextjs.org) (App Router)
+- **言語**: TypeScript
+- **スタイリング**: Tailwind CSS
+- **3D グラフィックス**: Three.js / React Three Fiber
+- **アイコン**: React Icons, Lucide React
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 始め方 (Getting Started)
 
-## Learn More
+1.  **リポジトリのクローン:**
 
-To learn more about Next.js, take a look at the following resources:
+    ```bash
+    git clone https://github.com/your-username/curenaibeko-site.git
+    cd curenaibeko-site
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2.  **依存関係のインストール:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
 
-## Deploy on Vercel
+3.  **開発サーバーの起動:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    ```bash
+    npm run dev
+    # or
+    yarn dev
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4.  **ブラウザで開く:**
+    [http://localhost:3000](http://localhost:3000) を開いてサイトを確認してください。
+
+## ディレクトリ構成
+
+- `app/`: Next.js App Router のページとレイアウト。
+  - `components/`: 再利用可能な UI コンポーネント。
+  - `lib/`: 共通のロジックや定数。
+- `public/`: 静的アセット (画像, 3D モデル)。
+
+## ライセンス
+
+[MIT](LICENSE)

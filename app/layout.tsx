@@ -12,7 +12,7 @@ const yuji = Yuji_Syuku({
 });
 
 export const metadata: Metadata = {
-  title: "紅べこ | Kurenaibeko Portfolio",
+  title: "紅べこ",
   description: "Traditional x Tech Portfolio of Kurenaibeko",
   icons: {
     icon: "/akabeko.jpg",
