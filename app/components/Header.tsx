@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Github } from "lucide-react";
 import { useState, useEffect } from "react";
 import { NAV_LINKS } from "../lib/constants";
 
@@ -65,6 +65,15 @@ export default function Header() {
 
         {/* Icons / Social */}
         <div className="flex items-center space-x-4 text-gray-600">
+          <a
+            href="https://github.com/Akabeko-1460"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            className="hover:text-bain-red transition-colors"
+          >
+            <Github size={22} />
+          </a>
           <button
             aria-label="Menu"
             className="md:hidden hover:text-bain-red transition-colors z-[60]"
