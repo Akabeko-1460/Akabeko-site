@@ -1,8 +1,11 @@
-import type { Metadata } from "next";
-import { Yuji_Syuku } from "next/font/google";
-import "./globals.css";
+"use client";
+
+import { LanguageProvider } from "./contexts/LanguageContext";
+import { translations } from "./lib/translations";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { Yuji_Syuku } from "next/font/google";
+import "./globals.css";
 
 const yuji = Yuji_Syuku({
   weight: "400",
@@ -11,27 +14,29 @@ const yuji = Yuji_Syuku({
   preload: false,
 });
 
-export const metadata: Metadata = {
-  title: "紅べこ",
-  description: "Traditional x Tech Portfolio of Kurenaibeko",
-  icons: {
-    icon: "/akabeko.jpg",
-  },
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja">
+    <html lang="ja" suppressHydrationWarning>
+      <head>
+        <title>紅べこ</title>
+        <meta
+          name="description"
+          content="Traditional x Tech Portfolio of Kurenaibeko"
+        />
+        <link rel="icon" href="/akabeko.jpg" />
+      </head>
       <body
         className={`${yuji.variable} antialiased min-h-screen relative flex flex-col pt-20 md:pt-28 font-sans`}
       >
-        <Header />
-        <main className="flex-grow">{children}</main>
-        <Footer />
+        <LanguageProvider translations={translations}>
+          <Header />
+          <main className="flex-grow">{children}</main>
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );

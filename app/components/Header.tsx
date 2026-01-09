@@ -5,10 +5,12 @@ import Link from "next/link";
 import { Menu, X, Github } from "lucide-react";
 import { useState, useEffect } from "react";
 import { NAV_LINKS } from "../lib/constants";
+import { useLanguage } from "../contexts/LanguageContext";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,19 +38,18 @@ export default function Header() {
             />
           </div>
           <div className="font-serif text-xl font-bold tracking-tight text-text-main">
-            紅<span className="text-black">べこ</span>
+            {language === "ja" ? (
+              <>
+                紅<span className="text-black">べこ</span>
+              </>
+            ) : (
+              <span className="text-black">Akabeko</span>
+            )}
           </div>
         </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-12 absolute left-[48%] top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          {/* Split links into two groups for visual balance if needed, or mapping normally. 
-              The original design had 2 on left, 2 on right. 
-              We can just map them all linearly or keep the split if strictly required.
-              However, to simplify maintenance, let's map them.
-              Original had space-x-10 between pairs and gap-12 between groups.
-              Let's maximize simplicity while maintaining the look.
-          */}
           <div className="flex items-center gap-14">
             {NAV_LINKS.map((link) => (
               <Link
@@ -63,7 +64,7 @@ export default function Header() {
           </div>
         </nav>
 
-        {/* Icons / Social */}
+        {/* Icons / Social / Language */}
         <div className="flex items-center space-x-4 text-gray-600">
           <a
             href="https://github.com/Akabeko-1460"
@@ -74,6 +75,31 @@ export default function Header() {
           >
             <Github size={22} />
           </a>
+
+          {/* Language Switcher */}
+          <div className="flex items-center border border-gray-300 rounded-full overflow-hidden text-xs font-bold">
+            <button
+              onClick={() => setLanguage("ja")}
+              className={`px-3 py-1.5 transition-colors ${
+                language === "ja"
+                  ? "bg-bain-red text-white"
+                  : "bg-white text-gray-600 hover:bg-gray-100"
+              }`}
+            >
+              JP
+            </button>
+            <button
+              onClick={() => setLanguage("en")}
+              className={`px-3 py-1.5 transition-colors ${
+                language === "en"
+                  ? "bg-bain-red text-white"
+                  : "bg-white text-gray-600 hover:bg-gray-100"
+              }`}
+            >
+              EN
+            </button>
+          </div>
+
           <button
             aria-label="Menu"
             className="md:hidden hover:text-bain-red transition-colors z-[60]"

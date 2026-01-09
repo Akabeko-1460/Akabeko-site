@@ -3,13 +3,21 @@
 import Image from "next/image";
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
+import { useLanguage } from "../contexts/LanguageContext";
 
 type AboutProfileProps = {
-  detailContent: string;
+  detailContentJa: string;
+  detailContentEn: string;
 };
 
-export default function AboutProfile({ detailContent }: AboutProfileProps) {
+export default function AboutProfile({
+  detailContentJa,
+  detailContentEn,
+}: AboutProfileProps) {
   const [isExpanded, setIsExpanded] = useState(false);
+  const { language, t } = useLanguage();
+
+  const detailContent = language === "ja" ? detailContentJa : detailContentEn;
 
   return (
     <section className="bg-white p-8 md:p-12 shadow-sm border-t-4 border-bain-red mb-16 flex flex-col md:flex-row items-center gap-8">
@@ -17,15 +25,15 @@ export default function AboutProfile({ detailContent }: AboutProfileProps) {
         <Image src="/akabeko.jpg" className="object-cover" alt="Profile" fill />
       </div>
       <div className="flex-1 text-center md:text-left">
-        <h1 className="text-3xl font-bold mb-2">紅べこ</h1>
+        <h1 className="text-3xl font-bold mb-2">{t("about.profile.name")}</h1>
         <p className="text-bain-red font-bold uppercase tracking-widest text-xs mb-4">
           Aspiring IT Consultant / PM
         </p>
         <div className="text-gray-600 leading-relaxed text-sm">
           <p>
-            ITコンサルタント、プロジェクトマネージャーを目指して勉強中の大学生。
+            {t("about.profile.desc1")}
             <br />
-            ほぼすべてのスポーツが好き。音楽も好き。人間が好き。名前の通り赤べこも好き。
+            {t("about.profile.desc2")}
           </p>
 
           {isExpanded && (
