@@ -9,7 +9,7 @@ export default function BooksPage() {
     // Technology
     {
       title: "リーダブルコード",
-      author: "著：Dustin Boswell",
+      author: "著：Dustin Boswell / Trevor Foucher",
       cat: "Technology",
       color: "bg-blue-50",
       image: "/book-covers/readable_code_v3.jpg",
@@ -18,7 +18,7 @@ export default function BooksPage() {
     // Business
     {
       title: "20字に削ぎ落とせ",
-      author: "著：門松 唯加",
+      author: "著：信元 夏代",
       cat: "Business",
       color: "bg-red-50",
       image: "/book-covers/20character_limit.jpg",
@@ -29,7 +29,7 @@ export default function BooksPage() {
       author: "著：赤羽 雄二",
       cat: "Business",
       color: "bg-red-50",
-      image: "https://placehold.co/400x600/fee/aaa?text=Zero+Second",
+      image: "/book-covers/zerosecondsthinking.jpg",
       url: "https://www.amazon.co.jp/dp/4478025802",
     },
     {
@@ -37,20 +37,20 @@ export default function BooksPage() {
       author: "著：赤羽 雄二",
       cat: "Business",
       color: "bg-red-50",
-      image: "https://placehold.co/400x600/fee/aaa?text=Action",
+      image: "/book-covers/zerosecondsthinking_exercisepart.jpg",
       url: "https://www.amazon.co.jp/dp/B0182T2J2Q",
     },
     {
-      title: "ロジカル・シンキング",
-      author: "著：照屋 華子 / 岡田 恵子",
+      title: "ロジカル・シンキング練習帳",
+      author: "著：岡 重文",
       cat: "Business",
       color: "bg-red-50",
-      image: "https://placehold.co/400x600/fee/aaa?text=Logical",
+      image: "/book-covers/logicalthinking_practicenote.jpg",
       url: "https://www.amazon.co.jp/dp/4492554171",
     },
     {
       title: "コンサル一年目が学ぶこと",
-      author: "著：大石哲之",
+      author: "著：大石 哲之",
       cat: "Business",
       color: "bg-red-50",
       image: "/book-covers/consultant_first_year_v3.jpg",
@@ -61,7 +61,7 @@ export default function BooksPage() {
       author: "著：安藤 広大",
       cat: "Business",
       color: "bg-red-50",
-      image: "https://placehold.co/400x600/fee/aaa?text=Leader",
+      image: "/book-covers/leadersmasc.jpg",
       url: "https://www.amazon.co.jp/dp/4478112020",
     },
     {
@@ -69,12 +69,12 @@ export default function BooksPage() {
       author: "著：橋本 将功",
       cat: "Business",
       color: "bg-red-50",
-      image: "https://placehold.co/400x600/fee/aaa?text=PM+Basic",
+      image: "/book-covers/projectmanagementbasicknowledge.jpg",
       url: "https://www.amazon.co.jp/dp/B0BNKT4N74",
     },
     {
       title: "イシューからはじめよ",
-      author: "著：安宅和人",
+      author: "著：安宅 和人",
       cat: "Business",
       color: "bg-red-50",
       image: "/book-covers/issue_first_v2.jpg",
@@ -86,7 +86,7 @@ export default function BooksPage() {
       author: "著：斉藤 洋",
       cat: "General",
       color: "bg-yellow-50",
-      image: "https://placehold.co/400x600/fff/aaa?text=Rudolf+1",
+      image: "/book-covers/rudoruhutoixtupaiaxtutena.jpg",
       url: "https://www.amazon.co.jp/dp/4061335029",
     },
     {
@@ -94,7 +94,7 @@ export default function BooksPage() {
       author: "著：斉藤 洋",
       cat: "General",
       color: "bg-yellow-50",
-      image: "https://placehold.co/400x600/fff/aaa?text=Rudolf+2",
+      image: "/book-covers/rudoruhutomodachihitoridachi.jpg",
       url: "https://www.amazon.co.jp/dp/4061335096",
     },
     {
@@ -102,7 +102,7 @@ export default function BooksPage() {
       author: "著：斉藤 洋",
       cat: "General",
       color: "bg-yellow-50",
-      image: "https://placehold.co/400x600/fff/aaa?text=Rudolf+Snow",
+      image: "/book-covers/rudoruhutosuno-howaito.jpg",
       url: "https://www.amazon.co.jp/dp/4061335266",
     },
     {
@@ -110,7 +110,7 @@ export default function BooksPage() {
       author: "著：梅田 悟司",
       cat: "General",
       color: "bg-yellow-50",
-      image: "https://placehold.co/400x600/fff/aaa?text=Words",
+      image: "/book-covers/kotobanidekiruhabukininaru.jpg",
       url: "https://www.amazon.co.jp/dp/453232075X",
     },
     {
@@ -118,7 +118,7 @@ export default function BooksPage() {
       author: "著：吉田 昌生",
       cat: "General",
       color: "bg-yellow-50",
-      image: "https://placehold.co/400x600/fff/aaa?text=Mindfulness",
+      image: "/book-covers/maindohurunesumeisounyuumon.jpg",
       url: "https://www.amazon.co.jp/dp/4872906470",
     },
     {
@@ -126,7 +126,7 @@ export default function BooksPage() {
       author: "著：トイアンナ",
       cat: "General",
       color: "bg-yellow-50",
-      image: "https://placehold.co/400x600/fff/aaa?text=Naitei",
+      image: "/book-covers/kakuzitsunaitei.jpg",
       url: "https://www.amazon.co.jp/dp/4046023577",
     },
     {
@@ -134,7 +134,7 @@ export default function BooksPage() {
       author: "著：安恒 理",
       cat: "General",
       color: "bg-yellow-50",
-      image: "https://placehold.co/400x600/fff/aaa?text=Stock",
+      image: "/book-covers/mangadewakarusaikyounokabunyuumon.jpg",
       url: "https://www.amazon.co.jp/dp/4405102636",
     },
     {
@@ -142,7 +142,7 @@ export default function BooksPage() {
       author: "著：塚本 亮",
       cat: "General",
       color: "bg-yellow-50",
-      image: "https://placehold.co/400x600/fff/aaa?text=English",
+      image: "/book-covers/80pata-ndeeigogatomaranai.jpg",
       url: "https://www.amazon.co.jp/dp/4471113220",
     },
     {
@@ -150,7 +150,7 @@ export default function BooksPage() {
       author: "著：九段 理江",
       cat: "General",
       color: "bg-yellow-50",
-      image: "https://placehold.co/400x600/fff/aaa?text=Tokyo",
+      image: "/book-covers/tokyo-to_dojo-to.jpg",
       url: "https://www.amazon.co.jp/dp/4103555114",
     },
     {
@@ -158,11 +158,18 @@ export default function BooksPage() {
       author: "著：永井 孝尚",
       cat: "General",
       color: "bg-yellow-50",
-      image: "https://placehold.co/400x600/fff/aaa?text=Elite+100",
+      image: "/book-covers/liberalarts.jpg",
       url: "https://www.amazon.co.jp/dp/4046043969",
     },
+    {
+      title: "スティグリッツ入門経済学 第4版",
+      author: "著：J.E.スティグリッツ 他",
+      cat: "General",
+      color: "bg-yellow-50",
+      image: "/book-covers/Stiglitz_Introduction_to_Economics.jpg",
+      url: "https://www.amazon.co.jp/dp/4492314197",
+    },
   ];
-
   return (
     <div className="pt-24 pb-20 bg-warm-bg min-h-screen">
       <div className="container-custom">
