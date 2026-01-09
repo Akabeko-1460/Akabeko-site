@@ -2,11 +2,13 @@
 
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { useLanguage } from "../contexts/LanguageContext";
 
 // EmailJSの初期化
 emailjs.init("u-u4c3W0au7T-X-tm");
 
 export default function Footer() {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -19,7 +21,7 @@ export default function Footer() {
   const handleSubmit = async () => {
     // 入力チェック
     if (!formData.name || !formData.email || !formData.message) {
-      alert("すべての項目を入力してください。");
+      alert(t("footer.form.allFieldsRequired"));
       return;
     }
 
@@ -44,25 +46,25 @@ export default function Footer() {
     <footer className="bg-black text-white py-20">
       <div className="container-custom text-center">
         <h3 className="text-3xl font-bold mb-12 tracking-widest text-white">
-          Contact
+          {t("footer.contact")}
         </h3>
 
         {status === "success" ? (
           <div className="max-w-lg mx-auto text-center mb-16">
             <div className="text-6xl mb-4">✉️</div>
             <h4 className="text-2xl font-bold text-white mb-4">
-              送信完了しました！
+              {t("footer.success.title")}
             </h4>
             <p className="text-gray-400 mb-8">
-              お問い合わせいただきありがとうございます。
+              {t("footer.success.message1")}
               <br />
-              折り返しご連絡いたします。
+              {t("footer.success.message2")}
             </p>
             <button
               onClick={() => setStatus("idle")}
               className="px-8 py-3 border border-bain-red text-white hover:bg-bain-red transition-all duration-300 rounded-sm text-sm tracking-widest"
             >
-              新しいメッセージを送る
+              {t("footer.success.newMessage")}
             </button>
           </div>
         ) : (
@@ -72,7 +74,7 @@ export default function Footer() {
                 htmlFor="name"
                 className="block text-xs font-bold text-gray-400 mb-2"
               >
-                お名前
+                {t("footer.form.name")}
               </label>
               <input
                 type="text"
@@ -82,7 +84,7 @@ export default function Footer() {
                   setFormData({ ...formData, name: e.target.value })
                 }
                 className="w-full bg-gray-900 border border-gray-800 text-white px-4 py-3 focus:outline-none focus:border-bain-red transition-colors rounded-sm"
-                placeholder="あなたのお名前"
+                placeholder={t("footer.form.namePlaceholder")}
                 disabled={status === "sending"}
               />
             </div>
@@ -91,7 +93,7 @@ export default function Footer() {
                 htmlFor="email"
                 className="block text-xs font-bold text-gray-400 mb-2"
               >
-                メールアドレス
+                {t("footer.form.email")}
               </label>
               <input
                 type="email"
@@ -101,7 +103,7 @@ export default function Footer() {
                   setFormData({ ...formData, email: e.target.value })
                 }
                 className="w-full bg-gray-900 border border-gray-800 text-white px-4 py-3 focus:outline-none focus:border-bain-red transition-colors rounded-sm"
-                placeholder="あなたのメールアドレス"
+                placeholder={t("footer.form.emailPlaceholder")}
                 disabled={status === "sending"}
               />
             </div>
@@ -110,7 +112,7 @@ export default function Footer() {
                 htmlFor="message"
                 className="block text-xs font-bold text-gray-400 mb-2"
               >
-                メッセージ
+                {t("footer.form.message")}
               </label>
               <textarea
                 id="message"
@@ -120,14 +122,14 @@ export default function Footer() {
                   setFormData({ ...formData, message: e.target.value })
                 }
                 className="w-full bg-gray-900 border border-gray-800 text-white px-4 py-3 focus:outline-none focus:border-bain-red transition-colors rounded-sm"
-                placeholder="メッセージを入力してください"
+                placeholder={t("footer.form.messagePlaceholder")}
                 disabled={status === "sending"}
               ></textarea>
             </div>
 
             {status === "error" && (
               <div className="text-center text-red-500 text-sm mb-4">
-                送信に失敗しました。もう一度お試しください。
+                {t("footer.form.error")}
               </div>
             )}
 
@@ -139,7 +141,9 @@ export default function Footer() {
                 status === "sending" ? "opacity-50 cursor-not-allowed" : ""
               }`}
             >
-              {status === "sending" ? "送信中..." : "送信"}
+              {status === "sending"
+                ? t("footer.form.sending")
+                : t("footer.form.submit")}
             </button>
           </form>
         )}

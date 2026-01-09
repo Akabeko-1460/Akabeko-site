@@ -3,8 +3,11 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
+import { useLanguage } from "../contexts/LanguageContext";
 
 export default function BooksPage() {
+  const { t } = useLanguage();
+
   const books = [
     // Technology
     {
@@ -181,10 +184,10 @@ export default function BooksPage() {
   return (
     <div className="pt-24 pb-20 bg-warm-bg min-h-screen">
       <div className="container-custom">
-        <h1 className="text-4xl font-bold mb-4 text-center">紅べこの本棚</h1>
-        <p className="text-center text-gray-500 mb-12">
-          私が読ませてもらった書籍たち。
-        </p>
+        <h1 className="text-4xl font-bold mb-4 text-center">
+          {t("books.title")}
+        </h1>
+        <p className="text-center text-gray-500 mb-12">{t("books.subtitle")}</p>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
           {books.map((book, idx) => (
