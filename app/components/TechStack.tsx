@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import {
   SiNextdotjs,
   SiTypescript,
@@ -98,20 +101,74 @@ const TECH_ITEMS = [
   },
 ];
 
+// Animation variants
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.08,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: {
+    opacity: 0,
+    y: 20,
+    scale: 0.8,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      type: "spring" as const,
+      stiffness: 300,
+      damping: 20,
+    },
+  },
+};
+
 export default function TechStack() {
   return (
-    <div className="grid grid-cols-4 gap-4 mb-8">
+    <motion.div
+      className="grid grid-cols-4 gap-4 mb-8"
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-50px" }}
+    >
       {TECH_ITEMS.map((tech) => (
-        <div
+        <motion.div
           key={tech.name}
-          className="flex flex-col items-center p-3 bg-white rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
+          variants={itemVariants}
+          whileHover={{
+            y: -8,
+            scale: 1.05,
+            boxShadow: "0 12px 24px rgba(0, 0, 0, 0.15)",
+          }}
+          transition={{
+            type: "spring",
+            stiffness: 400,
+            damping: 25,
+          }}
+          className="flex flex-col items-center p-3 bg-white rounded-lg border border-gray-100 shadow-sm cursor-pointer group"
+          style={{
+            boxShadow: "0 2px 8px rgba(0, 0, 0, 0.06)",
+          }}
         >
-          <tech.icon className={`text-3xl mb-2 ${tech.color}`} />
-          <span className="text-[10px] font-bold text-gray-700">
+          <div className="transition-transform duration-300 group-hover:scale-110">
+            <tech.icon
+              className={`text-3xl mb-2 ${tech.color} transition-all duration-300 group-hover:drop-shadow-lg`}
+            />
+          </div>
+          <span className="text-[10px] font-bold text-gray-700 group-hover:text-bain-red transition-colors">
             {tech.name}
           </span>
-        </div>
+        </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
 }
