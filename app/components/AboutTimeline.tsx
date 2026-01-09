@@ -17,7 +17,7 @@ const HISTORY_DATA: HistoryItem[] = [
   {
     year: "Middle School",
     title: "中学校時代",
-    desc: "家で友達とゲームして遊ぶ。心理学、哲学、地理学のYoutubeに没頭。",
+    desc: "家で友達とゲームして遊ぶ。心理学、哲学、地理学のYoutubeにハマる。",
   },
   {
     year: "High School",
@@ -32,7 +32,7 @@ const HISTORY_DATA: HistoryItem[] = [
   {
     year: "Univ 2nd",
     title: "大学2年次",
-    desc: "メンバーを8人とメンター1人を集めてアプリ開発PJを立ち上げ。大学の勉強ではGPA3.88を獲得。後期はAI・Web・ゲーム開発に没頭し、TOEIC 750点取得、ハッカソン出場、簿記3級取得と多岐に活動。",
+    desc: "メンバー8人とメンター1人を集めてアプリ開発プロジェクトを立ち上げた。GPA3.88を獲得。後期は技術系の勉強を頑張った。TOEIC 750点取得、ハッカソン出場、簿記3級取得。",
   },
 ];
 
