@@ -44,7 +44,7 @@ export default function Footer() {
     <footer className="bg-black text-white py-20">
       <div className="container-custom text-center">
         <h3 className="text-3xl font-bold mb-12 tracking-widest text-white">
-          連絡先
+          Contact
         </h3>
 
         {status === "success" ? (

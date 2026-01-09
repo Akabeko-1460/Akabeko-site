@@ -77,7 +77,7 @@ export default function BooksPage() {
       author: "著：安宅 和人",
       cat: "Business",
       color: "bg-red-50",
-      image: "/book-covers/issue_first_v2.jpg",
+      image: "/book-covers/ISSUEDRIVEN.jpg",
       url: "https://www.amazon.co.jp/%E3%82%A4%E3%82%B7%E3%83%A5%E3%83%BC%E3%81%8B%E3%82%89%E3%81%AF%E3%81%98%E3%82%81%E3%82%88%EF%BC%BB%E6%94%B9%E8%A8%82%E7%89%88%EF%BC%BD%E2%80%95%E2%80%95%E7%9F%A5%E7%9A%84%E7%94%9F%E7%94%A3%E3%81%AE%E3%80%8C%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB%E3%81%AA%E6%9C%AC%E8%B3%AA%E3%80%8D-%E5%AE%89%E5%AE%85%E5%92%8C%E4%BA%BA/dp/4862763561/ref=sr_1_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=3K4V298VZB8QX&dib=eyJ2IjoiMSJ9.XhZiNVfOt1SrAcQzPiTjOBZgwnOAsspAaGVExl_ZHyu97IK6Jsw4TAabJ5JYk4ie33MaUhotlp41yhJslHBebYmJLjLkwIlpkLLnB0J4NNl4NxdCdTsksZbCK6wRDmR7lSgoHeiLedaeQVwL1yifk5UkWSPl06PrFAuvl-lTgv_6rpYlkXI1i3x2N4TLWxHKbWWhZo63UID7_ILHTJj4adbnYtRCpxMMFi8e1A0gDuA.rdAPRos8E1xs8zNwqQwz9dXIIus3_ek13s6tM2DonRs&dib_tag=se&keywords=%E3%82%A4%E3%82%B7%E3%83%A5%E3%83%BC%E3%81%8B%E3%82%89%E3%81%AF%E3%81%98%E3%82%81%E3%82%88&qid=1767932837&s=books&sprefix=%E3%82%A4%E3%82%B7%E3%83%A5%E3%83%BC%E3%81%8B%E3%82%89%E3%81%AF%E3%81%98%E3%82%81%E3%82%88%2Cstripbooks%2C192&sr=1-1",
     },
     // General
