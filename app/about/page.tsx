@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import AboutProfile from "../components/AboutProfile";
 import AboutTimeline from "../components/AboutTimeline";
 import { useLanguage } from "../contexts/LanguageContext";
@@ -81,6 +82,44 @@ With a TOEIC score of 750, I have the English proficiency to communicate in glob
 
 I enjoy almost all sports and am interested in music, showing interest in diverse fields. As expressed in the phrase "I love people," my attitude of valuing relationships with others is an essential quality for consultants and PMs.`;
 
+// Animation variants
+const pageVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const sectionVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut" as const,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, scale: 0.9, y: 20 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: {
+      type: "spring" as const,
+      stiffness: 200,
+      damping: 20,
+    },
+  },
+};
+
 export default function AboutPage() {
   const { t } = useLanguage();
 
@@ -93,7 +132,12 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="pt-24 pb-20 bg-warm-bg min-h-screen">
+    <motion.div
+      className="pt-24 pb-20 bg-warm-bg min-h-screen"
+      initial="hidden"
+      animate="visible"
+      variants={pageVariants}
+    >
       <div className="container-custom max-w-[800px]">
         {/* Profile Card */}
         <AboutProfile
@@ -102,26 +146,61 @@ export default function AboutPage() {
         />
 
         {/* Timeline Section */}
-        <AboutTimeline />
+        <motion.div variants={sectionVariants}>
+          <AboutTimeline />
+        </motion.div>
 
         {/* Qualifications */}
-        <section className="mt-20">
-          <h2 className="text-2xl font-bold mb-8 text-center">
+        <motion.section className="mt-20" variants={sectionVariants}>
+          <motion.h2
+            className="text-2xl font-bold mb-8 text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
             {t("about.qualifications.title")}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          </motion.h2>
+
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 gap-4"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: {
+                  staggerChildren: 0.1,
+                },
+              },
+            }}
+          >
             {qualifications.map((q, i) => (
-              <div
+              <motion.div
                 key={i}
-                className="bg-white p-4 border-l-4 border-gray-800 shadow-sm flex items-center"
+                className="bg-white p-4 border-l-4 border-gray-800 shadow-sm flex items-center cursor-pointer group"
+                variants={cardVariants}
+                whileHover={{
+                  x: 10,
+                  borderColor: "#cc0000",
+                  boxShadow: "0 5px 20px rgba(0, 0, 0, 0.1)",
+                  transition: { duration: 0.2 },
+                }}
               >
-                <div className="w-2 h-2 bg-bain-red rounded-full mr-3" />
-                <span className="font-bold text-gray-700">{q}</span>
-              </div>
+                <motion.div
+                  className="w-2 h-2 bg-bain-red rounded-full mr-3"
+                  whileHover={{ scale: 1.5 }}
+                />
+                <span className="font-bold text-gray-700 group-hover:text-bain-red transition-colors">
+                  {q}
+                </span>
+              </motion.div>
             ))}
-          </div>
-        </section>
+          </motion.div>
+        </motion.section>
       </div>
-    </div>
+    </motion.div>
   );
 }

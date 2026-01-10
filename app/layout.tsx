@@ -4,6 +4,7 @@ import { LanguageProvider } from "./contexts/LanguageContext";
 import { translations } from "./lib/translations";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import LoadingScreen from "./components/LoadingScreen";
 import { Yuji_Syuku } from "next/font/google";
 import "./globals.css";
 
@@ -33,6 +34,7 @@ export default function RootLayout({
         className={`${yuji.variable} antialiased min-h-screen relative flex flex-col pt-20 md:pt-28 font-sans`}
       >
         <LanguageProvider translations={translations}>
+          <LoadingScreen />
           <Header />
           <main className="flex-grow">{children}</main>
           <Footer />
