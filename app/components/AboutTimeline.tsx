@@ -10,7 +10,7 @@ const lineVariants = {
     scaleY: 1,
     transition: {
       duration: 0.8,
-      ease: "easeOut",
+      ease: "easeOut" as const,
     },
   },
 };
@@ -22,7 +22,7 @@ const titleVariants = {
     y: 0,
     transition: {
       duration: 0.6,
-      ease: "easeOut",
+      ease: "easeOut" as const,
     },
   },
 };
@@ -33,7 +33,7 @@ const itemVariants = {
     opacity: 1,
     x: 0,
     transition: {
-      type: "spring",
+      type: "spring" as const,
       stiffness: 150,
       damping: 20,
     },
@@ -45,7 +45,7 @@ const markerVariants = {
   visible: {
     scale: 1,
     transition: {
-      type: "spring",
+      type: "spring" as const,
       stiffness: 400,
       damping: 15,
     },

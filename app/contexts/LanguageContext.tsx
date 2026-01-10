@@ -5,6 +5,7 @@ import {
   useContext,
   useState,
   useEffect,
+  useCallback,
   ReactNode,
 } from "react";
 
@@ -27,27 +28,32 @@ export function LanguageProvider({
   children: ReactNode;
   translations: Record<Language, Record<string, string>>;
 }) {
-  const [language, setLanguage] = useState<Language>("ja");
-  const [mounted, setMounted] = useState(false);
+  const [language, setLanguageState] = useState<Language>("ja");
 
+  // 初期化時にlocalStorageから言語設定を読み込む
+  // 初期化ロジックなのでuseEffect内でのsetStateは意図的
   useEffect(() => {
-    setMounted(true);
     const saved = localStorage.getItem("language") as Language;
     if (saved && (saved === "ja" || saved === "en")) {
-      setLanguage(saved);
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setLanguageState(saved);
     }
+    document.documentElement.lang = saved || "ja";
   }, []);
 
-  useEffect(() => {
-    if (mounted) {
-      localStorage.setItem("language", language);
-      document.documentElement.lang = language;
-    }
-  }, [language, mounted]);
+  // 言語変更ハンドラー
+  const setLanguage = useCallback((lang: Language) => {
+    setLanguageState(lang);
+    localStorage.setItem("language", lang);
+    document.documentElement.lang = lang;
+  }, []);
 
-  const t = (key: string): string => {
-    return translations[language][key] || key;
-  };
+  const t = useCallback(
+    (key: string): string => {
+      return translations[language][key] || key;
+    },
+    [language, translations]
+  );
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage, t }}>
