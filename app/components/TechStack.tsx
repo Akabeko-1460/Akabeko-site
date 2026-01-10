@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import {
   SiNextdotjs,
@@ -29,76 +30,20 @@ const CustomCLogo = ({ className }: { className?: string }) => (
 );
 
 const TECH_ITEMS = [
-  {
-    icon: SiNextdotjs,
-    name: "Next.js",
-    color: "text-black",
-  },
-  {
-    icon: SiReact,
-    name: "React",
-    color: "text-[#61DAFB]",
-  },
-  {
-    icon: SiTypescript,
-    name: "TypeScript",
-    color: "text-[#3178C6]",
-  },
-  {
-    icon: SiJavascript,
-    name: "JavaScript",
-    color: "text-[#F7DF1E]",
-  },
-  {
-    icon: SiPython,
-    name: "Python",
-    color: "text-[#3776AB]",
-  },
-  {
-    icon: SiDjango,
-    name: "Django",
-    color: "text-[#092E20]",
-  },
-  {
-    icon: SiHtml5,
-    name: "HTML",
-    color: "text-[#E34F26]",
-  },
-  {
-    icon: SiCss3,
-    name: "CSS",
-    color: "text-[#1572B6]",
-  },
-  {
-    icon: SiBootstrap,
-    name: "BootStrap",
-    color: "text-[#7952B3]",
-  },
-  {
-    icon: SiTailwindcss,
-    name: "Tailwind CSS",
-    color: "text-[#06B6D4]",
-  },
-  {
-    icon: FaJava,
-    name: "Java",
-    color: "text-[#007396]",
-  },
-  {
-    icon: CustomCLogo,
-    name: "C",
-    color: "text-[#00599C]",
-  },
-  {
-    icon: SiUnity,
-    name: "Unity",
-    color: "text-[#000000]",
-  },
-  {
-    icon: SiBlender,
-    name: "Blender",
-    color: "text-[#F5792A]",
-  },
+  { icon: SiNextdotjs, name: "Next.js", color: "text-black" },
+  { icon: SiReact, name: "React", color: "text-[#61DAFB]" },
+  { icon: SiTypescript, name: "TypeScript", color: "text-[#3178C6]" },
+  { icon: SiJavascript, name: "JavaScript", color: "text-[#F7DF1E]" },
+  { icon: SiPython, name: "Python", color: "text-[#3776AB]" },
+  { icon: SiDjango, name: "Django", color: "text-[#092E20]" },
+  { icon: SiHtml5, name: "HTML", color: "text-[#E34F26]" },
+  { icon: SiCss3, name: "CSS", color: "text-[#1572B6]" },
+  { icon: SiBootstrap, name: "BootStrap", color: "text-[#7952B3]" },
+  { icon: SiTailwindcss, name: "Tailwind CSS", color: "text-[#06B6D4]" },
+  { icon: FaJava, name: "Java", color: "text-[#007396]" },
+  { icon: CustomCLogo, name: "C", color: "text-[#00599C]" },
+  { icon: SiUnity, name: "Unity", color: "text-[#000000]" },
+  { icon: SiBlender, name: "Blender", color: "text-[#F5792A]" },
 ];
 
 // Animation variants
@@ -114,11 +59,7 @@ const containerVariants = {
 };
 
 const itemVariants = {
-  hidden: {
-    opacity: 0,
-    y: 20,
-    scale: 0.8,
-  },
+  hidden: { opacity: 0, y: 20, scale: 0.8 },
   visible: {
     opacity: 1,
     y: 0,
@@ -131,6 +72,91 @@ const itemVariants = {
   },
 };
 
+/**
+ * TechCard - マウス追従回転アニメーション付きカード
+ */
+function TechCard({
+  icon: Icon,
+  name,
+  color,
+}: {
+  icon: React.ComponentType<{ className?: string }>;
+  name: string;
+  color: string;
+}) {
+  const cardRef = useRef<HTMLDivElement>(null);
+  const [rotation, setRotation] = useState(0);
+  const [isHovering, setIsHovering] = useState(false);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!cardRef.current) return;
+
+    const rect = cardRef.current.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+
+    // カーソル位置からアイコンの回転角度を計算
+    const angle = Math.atan2(e.clientY - centerY, e.clientX - centerX);
+    const degrees = (angle * 180) / Math.PI;
+
+    setRotation((degrees + 90) * 0.5); // 回転角を半分に
+  };
+
+  const handleMouseEnter = () => {
+    setIsHovering(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovering(false);
+    setRotation(0);
+  };
+
+  return (
+    <motion.div
+      ref={cardRef}
+      variants={itemVariants}
+      whileHover={{
+        y: -8,
+        scale: 1.05,
+        boxShadow: "0 12px 24px rgba(0, 0, 0, 0.15)",
+      }}
+      transition={{
+        type: "spring",
+        stiffness: 400,
+        damping: 25,
+      }}
+      onMouseMove={handleMouseMove}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      className="flex flex-col items-center p-3 bg-white rounded-lg border border-gray-100 shadow-sm cursor-pointer group"
+      style={{
+        boxShadow: "0 2px 8px rgba(0, 0, 0, 0.06)",
+      }}
+    >
+      <motion.div
+        animate={{
+          rotate: isHovering ? rotation : 0,
+          scale: isHovering ? 1.15 : 1,
+        }}
+        transition={{
+          type: "spring",
+          stiffness: 300,
+          damping: 20,
+        }}
+      >
+        <Icon
+          className={`text-3xl mb-2 ${color} transition-all duration-200 ${
+            isHovering ? "drop-shadow-lg" : ""
+          }`}
+        />
+      </motion.div>
+      <span className="text-[10px] font-bold text-gray-700 group-hover:text-bain-red transition-colors">
+        {name}
+      </span>
+    </motion.div>
+  );
+}
+
 export default function TechStack() {
   return (
     <motion.div
@@ -141,33 +167,12 @@ export default function TechStack() {
       viewport={{ once: true, margin: "-50px" }}
     >
       {TECH_ITEMS.map((tech) => (
-        <motion.div
+        <TechCard
           key={tech.name}
-          variants={itemVariants}
-          whileHover={{
-            y: -8,
-            scale: 1.05,
-            boxShadow: "0 12px 24px rgba(0, 0, 0, 0.15)",
-          }}
-          transition={{
-            type: "spring",
-            stiffness: 400,
-            damping: 25,
-          }}
-          className="flex flex-col items-center p-3 bg-white rounded-lg border border-gray-100 shadow-sm cursor-pointer group"
-          style={{
-            boxShadow: "0 2px 8px rgba(0, 0, 0, 0.06)",
-          }}
-        >
-          <div className="transition-transform duration-300 group-hover:scale-110">
-            <tech.icon
-              className={`text-3xl mb-2 ${tech.color} transition-all duration-300 group-hover:drop-shadow-lg`}
-            />
-          </div>
-          <span className="text-[10px] font-bold text-gray-700 group-hover:text-bain-red transition-colors">
-            {tech.name}
-          </span>
-        </motion.div>
+          icon={tech.icon}
+          name={tech.name}
+          color={tech.color}
+        />
       ))}
     </motion.div>
   );
