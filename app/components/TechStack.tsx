@@ -17,15 +17,39 @@ import {
   SiBlender,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
-import Image from "next/image";
 
+// CSSベースのC言語ロゴコンポーネント
 const CustomCLogo = ({ className }: { className?: string }) => (
   <div
-    className={`w-8 h-8 flex items-center justify-center relative ${
+    className={`relative flex items-center justify-center rounded-full bg-[#3949AB] text-white font-sans font-bold ${
       className || ""
     }`}
+    style={{
+      width: 32,
+      height: 32,
+      fontSize: 20,
+      boxShadow: "2px 4px 6px rgba(0,0,0,0.3)",
+    }}
+    aria-label="C Language"
   >
-    <Image src="/c-logo.png" alt="C" fill className="object-contain" />
+    {/* 光沢（ハイライト） */}
+    <div
+      className="absolute top-0 left-0 w-full h-full rounded-full opacity-20 pointer-events-none"
+      style={{
+        background:
+          "linear-gradient(135deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 50%)",
+      }}
+    />
+    {/* 文字本体 */}
+    <span
+      style={{
+        marginTop: -1,
+        marginLeft: -1,
+        textShadow: "1px 1px 2px rgba(0,0,0,0.2)",
+      }}
+    >
+      C
+    </span>
   </div>
 );
 
