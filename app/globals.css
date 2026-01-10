@@ -67,3 +67,167 @@ html {
 .btn-shine:hover::after {
   left: 100%;
 }
+
+/* ===========================================
+   CSS Book Styling
+   =========================================== */
+
+.book {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/4;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.book-cover {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+/* Book spine effect */
+.book-cover::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.05)
+  );
+  z-index: 2;
+}
+
+.book-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  position: relative;
+}
+
+.book-title {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 8px;
+  word-break: break-word;
+}
+
+.book-subtitle {
+  font-size: 0.7rem;
+  line-height: 1.4;
+  opacity: 0.7;
+  margin-bottom: auto;
+}
+
+.book-author {
+  font-size: 0.75rem;
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+/* Book band (obi) */
+.book-band {
+  padding: 12px 16px;
+  position: relative;
+}
+
+.book-band-text {
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.book-publisher {
+  position: absolute;
+  right: 8px;
+  top: 4px;
+  font-size: 0.5rem;
+  opacity: 0.7;
+}
+
+/* Book color themes - matching the site's warm, professional aesthetic */
+
+/* White/Cream - Technology */
+.book-technology .book-body {
+  background: #fafafa;
+  color: #333;
+}
+.book-technology .book-band {
+  background: #16a34a;
+  color: white;
+}
+
+/* Yellow - Business (Thinking) */
+.book-business .book-body {
+  background: #fef3c7;
+  color: #92400e;
+}
+.book-business .book-band {
+  background: #fbbf24;
+  color: #78350f;
+}
+
+/* Gray/Blue - General Knowledge */
+.book-general .book-body {
+  background: #f1f5f9;
+  color: #334155;
+}
+.book-general .book-band {
+  background: #0891b2;
+  color: white;
+}
+
+/* Blue - Project Management */
+.book-blue .book-body {
+  background: #3b82f6;
+  color: white;
+}
+.book-blue .book-band {
+  background: #1e40af;
+  color: white;
+}
+
+/* Red accent for bain theme */
+.book-red .book-body {
+  background: #fafafa;
+  color: #333;
+}
+.book-red .book-band {
+  background: #cc0000;
+  color: white;
+}
+
+/* Pink/Purple */
+.book-pink .book-body {
+  background: #fce7f3;
+  color: #831843;
+}
+.book-pink .book-band {
+  background: #db2777;
+  color: white;
+}
+
+/* Dark/Navy */
+.book-dark .book-body {
+  background: #1e293b;
+  color: white;
+}
+.book-dark .book-band {
+  background: #0f172a;
+  color: #94a3b8;
+}
