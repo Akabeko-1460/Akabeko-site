@@ -17,6 +17,37 @@ import {
   SiBlender,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
+import Image from "next/image";
+
+// Vercelロゴコンポーネント（黒い丸背景に白三角形）
+const VercelLogo = ({ className }: { className?: string }) => (
+  <div
+    className={`relative flex items-center justify-center rounded-full bg-black ${
+      className || ""
+    }`}
+    style={{ width: 32, height: 32 }}
+  >
+    <svg width="16" height="14" viewBox="0 0 24 21" fill="none">
+      <path d="M12 0L24 21H0L12 0Z" fill="white" />
+    </svg>
+  </div>
+);
+
+// Firebaseロゴコンポーネント
+const FirebaseLogo = ({ className }: { className?: string }) => (
+  <div
+    className={`relative w-8 h-8 flex items-center justify-center ${
+      className || ""
+    }`}
+  >
+    <Image
+      src="/icons/Logomark_Full Color.svg"
+      alt="Firebase"
+      fill
+      className="object-contain"
+    />
+  </div>
+);
 
 // CSSベースのC言語ロゴコンポーネント
 const CustomCLogo = ({ className }: { className?: string }) => (
@@ -54,6 +85,8 @@ const CustomCLogo = ({ className }: { className?: string }) => (
 );
 
 const TECH_ITEMS = [
+  { icon: VercelLogo, name: "Vercel", color: "text-black" },
+  { icon: FirebaseLogo, name: "Firebase", color: "" },
   { icon: SiNextdotjs, name: "Next.js", color: "text-black" },
   { icon: SiReact, name: "React", color: "text-[#61DAFB]" },
   { icon: SiTypescript, name: "TypeScript", color: "text-[#3178C6]" },
