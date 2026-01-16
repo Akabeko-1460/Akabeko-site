@@ -60,6 +60,7 @@ const CustomCLogo = ({ className }: { className?: string }) => (
       height: 26,
       fontSize: 15,
       boxShadow: "2px 4px 6px rgba(0,0,0,0.3)",
+      transform: "scale(1.02)",
     }}
     aria-label="C Language"
   >
@@ -203,7 +204,7 @@ function TechCard({
       <motion.div
         animate={{
           rotate: isHovering ? rotation : 0,
-          scale: isHovering ? 1.15 : 1,
+          scale: isHovering ? 1.127 : 0.98,
         }}
         transition={{
           type: "spring",
