@@ -33,10 +33,10 @@ const VercelLogo = ({ className }: { className?: string }) => (
   </div>
 );
 
-// Firebaseロゴコンポーネント
+// Firebaseロゴコンポーネント（拡大版）
 const FirebaseLogo = ({ className }: { className?: string }) => (
   <div
-    className={`relative w-8 h-8 flex items-center justify-center ${
+    className={`relative w-9 h-9 flex items-center justify-center ${
       className || ""
     }`}
   >
@@ -49,16 +49,16 @@ const FirebaseLogo = ({ className }: { className?: string }) => (
   </div>
 );
 
-// CSSベースのC言語ロゴコンポーネント
+// CSSベースのC言語ロゴコンポーネント（縮小版）
 const CustomCLogo = ({ className }: { className?: string }) => (
   <div
     className={`relative flex items-center justify-center rounded-full bg-[#3949AB] text-white font-sans font-bold ${
       className || ""
     }`}
     style={{
-      width: 32,
-      height: 32,
-      fontSize: 20,
+      width: 26,
+      height: 26,
+      fontSize: 15,
       boxShadow: "2px 4px 6px rgba(0,0,0,0.3)",
     }}
     aria-label="C Language"
@@ -84,11 +84,21 @@ const CustomCLogo = ({ className }: { className?: string }) => (
   </div>
 );
 
+// Next.jsロゴ（拡大版）
+const NextjsLogo = ({ className }: { className?: string }) => (
+  <SiNextdotjs className={`text-4xl ${className || ""}`} />
+);
+
+// Reactロゴ（拡大版）
+const ReactLogo = ({ className }: { className?: string }) => (
+  <SiReact className={`text-4xl ${className || ""}`} />
+);
+
 const TECH_ITEMS = [
   { icon: VercelLogo, name: "Vercel", color: "text-black" },
   { icon: FirebaseLogo, name: "Firebase", color: "" },
-  { icon: SiNextdotjs, name: "Next.js", color: "text-black" },
-  { icon: SiReact, name: "React", color: "text-[#61DAFB]" },
+  { icon: NextjsLogo, name: "Next.js", color: "text-black" },
+  { icon: ReactLogo, name: "React", color: "text-[#61DAFB]" },
   { icon: SiTypescript, name: "TypeScript", color: "text-[#3178C6]" },
   { icon: SiJavascript, name: "JavaScript", color: "text-[#F7DF1E]" },
   { icon: SiPython, name: "Python", color: "text-[#3776AB]" },
