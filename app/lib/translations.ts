@@ -98,7 +98,7 @@ export const translations = {
       "Had fun at karaoke, sports centers, and USJ. Switched to science track to become an IT consultant (ERP consultant) and PM.",
     "about.timeline.univ1.title": "University 1st Year",
     "about.timeline.univ1.desc":
-      "Studied seriously at university (mainly calculus and linear algebra). Learned programming through Daily Python course. Obtained Fundamental Information Technology Engineer certification.",
+      "Studied seriously at university (mainly calculus and linear algebra). Learned programming through Daily-trial(デイトラ) Python course. Obtained Fundamental Information Technology Engineer certification.",
     "about.timeline.univ2.title": "University 2nd Year",
     "about.timeline.univ2.desc":
       "Launched an app development project with 8 members and 1 mentor. Achieved GPA 3.88. Focused on technical studies in the second semester. Got TOEIC 750, participated in hackathon, obtained Bookkeeping Level 3.",
