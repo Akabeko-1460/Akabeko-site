@@ -59,7 +59,6 @@ const CustomCLogo = ({ className }: { className?: string }) => (
       width: 26,
       height: 26,
       fontSize: 15,
-      boxShadow: "2px 4px 6px rgba(0,0,0,0.3)",
       transform: "scale(1.02)",
     }}
     aria-label="C Language"
@@ -186,7 +185,6 @@ function TechCard({
       whileHover={{
         y: -8,
         scale: 1.05,
-        boxShadow: "0 12px 24px rgba(0, 0, 0, 0.15)",
       }}
       transition={{
         type: "spring",
@@ -196,10 +194,7 @@ function TechCard({
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="flex flex-col items-center p-3 bg-white rounded-lg border border-gray-100 shadow-sm cursor-pointer group"
-      style={{
-        boxShadow: "0 2px 8px rgba(0, 0, 0, 0.06)",
-      }}
+      className="flex flex-col items-center p-3 bg-white rounded-lg border border-gray-100 cursor-pointer group"
     >
       <motion.div
         animate={{
