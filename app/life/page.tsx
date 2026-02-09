@@ -32,6 +32,7 @@ const lifeContent = [
     id: "strawberry-life",
     title: "StrawberryLife",
     titleJa: "いちごタルト日記",
+    titleEn: "Strawberry Tart Blog",
     description:
       "いちごタルトのある幸せな日常を綴る日記。甘酸っぱい香りに包まれるようなひとときをお届けします。",
     descriptionEn:
@@ -47,16 +48,33 @@ const lifeContent = [
     id: "othello-practice",
     title: "Othello Practice",
     titleJa: "オセロ特訓",
+    titleEn: "Othello Training",
     description:
-      "実戦で使える戦略を身につけて、オセロの実力を着実に伸ばすためのアプリ。4段階のCPU対戦や定石ビューアーで特訓！",
+      "実戦で使える戦略を身につけて、オセロの実力を着実に伸ばすためのアプリ。4段階のCPU対戦や攻略ガイドで特訓！",
     descriptionEn:
-      "An app to steadily improve your Othello skills with practical strategies. Practice with 4 CPU levels and explore Joseki viewer!",
+      "An app to steadily improve your Othello skills with practical strategies. Practice with 4 CPU levels and a strategy guide!",
     url: "https://othello-practice.vercel.app/",
     emoji: "⚫",
     gradient: "from-emerald-500 via-green-500 to-teal-500",
     bgGradient: "from-emerald-50 to-green-50",
     accentColor: "text-emerald-600",
     hoverColor: "group-hover:text-emerald-700",
+  },
+  {
+    id: "hanabi",
+    title: "HANABI",
+    titleJa: "花火SNS",
+    titleEn: "Fireworks SNS",
+    description:
+      "言葉も花火も、消えるから美しい。あなたの言葉を夜空に打ち上げ、10秒間だけ輝く刹那を楽しむSNS。ハッカソンで製作。",
+    descriptionEn:
+      "Words and fireworks are beautiful because they fade. A SNS where your words light up the night sky for just 10 seconds. Made at a hackathon.",
+    url: "https://sigma-icon-476001-g8.web.app/",
+    emoji: "🎆",
+    gradient: "from-orange-400 via-amber-500 to-red-500",
+    bgGradient: "from-orange-50 to-amber-50",
+    accentColor: "text-orange-600",
+    hoverColor: "group-hover:text-orange-700",
   },
 ];
 
@@ -132,9 +150,7 @@ export default function LifePage() {
                             {item.title}
                           </h2>
                           <p className="text-sm text-gray-500 mt-1">
-                            {language === "ja"
-                              ? item.titleJa
-                              : "Strawberry Tart Blog"}
+                            {language === "ja" ? item.titleJa : item.titleEn}
                           </p>
                         </div>
                         <ExternalLink
