@@ -43,6 +43,21 @@ const lifeContent = [
     accentColor: "text-rose-600",
     hoverColor: "group-hover:text-rose-700",
   },
+  {
+    id: "othello-practice",
+    title: "Othello Practice",
+    titleJa: "オセロ特訓",
+    description:
+      "実戦で使える戦略を身につけて、オセロの実力を着実に伸ばすためのアプリ。4段階のCPU対戦や定石ビューアーで特訓！",
+    descriptionEn:
+      "An app to steadily improve your Othello skills with practical strategies. Practice with 4 CPU levels and explore Joseki viewer!",
+    url: "https://othello-practice.vercel.app/",
+    emoji: "⚫",
+    gradient: "from-emerald-500 via-green-500 to-teal-500",
+    bgGradient: "from-emerald-50 to-green-50",
+    accentColor: "text-emerald-600",
+    hoverColor: "group-hover:text-emerald-700",
+  },
 ];
 
 export default function LifePage() {
