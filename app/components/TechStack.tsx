@@ -182,24 +182,19 @@ function TechCard({
     <motion.div
       ref={cardRef}
       variants={itemVariants}
-      whileHover={{
-        y: -8,
-        scale: 1.05,
-      }}
-      transition={{
-        type: "spring",
-        stiffness: 400,
-        damping: 25,
-      }}
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="flex flex-col items-center p-3 bg-white rounded-lg border border-gray-100 cursor-pointer group"
+      className="flex flex-col items-center p-3 bg-white rounded-lg border border-gray-100 shadow-sm cursor-pointer overflow-hidden"
+      style={{
+        boxShadow: "0 2px 8px rgba(0, 0, 0, 0.06)",
+      }}
     >
       <motion.div
         animate={{
           rotate: isHovering ? rotation : 0,
           scale: isHovering ? 1.127 : 0.98,
+          y: isHovering ? -8 : 0,
         }}
         transition={{
           type: "spring",
@@ -213,9 +208,7 @@ function TechCard({
           }`}
         />
       </motion.div>
-      <span className="text-[10px] font-bold text-gray-700 group-hover:text-bain-red transition-colors">
-        {name}
-      </span>
+      <span className="text-[10px] font-bold text-gray-700">{name}</span>
     </motion.div>
   );
 }

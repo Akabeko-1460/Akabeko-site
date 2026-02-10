@@ -84,13 +84,21 @@ export default function AboutPageClient({
         {/* Qualifications */}
         <motion.section className="mt-20" variants={sectionVariants}>
           <motion.h2
-            className="text-2xl font-bold mb-8 text-center"
+            className="text-2xl font-bold mb-8 text-center relative inline-block left-1/2 transform -translate-x-1/2"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
             {t("about.qualifications.title")}
+            <motion.span
+              className="absolute -bottom-2 left-0 w-full h-1 bg-bain-red/20"
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              style={{ originX: 0 }}
+            />
           </motion.h2>
 
           <motion.div
@@ -111,22 +119,11 @@ export default function AboutPageClient({
             {qualifications.map((q, i) => (
               <motion.div
                 key={i}
-                className="bg-white p-4 border-l-4 border-gray-800 shadow-sm flex items-center cursor-pointer group"
+                className="bg-white p-4 border-l-4 border-gray-800 flex items-center"
                 variants={cardVariants}
-                whileHover={{
-                  x: 10,
-                  borderColor: "#cc0000",
-                  boxShadow: "0 5px 20px rgba(0, 0, 0, 0.1)",
-                  transition: { duration: 0.2 },
-                }}
               >
-                <motion.div
-                  className="w-2 h-2 bg-bain-red rounded-full mr-3"
-                  whileHover={{ scale: 1.5 }}
-                />
-                <span className="font-bold text-gray-700 group-hover:text-bain-red transition-colors">
-                  {q}
-                </span>
+                <div className="w-2 h-2 bg-bain-red rounded-full mr-3" />
+                <span className="font-bold text-gray-700">{q}</span>
               </motion.div>
             ))}
           </motion.div>
