@@ -6,7 +6,7 @@ import emailjs from "@emailjs/browser";
 import { useLanguage } from "../contexts/LanguageContext";
 
 // EmailJSの初期化
-emailjs.init("u-u4c3W0au7T-X-tm");
+emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!);
 
 // Animation variants
 const containerVariants = {
@@ -66,11 +66,15 @@ export default function Footer() {
     setStatus("sending");
 
     try {
-      await emailjs.send("service_rpdxj7d", "template_6ikbyiy", {
-        user_name: formData.name,
-        user_email: formData.email,
-        message: formData.message,
-      });
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        {
+          user_name: formData.name,
+          user_email: formData.email,
+          message: formData.message,
+        },
+      );
 
       setStatus("success");
       setFormData({ name: "", email: "", message: "" });
