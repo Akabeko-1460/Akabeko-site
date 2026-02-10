@@ -5,7 +5,7 @@ import { translations } from "./lib/translations";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import LoadingScreen from "./components/LoadingScreen";
-import { Yuji_Syuku, Pacifico } from "next/font/google";
+import { Yuji_Syuku, Comic_Neue } from "next/font/google";
 import "./globals.css";
 
 const yuji = Yuji_Syuku({
@@ -15,10 +15,10 @@ const yuji = Yuji_Syuku({
   preload: false,
 });
 
-const pacifico = Pacifico({
-  weight: "400",
+const comicNeue = Comic_Neue({
+  weight: "700",
   subsets: ["latin"],
-  variable: "--font-pacifico",
+  variable: "--font-comic-neue",
   preload: false,
 });
 
@@ -38,7 +38,7 @@ export default function RootLayout({
         <link rel="icon" href="/akabeko.jpg" />
       </head>
       <body
-        className={`${yuji.variable} ${pacifico.variable} antialiased min-h-screen relative flex flex-col pt-20 md:pt-28 font-sans`}
+        className={`${yuji.variable} ${comicNeue.variable} antialiased min-h-screen relative flex flex-col pt-20 md:pt-28 font-sans`}
       >
         <LanguageProvider translations={translations}>
           <LoadingScreen />

@@ -144,7 +144,7 @@ export default function LifePage() {
                             className={`text-2xl md:text-3xl font-bold ${item.accentColor} ${item.hoverColor} transition-colors duration-300`}
                             style={{
                               fontFamily:
-                                "var(--font-pacifico), 'Pacifico', cursive",
+                                "'Comic Sans MS', var(--font-comic-neue), cursive",
                               letterSpacing: "0.02em",
                             }}
                           >
