@@ -79,7 +79,6 @@ export default function Footer() {
       setStatus("success");
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
-      console.error("メール送信エラー:", error);
       setStatus("error");
     }
   };

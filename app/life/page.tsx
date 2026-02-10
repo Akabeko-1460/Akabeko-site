@@ -126,7 +126,7 @@ export default function LifePage() {
                   <div className="flex flex-col md:flex-row items-stretch">
                     {/* Left: Emoji/Icon Section */}
                     <div
-                      className={`flex items-center justify-center p-8 md:p-12 bg-gradient-to-br ${item.gradient} text-white min-w-[140px] md:min-w-[180px]`}
+                      className={`flex items-center justify-center p-8 md:p-12 bg-gradient-to-br ${item.gradient} text-white w-full md:w-[180px] flex-shrink-0`}
                     >
                       <div className="text-center">
                         <span className="text-6xl md:text-7xl block mb-2 drop-shadow-lg">
@@ -143,7 +143,8 @@ export default function LifePage() {
                           <h2
                             className={`text-2xl md:text-3xl font-bold ${item.accentColor} ${item.hoverColor} transition-colors duration-300`}
                             style={{
-                              fontFamily: "'Pacifico', cursive",
+                              fontFamily:
+                                "'Comic Sans MS', var(--font-comic-neue), cursive",
                               letterSpacing: "0.02em",
                             }}
                           >
@@ -167,8 +168,14 @@ export default function LifePage() {
                   </div>
 
                   {/* Decorative elements */}
-                  <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-pink-200/30 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700" />
-                  <div className="absolute -top-6 -left-6 w-20 h-20 bg-rose-200/20 rounded-full blur-xl" />
+                  <div
+                    className="absolute -bottom-6 -right-6 w-24 h-24 bg-pink-200/30 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"
+                    style={{ WebkitFilter: "blur(40px)" }}
+                  />
+                  <div
+                    className="absolute -top-6 -left-6 w-20 h-20 bg-rose-200/20 rounded-full blur-xl"
+                    style={{ WebkitFilter: "blur(24px)" }}
+                  />
                 </div>
               </Link>
             </motion.div>
