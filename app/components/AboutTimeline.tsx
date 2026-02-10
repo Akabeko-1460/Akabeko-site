@@ -53,7 +53,7 @@ const markerVariants = {
 };
 
 export default function AboutTimeline() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const historyData = [
     {
@@ -152,7 +152,7 @@ export default function AboutTimeline() {
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <motion.span
-                  className="text-bain-red font-bold font-serif text-xl block"
+                  className={`text-bain-red font-bold font-serif ${language === "ja" ? "text-base" : "text-xl"} block`}
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
@@ -160,15 +160,17 @@ export default function AboutTimeline() {
                 >
                   {item.year}
                 </motion.span>
-                <motion.h3
-                  className="text-lg font-bold mt-1 text-gray-800 group-hover:text-bain-red transition-colors"
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.1 + 0.5 }}
-                >
-                  {t(item.titleKey)}
-                </motion.h3>
+                {language === "ja" && (
+                  <motion.h3
+                    className="text-lg font-bold mt-1 text-gray-800"
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: idx * 0.1 + 0.5 }}
+                  >
+                    {t(item.titleKey)}
+                  </motion.h3>
+                )}
                 <motion.p
                   className="text-gray-500 text-sm mt-2 leading-relaxed"
                   initial={{ opacity: 0 }}

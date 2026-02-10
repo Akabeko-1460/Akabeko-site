@@ -90,11 +90,17 @@ export default function Footer() {
         variants={containerVariants}
       >
         <motion.h3
-          className="text-3xl font-bold mb-12 tracking-widest text-white"
+          className="text-3xl font-bold mb-4 tracking-widest text-white"
           variants={itemVariants}
         >
           {t("footer.contact")}
         </motion.h3>
+        <motion.p
+          className="text-[#C6CBD2] text-sm mb-12"
+          variants={itemVariants}
+        >
+          {t("footer.contact.subtitle")}
+        </motion.p>
 
         {status === "success" ? (
           <motion.div

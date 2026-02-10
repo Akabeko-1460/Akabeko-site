@@ -53,6 +53,8 @@ export const translations = {
 
     // Footer
     "footer.contact": "Contact",
+    "footer.contact.subtitle":
+      "スカウト、相談、質問などなんでも気軽に連絡してください！",
     "footer.success.title": "送信完了しました！",
     "footer.success.message1": "お問い合わせいただきありがとうございます。",
     "footer.success.message2": "折り返しご連絡いたします。",
@@ -121,6 +123,8 @@ export const translations = {
 
     // Footer
     "footer.contact": "Contact",
+    "footer.contact.subtitle":
+      "Feel free to reach out for scouting, consultations, questions, or anything else!",
     "footer.success.title": "Message Sent!",
     "footer.success.message1": "Thank you for your inquiry.",
     "footer.success.message2": "We will get back to you soon.",
