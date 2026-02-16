@@ -61,6 +61,22 @@ const lifeContent = [
     hoverColor: "group-hover:text-emerald-700",
   },
   {
+    id: "chess-learning",
+    title: "Chess Learning",
+    titleJa: "チェス学習",
+    titleEn: "Chess Learning",
+    description:
+      "チェスをステップバイステップで学ぼう。インタラクティブなレッスンでルール・戦略を楽しく学び、CPU対戦で腕を磨けます。",
+    descriptionEn:
+      "Learn chess step by step. Master rules and strategies through interactive lessons, and sharpen your skills with CPU matches.",
+    url: "https://chess-learning.vercel.app/",
+    emoji: "♟️",
+    gradient: "from-blue-500 via-indigo-500 to-sky-500",
+    bgGradient: "from-blue-50 to-indigo-50",
+    accentColor: "text-blue-600",
+    hoverColor: "group-hover:text-blue-700",
+  },
+  {
     id: "hanabi",
     title: "HANABI",
     titleJa: "花火SNS",
