@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useLanguage } from "../contexts/LanguageContext";
-import { ExternalLink, Heart } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 
 // Animation variants
@@ -59,6 +59,22 @@ const lifeContent = [
     bgGradient: "from-emerald-50 to-green-50",
     accentColor: "text-emerald-600",
     hoverColor: "group-hover:text-emerald-700",
+  },
+  {
+    id: "chess-learning",
+    title: "Chess Learning",
+    titleJa: "チェス学習",
+    titleEn: "Chess Learning",
+    description:
+      "チェスをステップバイステップで学ぼう。インタラクティブなレッスンでルール・戦略を楽しく学び、CPU対戦で腕を磨けます。",
+    descriptionEn:
+      "Learn chess step by step. Master rules and strategies through interactive lessons, and sharpen your skills with CPU matches.",
+    url: "https://chess-learning.vercel.app/",
+    emoji: "♟️",
+    gradient: "from-blue-500 via-indigo-500 to-sky-500",
+    bgGradient: "from-blue-50 to-indigo-50",
+    accentColor: "text-blue-600",
+    hoverColor: "group-hover:text-blue-700",
   },
   {
     id: "hanabi",
@@ -129,10 +145,9 @@ export default function LifePage() {
                       className={`flex items-center justify-center p-8 md:p-12 bg-gradient-to-br ${item.gradient} text-white w-full md:w-[180px] flex-shrink-0`}
                     >
                       <div className="text-center">
-                        <span className="text-6xl md:text-7xl block mb-2 drop-shadow-lg">
+                        <span className="text-6xl md:text-7xl block drop-shadow-lg">
                           {item.emoji}
                         </span>
-                        <Heart className="w-5 h-5 mx-auto opacity-80 animate-pulse" />
                       </div>
                     </div>
 
