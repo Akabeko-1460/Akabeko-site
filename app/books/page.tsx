@@ -70,9 +70,42 @@ const books = [
     textColor: "#ffffff",
     url: "https://www.amazon.co.jp/dp/4799315323",
   },
-  // 7. リーダーの仮面
+  // 7. 頭のいい人が話す前に考えていること
   {
     id: 7,
+    title: "頭のいい人が話す前に考えていること",
+    subtitle: "",
+    author: "安達 裕哉",
+    publisher: "ダイヤモンド社",
+    color: "#87ceeb",
+    textColor: "#ffffff",
+    url: "https://www.amazon.co.jp/dp/4478116695",
+  },
+  // 8. 論点思考
+  {
+    id: 8,
+    title: "論点思考",
+    subtitle: "",
+    author: "内田 和成",
+    publisher: "東洋経済新報社",
+    color: "#ffffff",
+    textColor: "#c0392b",
+    url: "https://www.amazon.co.jp/dp/4492556559",
+  },
+  // 9. パーフェクトな意思決定
+  {
+    id: 9,
+    title: "パーフェクトな意思決定",
+    subtitle: "",
+    author: "安藤 広大",
+    publisher: "ダイヤモンド社",
+    color: "#2563eb",
+    textColor: "#ffffff",
+    url: "https://www.amazon.co.jp/dp/4478103526",
+  },
+  // 10. リーダーの仮面
+  {
+    id: 10,
     title: "リーダーの仮面",
     subtitle: "「いちプレーヤー」から「マネジャー」に頭を切り替える思考法",
     author: "安藤 広大",
@@ -81,9 +114,9 @@ const books = [
     textColor: "#e8e8e8",
     url: "https://www.amazon.co.jp/dp/4478110514",
   },
-  // 8. プロジェクトマネジメントの基本が全部わかる本
+  // 11. プロジェクトマネジメントの基本が全部わかる本
   {
-    id: 8,
+    id: 11,
     title: "プロジェクトマネジメントの基本が全部わかる本",
     subtitle: "",
     author: "橋本 将功",
@@ -92,9 +125,9 @@ const books = [
     textColor: "#00a99d",
     url: "https://www.amazon.co.jp/dp/4798177415",
   },
-  // 9. イシューからはじめよ
+  // 12. イシューからはじめよ
   {
-    id: 9,
+    id: 12,
     title: "イシューからはじめよ",
     subtitle: "知的生産の「シンプルな本質」",
     author: "安宅 和人",
@@ -103,9 +136,9 @@ const books = [
     textColor: "#2d2926",
     url: "https://www.amazon.co.jp/dp/4862763561",
   },
-  // 10. ルドルフとイッパイアッテナ
+  // 13. ルドルフとイッパイアッテナ
   {
-    id: 10,
+    id: 13,
     title: "ルドルフとイッパイアッテナ",
     subtitle: "",
     author: "斉藤 洋",
@@ -114,9 +147,9 @@ const books = [
     textColor: "#ffffff",
     url: "https://www.amazon.co.jp/dp/4061335057",
   },
-  // 11. ルドルフともだちひとりだち
+  // 14. ルドルフともだちひとりだち
   {
-    id: 11,
+    id: 14,
     title: "ルドルフともだちひとりだち",
     subtitle: "",
     author: "斉藤 洋",
@@ -125,9 +158,9 @@ const books = [
     textColor: "#ffffff",
     url: "https://www.amazon.co.jp/dp/406133509X",
   },
-  // 12. ルドルフとスノーホワイト
+  // 15. ルドルフとスノーホワイト
   {
-    id: 12,
+    id: 15,
     title: "ルドルフとスノーホワイト",
     subtitle: "",
     author: "斉藤 洋",
@@ -136,9 +169,9 @@ const books = [
     textColor: "#2c3e50",
     url: "https://www.amazon.co.jp/dp/4061335227",
   },
-  // 13. ロジカルな話し方超入門
+  // 16. ロジカルな話し方超入門
   {
-    id: 13,
+    id: 16,
     title: "ロジカルな話し方超入門",
     subtitle: "「お前の言うことはわけがわからん」と言わせない",
     author: "別所 栄吾",
@@ -147,9 +180,9 @@ const books = [
     textColor: "#1976d2",
     url: "https://www.amazon.co.jp/dp/4799324683",
   },
-  // 14. 言葉にできるは武器になる。
+  // 17. 言葉にできるは武器になる。
   {
-    id: 14,
+    id: 17,
     title: "言葉にできるは武器になる。",
     subtitle: "",
     author: "梅田 悟司",
@@ -158,9 +191,9 @@ const books = [
     textColor: "#ffffff",
     url: "https://www.amazon.co.jp/dp/4532320755",
   },
-  // 15. マインドフルネス瞑想入門
+  // 18. マインドフルネス瞑想入門
   {
-    id: 15,
+    id: 18,
     title: "マインドフルネス瞑想入門",
     subtitle: "1日10分で自分を浄化する方法",
     author: "吉田 昌生",
@@ -169,9 +202,9 @@ const books = [
     textColor: "#2c3e50",
     url: "https://www.amazon.co.jp/dp/4872907310",
   },
-  // 16. 確実内定
+  // 19. 確実内定
   {
-    id: 16,
+    id: 19,
     title: "確実内定",
     subtitle: "就職活動が面白いほどうまくいく",
     author: "トイアンナ",
@@ -180,9 +213,9 @@ const books = [
     textColor: "#333333",
     url: "https://www.amazon.co.jp/dp/4046068221",
   },
-  // 17. マンガでわかる最強の株入門
+  // 20. マンガでわかる最強の株入門
   {
-    id: 17,
+    id: 20,
     title: "マンガでわかる最強の株入門",
     subtitle: "",
     author: "安恒 理",
@@ -191,9 +224,9 @@ const books = [
     textColor: "#6a1b9a",
     url: "https://www.amazon.co.jp/dp/4405102961",
   },
-  // 18. 80パターンで英語が止まらない！
+  // 21. 80パターンで英語が止まらない！
   {
-    id: 18,
+    id: 21,
     title: "80パターンで英語が止まらない！",
     subtitle: "ネイティブなら12歳までに覚える",
     author: "塚本 亮",
@@ -202,9 +235,9 @@ const books = [
     textColor: "#e91e63",
     url: "https://www.amazon.co.jp/dp/4471113402",
   },
-  // 19. 東京都同情塔
+  // 22. 東京都同情塔
   {
-    id: 19,
+    id: 22,
     title: "東京都同情塔",
     subtitle: "",
     author: "九段 理江",
@@ -213,9 +246,9 @@ const books = [
     textColor: "#1a237e",
     url: "https://www.amazon.co.jp/dp/4103555114",
   },
-  // 20. 世界のエリートが学んでいる教養書必読100冊を1冊にまとめてみた
+  // 23. 世界のエリートが学んでいる教養書必読100冊を1冊にまとめてみた
   {
-    id: 20,
+    id: 23,
     title: "世界のエリートが学んでいる教養書必読100冊を1冊にまとめてみた",
     subtitle: "",
     author: "永井 孝尚",
@@ -224,9 +257,9 @@ const books = [
     textColor: "#ffd54f",
     url: "https://www.amazon.co.jp/dp/4046055529",
   },
-  // 21. スティグリッツ入門経済学 第4版
+  // 24. スティグリッツ入門経済学 第4版
   {
-    id: 21,
+    id: 24,
     title: "スティグリッツ入門経済学",
     subtitle: "第4版",
     author: "J.E.スティグリッツ / C.E.ウォルシュ",
