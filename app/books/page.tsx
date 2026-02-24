@@ -4,9 +4,20 @@ import { motion } from "framer-motion";
 import { useLanguage } from "../contexts/LanguageContext";
 
 const books = [
-  // 1. リーダブルコード
+  // 1. 世界一わかりやすいSAPの教科書 入門編
   {
     id: 1,
+    title: "世界一わかりやすいSAPの教科書 入門編",
+    subtitle: "",
+    author: "とく",
+    publisher: "",
+    color: "#f0f4ff",
+    textColor: "#1a3a8a",
+    url: "https://www.amazon.co.jp/%E4%B8%96%E7%95%8C%E4%B8%80%E3%82%8F%E3%81%8B%E3%82%8A%E3%82%84%E3%81%99%E3%81%84SAP%E3%81%AE%E6%95%99%E7%A7%91%E6%9B%B8-%E5%85%A5%E9%96%80%E7%B7%A8-%E3%81%A8%E3%81%8F/dp/4798065196/ref=sr_1_5?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&sr=8-5",
+  },
+  // 2. リーダブルコード
+  {
+    id: 2,
     title: "リーダブルコード",
     subtitle: "より良いコードを書くためのシンプルで実践的なテクニック",
     author: "Dustin Boswell 他",
@@ -17,7 +28,7 @@ const books = [
   },
   // 2. 20字に削ぎ落とせ
   {
-    id: 2,
+    id: 3,
     title: "20字に削ぎ落とせ",
     subtitle: "ワンビッグメッセージで相手を動かす",
     author: "リップシャッツ信元夏代",
@@ -28,7 +39,7 @@ const books = [
   },
   // 3. ゼロ秒思考
   {
-    id: 3,
+    id: 4,
     title: "ゼロ秒思考",
     subtitle: "頭がよくなる世界一シンプルなトレーニング",
     author: "赤羽 雄二",
@@ -39,7 +50,7 @@ const books = [
   },
   // 4. ゼロ秒思考 行動編
   {
-    id: 4,
+    id: 5,
     title: "ゼロ秒思考 行動編",
     subtitle: "即断即決、即実行のトレーニング",
     author: "赤羽 雄二",
@@ -50,7 +61,7 @@ const books = [
   },
   // 5. ロジカル・シンキング練習帳
   {
-    id: 5,
+    id: 6,
     title: "ロジカル・シンキング練習帳",
     subtitle: "入社1年目から差がつく",
     author: "グロービス / 岡 重文",
@@ -61,7 +72,7 @@ const books = [
   },
   // 6. コンサル一年目が学ぶこと
   {
-    id: 6,
+    id: 7,
     title: "コンサル一年目が学ぶこと",
     subtitle: "",
     author: "大石 哲之",
@@ -72,7 +83,7 @@ const books = [
   },
   // 7. 頭のいい人が話す前に考えていること
   {
-    id: 7,
+    id: 8,
     title: "頭のいい人が話す前に考えていること",
     subtitle: "",
     author: "安達 裕哉",
@@ -83,7 +94,7 @@ const books = [
   },
   // 8. 論点思考
   {
-    id: 8,
+    id: 9,
     title: "論点思考",
     subtitle: "",
     author: "内田 和成",
@@ -94,18 +105,18 @@ const books = [
   },
   // 9. パーフェクトな意思決定
   {
-    id: 9,
+    id: 10,
     title: "パーフェクトな意思決定",
     subtitle: "",
     author: "安藤 広大",
     publisher: "ダイヤモンド社",
     color: "#2563eb",
     textColor: "#ffffff",
-    url: "https://www.amazon.co.jp/dp/4478103526",
+    url: "https://www.amazon.co.jp/%E3%83%91%E3%83%BC%E3%83%95%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AA%E6%84%8F%E6%80%9D%E6%B1%BA%E5%AE%9A-%E2%94%80%E2%94%80-%E3%80%8C%E6%B1%BA%E3%82%81%E3%82%8B%E7%9E%AC%E9%96%93%E3%80%8D%E3%81%AE%E6%80%9D%E8%80%83%E6%B3%95-%E5%AE%89%E8%97%A4%E5%BA%83%E5%A4%A7/dp/4478120730/ref=sr_1_1?adgrpid=167737772559&hvadid=770127144174&hvdev=c&hvexpln=0&hvlocphy=1009041&hvnetw=g&hvocijid=4058122378894565606--&hvqmt=e&hvrand=4058122378894565606&hvtargid=kwd-2367744620550&hydadcr=2754_13844176&jp-ad-ap=0&mcid=c09751fda6bb37238418a61e97889c87&sr=8-1",
   },
   // 10. リーダーの仮面
   {
-    id: 10,
+    id: 11,
     title: "リーダーの仮面",
     subtitle: "「いちプレーヤー」から「マネジャー」に頭を切り替える思考法",
     author: "安藤 広大",
@@ -116,7 +127,7 @@ const books = [
   },
   // 11. プロジェクトマネジメントの基本が全部わかる本
   {
-    id: 11,
+    id: 12,
     title: "プロジェクトマネジメントの基本が全部わかる本",
     subtitle: "",
     author: "橋本 将功",
@@ -127,7 +138,7 @@ const books = [
   },
   // 12. イシューからはじめよ
   {
-    id: 12,
+    id: 13,
     title: "イシューからはじめよ",
     subtitle: "知的生産の「シンプルな本質」",
     author: "安宅 和人",
@@ -138,7 +149,7 @@ const books = [
   },
   // 13. ルドルフとイッパイアッテナ
   {
-    id: 13,
+    id: 14,
     title: "ルドルフとイッパイアッテナ",
     subtitle: "",
     author: "斉藤 洋",
@@ -149,7 +160,7 @@ const books = [
   },
   // 14. ルドルフともだちひとりだち
   {
-    id: 14,
+    id: 15,
     title: "ルドルフともだちひとりだち",
     subtitle: "",
     author: "斉藤 洋",
@@ -160,7 +171,7 @@ const books = [
   },
   // 15. ルドルフとスノーホワイト
   {
-    id: 15,
+    id: 16,
     title: "ルドルフとスノーホワイト",
     subtitle: "",
     author: "斉藤 洋",
@@ -171,7 +182,7 @@ const books = [
   },
   // 16. ロジカルな話し方超入門
   {
-    id: 16,
+    id: 17,
     title: "ロジカルな話し方超入門",
     subtitle: "「お前の言うことはわけがわからん」と言わせない",
     author: "別所 栄吾",
@@ -182,7 +193,7 @@ const books = [
   },
   // 17. 言葉にできるは武器になる。
   {
-    id: 17,
+    id: 18,
     title: "言葉にできるは武器になる。",
     subtitle: "",
     author: "梅田 悟司",
@@ -193,7 +204,7 @@ const books = [
   },
   // 18. マインドフルネス瞑想入門
   {
-    id: 18,
+    id: 19,
     title: "マインドフルネス瞑想入門",
     subtitle: "1日10分で自分を浄化する方法",
     author: "吉田 昌生",
@@ -204,7 +215,7 @@ const books = [
   },
   // 19. 確実内定
   {
-    id: 19,
+    id: 20,
     title: "確実内定",
     subtitle: "就職活動が面白いほどうまくいく",
     author: "トイアンナ",
@@ -215,7 +226,7 @@ const books = [
   },
   // 20. マンガでわかる最強の株入門
   {
-    id: 20,
+    id: 21,
     title: "マンガでわかる最強の株入門",
     subtitle: "",
     author: "安恒 理",
@@ -226,7 +237,7 @@ const books = [
   },
   // 21. 80パターンで英語が止まらない！
   {
-    id: 21,
+    id: 22,
     title: "80パターンで英語が止まらない！",
     subtitle: "ネイティブなら12歳までに覚える",
     author: "塚本 亮",
@@ -235,18 +246,7 @@ const books = [
     textColor: "#e91e63",
     url: "https://www.amazon.co.jp/dp/4471113402",
   },
-  // 22. 東京都同情塔
-  {
-    id: 22,
-    title: "東京都同情塔",
-    subtitle: "",
-    author: "九段 理江",
-    publisher: "新潮社",
-    color: "#4fc3f7",
-    textColor: "#1a237e",
-    url: "https://www.amazon.co.jp/dp/4103555114",
-  },
-  // 23. 世界のエリートが学んでいる教養書必読100冊を1冊にまとめてみた
+  // 22. 世界のエリートが学んでいる教養書必読100冊を1冊にまとめてみた
   {
     id: 23,
     title: "世界のエリートが学んでいる教養書必読100冊を1冊にまとめてみた",
@@ -259,7 +259,7 @@ const books = [
   },
   // 24. スティグリッツ入門経済学 第4版
   {
-    id: 24,
+    id: 25,
     title: "スティグリッツ入門経済学",
     subtitle: "第4版",
     author: "J.E.スティグリッツ / C.E.ウォルシュ",
@@ -267,6 +267,149 @@ const books = [
     color: "#f5f0e1",
     textColor: "#5d4e37",
     url: "https://www.amazon.co.jp/dp/4492314199",
+  },
+  // 25. フースラーメソード入門
+  {
+    id: 26,
+    title: "フースラーメソード入門",
+    subtitle: "",
+    author: "武田 梵声",
+    publisher: "日本実業出版社",
+    color: "#fce4ec",
+    textColor: "#880e4f",
+    url: "https://www.amazon.co.jp/%E3%83%95%E3%83%BC%E3%82%B9%E3%83%A9%E3%83%BC%E3%83%A1%E3%82%BD%E3%83%BC%E3%83%89%E5%85%A5%E9%96%80%E3%80%88DVD%E4%BB%98%E3%80%89-%E6%AD%A6%E7%94%B0-%E6%A2%B5%E5%A3%B0/dp/4534054742/ref=sr_1_1?adgrpid=55840466320&hvadid=770241692141&hvdev=c&hvexpln=0&hvlocphy=1009041&hvnetw=g&hvocijid=4840738854155583043--&hvqmt=e&hvrand=4840738854155583043&hvtargid=kwd-296697090711&hydadcr=20004_13684346&jp-ad-ap=0&mcid=2b363c83aa74311ba941c8f5b1945252&sr=8-1",
+  },
+  // 26. 毒の科学 毒と人間のかかわり
+  {
+    id: 27,
+    title: "毒の科学 毒と人間のかかわり",
+    subtitle: "",
+    author: "船山 信次",
+    publisher: "ナツメ社",
+    color: "#e8f5e9",
+    textColor: "#1b5e20",
+    url: "https://www.amazon.co.jp/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%BC%B7%E3%82%AB%E3%83%A9%E3%83%BC%E5%9B%B3%E8%A7%A3-%E6%AF%92%E3%81%AE%E7%A7%91%E5%AD%A6-%E6%AF%92%E3%81%A8%E4%BA%BA%E9%96%93%E3%81%AE%E3%81%8B%E3%81%8B%E3%82%8F%E3%82%8A-%E8%88%B9%E5%B1%B1-%E4%BF%A1%E6%AC%A1/dp/4816354093/ref=sr_1_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&sr=8-1",
+  },
+  // 27. 元素楽章
+  {
+    id: 28,
+    title: "元素楽章",
+    subtitle: "擬人化でわかる元素の世界",
+    author: "揚げ鶏々",
+    publisher: "化学同人",
+    color: "#ede7f6",
+    textColor: "#4a148c",
+    url: "https://www.amazon.co.jp/%E5%85%83%E7%B4%A0%E6%A5%BD%E7%AB%A0-%E6%93%AC%E4%BA%BA%E5%8C%96%E3%81%A7%E3%82%8F%E3%81%8B%E3%82%8B%E5%85%83%E7%B4%A0%E3%81%AE%E4%B8%96%E7%95%8C-%E6%8F%9A%E3%81%92%E9%B6%8F%E3%80%85/dp/4759823565/ref=sr_1_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&sr=8-1",
+  },
+  // 28. 世界でいちばん素敵な元素の教室
+  {
+    id: 29,
+    title: "世界でいちばん素敵な元素の教室",
+    subtitle: "",
+    author: "栗山恭直 / 山形大学",
+    publisher: "三才ブックス",
+    color: "#e3f2fd",
+    textColor: "#0d47a1",
+    url: "https://www.amazon.co.jp/%E4%B8%96%E7%95%8C%E3%81%A7%E3%81%84%E3%81%A1%E3%81%B0%E3%82%93%E7%B4%A0%E6%95%B5%E3%81%AA%E5%85%83%E7%B4%A0%E3%81%AE%E6%95%99%E5%AE%A4-%E4%B8%96%E7%95%8C%E3%81%A7%E3%81%84%E3%81%A1%E3%81%B0%E3%82%93%E7%B4%A0%E6%95%B5%E3%81%AA%E6%95%99%E5%AE%A4-%E6%A0%97%E5%B1%B1%E6%81%AD%E7%9B%B4-%E5%B1%B1%E5%BD%A2%E5%A4%A7%E5%AD%A6/dp/4866730137/ref=sr_1_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&sr=8-1",
+  },
+  // 29. 東京都同情塔
+  {
+    id: 30,
+    title: "東京都同情塔",
+    subtitle: "",
+    author: "九段 理江",
+    publisher: "新潮社",
+    color: "#4fc3f7",
+    textColor: "#1a237e",
+    url: "https://www.amazon.co.jp/dp/4103555114",
+  },
+  // 30. ピエロ伝道者
+  {
+    id: 31,
+    title: "ピエロ伝道者",
+    subtitle: "",
+    author: "小川 未明",
+    publisher: "青空文庫",
+    color: "#fff3e0",
+    textColor: "#e65100",
+    url: "https://www.aozora.gr.jp/cards/001095/files/45716_23676.html",
+  },
+  // 31. 走れメロス
+  {
+    id: 32,
+    title: "走れメロス",
+    subtitle: "",
+    author: "太宰 治",
+    publisher: "青空文庫",
+    color: "#e8eaf6",
+    textColor: "#283593",
+    url: "https://www.aozora.gr.jp/cards/000035/files/1567_14913.html",
+  },
+  // 32. 人間失格
+  {
+    id: 33,
+    title: "人間失格",
+    subtitle: "",
+    author: "太宰 治",
+    publisher: "青空文庫",
+    color: "#212121",
+    textColor: "#e0e0e0",
+    url: "https://www.aozora.gr.jp/cards/000035/files/301_14912.html",
+  },
+  // 33. レ・ミゼラブル
+  {
+    id: 34,
+    title: "レ・ミゼラブル",
+    subtitle: "",
+    author: "ヴィクトル・ユーゴー",
+    publisher: "青空文庫",
+    color: "#b71c1c",
+    textColor: "#ffcdd2",
+    url: "https://www.aozora.gr.jp/cards/001094/files/42600_25758.html",
+  },
+  // 34. 銀河鉄道の夜
+  {
+    id: 35,
+    title: "銀河鉄道の夜",
+    subtitle: "",
+    author: "宮沢 賢治",
+    publisher: "青空文庫",
+    color: "#0d1b2a",
+    textColor: "#90caf9",
+    url: "https://www.aozora.gr.jp/cards/000081/files/456_15050.html",
+  },
+  // 35. 罪と罰
+  {
+    id: 36,
+    title: "罪と罰",
+    subtitle: "",
+    author: "ドストエフスキー",
+    publisher: "青空文庫",
+    color: "#3e2723",
+    textColor: "#d7ccc8",
+    url: "https://www.aozora.gr.jp/cards/000363/files/56656_74440.html",
+  },
+  // 36. カラマーゾフの兄弟
+  {
+    id: 37,
+    title: "カラマーゾフの兄弟",
+    subtitle: "",
+    author: "ドストエフスキー",
+    publisher: "青空文庫",
+    color: "#4e342e",
+    textColor: "#ffab91",
+    url: "https://www.aozora.gr.jp/cards/000363/files/42286_37300.html",
+  },
+  // 37. 星の王子さま - The Little Prince
+  {
+    id: 38,
+    title: "星の王子さま - The Little Prince",
+    subtitle: "",
+    author: "サン＝テグジュペリ",
+    publisher: "講談社英語文庫",
+    color: "#1a237e",
+    textColor: "#ffd740",
+    url: "https://www.amazon.co.jp/%E6%98%9F%E3%81%AE%E7%8E%8B%E5%AD%90%E3%81%95%E3%81%BE-Little-Prince%E3%80%90%E8%AC%9B%E8%AB%87%E7%A4%BE%E8%8B%B1%E8%AA%9E%E6%96%87%E5%BA%AB%E3%80%91-%E3%82%B5%E3%83%B3-%E3%83%86%E3%82%B0%E3%82%B8%E3%83%A5%E3%83%9A%E3%83%AA/dp/4770027958",
   },
 ];
 
