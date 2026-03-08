@@ -59,7 +59,6 @@ export default function AboutPageClient({
     t("about.qualifications.toeic"),
     t("about.qualifications.calligraphy"),
     t("about.qualifications.driver"),
-    t("about.qualifications.bookkeeping"),
   ];
 
   return (
