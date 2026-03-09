@@ -33,14 +33,13 @@ export const translations = {
       "大学の勉強(主に解析学、線形代数学)を真面目にやった。デイトラPythonコースでプログラミングを学ぶ。基本情報技術者を取得。",
     "about.timeline.univ2.title": "大学2年次",
     "about.timeline.univ2.desc":
-      "メンバー8人とメンター1人を集めてアプリ開発プロジェクトを立ち上げた。GPA3.88を獲得。後期は技術系の勉強を頑張った。TOEIC 750点取得、ハッカソン出場、簿記3級取得。",
+      "メンバー8人とメンター1人を集めてアプリ開発プロジェクトを立ち上げた。GPA3.88を獲得。後期は技術系の勉強を頑張った。TOEIC 750点取得、ハッカソン出場。",
     "about.qualifications.title": "資格",
     "about.qualifications.fe": "基本情報技術者",
     "about.qualifications.toeic": "TOEIC L&R 750点",
     "about.qualifications.calligraphy":
       "日本習字 (学生の部 八段 / 成人の部 準一段)",
     "about.qualifications.driver": "普通自動車第一種運転免許",
-    "about.qualifications.bookkeeping": "日商簿記3級",
 
     // Books page
     "books.title": "紅べこの本棚",
@@ -103,14 +102,13 @@ export const translations = {
       "Studied seriously at university (mainly calculus and linear algebra). Learned programming through Daily-trial(デイトラ) Python course. Obtained Fundamental Information Technology Engineer certification.",
     "about.timeline.univ2.title": "University 2nd Year",
     "about.timeline.univ2.desc":
-      "Launched an app development project with 8 members and 1 mentor. Achieved GPA 3.88. Focused on technical studies in the second semester. Got TOEIC 750, participated in hackathon, obtained Bookkeeping Level 3.",
+      "Launched an app development project with 8 members and 1 mentor. Achieved GPA 3.88. Focused on technical studies in the second semester. Got TOEIC 750, participated in hackathon.",
     "about.qualifications.title": "Qualifications",
     "about.qualifications.fe": "Fundamental Information Technology Engineer",
     "about.qualifications.toeic": "TOEIC L&R 750",
     "about.qualifications.calligraphy":
       "Japanese Calligraphy (Student: 8th Dan / Adult: Semi-1st Dan)",
     "about.qualifications.driver": "Japanese Driver's License",
-    "about.qualifications.bookkeeping": "Bookkeeping Level 3",
 
     // Books page
     "books.title": "Akabeko's Bookshelf",
