@@ -38,7 +38,7 @@ export const translations = {
     "about.qualifications.fe": "基本情報技術者",
     "about.qualifications.toeic": "TOEIC L&R 750点",
     "about.qualifications.calligraphy":
-      "日本習字 (学生の部 八段 / 成人の部 準一段)",
+      "日本習字（生徒部 八段 / 成人部 準初段）",
     "about.qualifications.driver": "普通自動車第一種運転免許",
 
     // Books page
