@@ -14,7 +14,7 @@ import {
   SiReact,
   SiDjango,
   SiUnity,
-  SiBlender,
+  SiRust,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 import Image from "next/image";
@@ -107,10 +107,10 @@ const TECH_ITEMS = [
   { icon: SiCss3, name: "CSS", color: "text-[#1572B6]" },
   { icon: SiBootstrap, name: "BootStrap", color: "text-[#7952B3]" },
   { icon: SiTailwindcss, name: "Tailwind CSS", color: "text-[#06B6D4]" },
+  { icon: SiRust, name: "Rust", color: "text-[#000000]" },
   { icon: FaJava, name: "Java", color: "text-[#007396]" },
   { icon: CustomCLogo, name: "C", color: "text-[#00599C]" },
   { icon: SiUnity, name: "Unity", color: "text-[#000000]" },
-  { icon: SiBlender, name: "Blender", color: "text-[#F5792A]" },
 ];
 
 // Animation variants
