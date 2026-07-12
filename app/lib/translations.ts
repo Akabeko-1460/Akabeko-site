@@ -30,12 +30,13 @@ export const translations = {
       "カラオケ、スポッチャ、USJで遊ぶ。ITコンサル(ERPコンサル)、PMになるために理系へ転換。",
     "about.timeline.univ1.title": "大学1年次",
     "about.timeline.univ1.desc":
-      "大学の勉強(主に解析学、線形代数学)を真面目にやった。デイトラPythonコースでプログラミングを学ぶ。基本情報技術者を取得。",
+      "大学の勉強(主に解析学、線形代数学)を真面目にやった。デイトラPythonコースで約30個のアプリやプログラムを作成しながら、プログラミングを学ぶ。AtCoderでアルゴリズムの基礎を復習しながら、基本情報技術者を取得。",
     "about.timeline.univ2.title": "大学2年次",
     "about.timeline.univ2.desc":
-      "メンバー8人とメンター1人を集めてアプリ開発プロジェクトを立ち上げた。GPA3.88を獲得。後期は技術系の勉強を頑張った。TOEIC 750点取得、ハッカソン出場。",
+      "メンバー8人とメンター1人を集めてアプリ開発プロジェクトを立ち上げるも頓挫。失敗から学び、9日間のハッカソンにPM兼エンジニアとして再挑戦し、成功。Next.jsで製作したWebアプリを5つ公開。GPA3.88、TOEIC L&R 750点取得。",
     "about.timeline.univ3.title": "大学3年次",
-    "about.timeline.univ3.desc": "",
+    "about.timeline.univ3.desc":
+      "研究室に早期配属され、知識蒸留とESNを組み合わせた研究に着手。エニグマ暗号解読機の製作や、他大学・企業と連携する50人規模プロジェクトのマネジメントに挑戦中。",
     "about.qualifications.title": "資格",
     "about.qualifications.fe": "基本情報技術者",
     "about.qualifications.toeic": "TOEIC L&R 750点",
@@ -101,12 +102,13 @@ export const translations = {
       "Had fun at karaoke, sports centers, and USJ. Switched to science track to become an IT consultant (ERP consultant) and PM.",
     "about.timeline.univ1.title": "University 1st Year",
     "about.timeline.univ1.desc":
-      "Studied seriously at university (mainly calculus and linear algebra). Learned programming through Daily-trial(デイトラ) Python course. Obtained Fundamental Information Technology Engineer certification.",
+      "Studied seriously at university (mainly calculus and linear algebra). Learned programming by building around 30 apps and programs through the Daily-trial (デイトラ) Python course. Obtained the Fundamental Information Technology Engineer certification while reviewing algorithm fundamentals on AtCoder.",
     "about.timeline.univ2.title": "University 2nd Year",
     "about.timeline.univ2.desc":
-      "Launched an app development project with 8 members and 1 mentor. Achieved GPA 3.88. Focused on technical studies in the second semester. Got TOEIC 750, participated in hackathon.",
+      "Launched an app development project with 8 members and 1 mentor, but it fell apart. Learning from the failure, took on a 9-day hackathon as PM and engineer — and succeeded. Released five web apps built with Next.js. Achieved GPA 3.88 and TOEIC L&R 750.",
     "about.timeline.univ3.title": "University 3rd Year",
-    "about.timeline.univ3.desc": "",
+    "about.timeline.univ3.desc":
+      "Joined a research lab earlier than usual and started research combining knowledge distillation with ESN. Currently building an Enigma cipher-breaking machine and managing a 50-person project in collaboration with other universities and companies.",
     "about.qualifications.title": "Qualifications",
     "about.qualifications.fe": "Fundamental Information Technology Engineer",
     "about.qualifications.toeic": "TOEIC L&R 750",
