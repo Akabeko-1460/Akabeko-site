@@ -34,6 +34,8 @@ export const translations = {
     "about.timeline.univ2.title": "大学2年次",
     "about.timeline.univ2.desc":
       "メンバー8人とメンター1人を集めてアプリ開発プロジェクトを立ち上げた。GPA3.88を獲得。後期は技術系の勉強を頑張った。TOEIC 750点取得、ハッカソン出場。",
+    "about.timeline.univ3.title": "大学3年次",
+    "about.timeline.univ3.desc": "",
     "about.qualifications.title": "資格",
     "about.qualifications.fe": "基本情報技術者",
     "about.qualifications.toeic": "TOEIC L&R 750点",
@@ -103,6 +105,8 @@ export const translations = {
     "about.timeline.univ2.title": "University 2nd Year",
     "about.timeline.univ2.desc":
       "Launched an app development project with 8 members and 1 mentor. Achieved GPA 3.88. Focused on technical studies in the second semester. Got TOEIC 750, participated in hackathon.",
+    "about.timeline.univ3.title": "University 3rd Year",
+    "about.timeline.univ3.desc": "",
     "about.qualifications.title": "Qualifications",
     "about.qualifications.fe": "Fundamental Information Technology Engineer",
     "about.qualifications.toeic": "TOEIC L&R 750",

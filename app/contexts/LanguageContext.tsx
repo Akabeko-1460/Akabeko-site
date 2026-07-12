@@ -50,7 +50,8 @@ export function LanguageProvider({
 
   const t = useCallback(
     (key: string): string => {
-      return translations[language][key] || key;
+      // 空文字は有効な訳文として扱う（キー未定義時のみキー名を返す）
+      return translations[language][key] ?? key;
     },
     [language, translations]
   );
