@@ -24,6 +24,17 @@ body {
   padding: 0;
 }
 
+/*
+ * 画面外で待機中のアニメーション要素（framer-motion の x オフセット等）が
+ * ページを横に押し広げるのを防ぐ。
+ * Xperia などで初回ロード時にヘッダー右端が画面外に隠れる不具合の対策。
+ */
+html,
+body {
+  overflow-x: hidden;
+  overflow-x: clip;
+}
+
 h1,
 h2,
 h3,

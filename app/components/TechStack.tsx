@@ -216,7 +216,7 @@ function TechCard({
 export default function TechStack() {
   return (
     <motion.div
-      className="grid grid-cols-4 gap-4 mb-8"
+      className="grid grid-cols-4 gap-2.5 sm:gap-4 mb-8"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
