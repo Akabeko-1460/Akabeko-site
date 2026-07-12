@@ -81,6 +81,11 @@ export default function AboutTimeline() {
       titleKey: "about.timeline.univ2.title",
       descKey: "about.timeline.univ2.desc",
     },
+    {
+      year: "Univ 3rd",
+      titleKey: "about.timeline.univ3.title",
+      descKey: "about.timeline.univ3.desc",
+    },
   ];
 
   return (
