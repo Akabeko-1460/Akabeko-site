@@ -144,7 +144,7 @@ export default function Akabeko3D() {
         <pointLight position={[-10, -10, -10]} intensity={0.5} />
 
         <Float speed={2} rotationIntensity={0.5} floatIntensity={0.5}>
-          <AkabekoModel rotation={[0, Math.PI / 4, 0]} />
+          <AkabekoModel rotation={[0, Math.PI * 0.3, 0]} />
         </Float>
 
         <ContactShadows
