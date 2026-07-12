@@ -194,7 +194,7 @@ export default function LoadingScreen() {
           <pointLight position={[-10, -10, -10]} intensity={0.5} />
 
           <Float speed={2} rotationIntensity={0.5} floatIntensity={0.5}>
-            <LoadingAkabekoModel rotation={[0, Math.PI / 4, 0]} />
+            <LoadingAkabekoModel rotation={[0, Math.PI * 0.3, 0]} />
           </Float>
         </Canvas>
       </div>
