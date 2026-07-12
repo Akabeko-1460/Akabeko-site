@@ -1,1 +1,17 @@
-## Under construction... Coming soon
+[Team Development & Project Management]
+In my second year, I gathered eight members and a mentor to launch an app development project. However, I took on too much work alone and limited the information I shared, and the project fell apart. Learning from this failure, I studied books on leadership and project management, then took on a 9-day hackathon as PM and engineer of a 4-person team. I committed to three principles: actively sharing my thoughts in chat, documenting the project vision to align everyone's goals, and trusting members with clearly delegated roles. The team worked smoothly without conflict, and every member told me they would love to work together again. I am now managing a 50-person project in collaboration with other universities and companies.
+
+[HANABI — an SNS built at a hackathon]
+We built "HANABI", a web app that tackles the problem of social media depending on interaction between users. Posts launch into the sky as fireworks, and tapping them sets off chain reactions — an SNS designed for releasing your feelings rather than collecting reactions. Built mainly with TypeScript (Next.js) and deployed on Firebase Hosting, it syncs posts and fireworks to all users in real time via Firestore listeners, and can be installed like a native app thanks to PWA support. The hardest technical challenge was the fireworks animation: the existing library did not allow specifying coordinates and colors, so I forked it, extended it, and published it on npm.
+
+[Working with AI Agents]
+This portfolio site was built by delegating almost the entire process — design, implementation, and testing — to AI agents. I focused especially on the design, running multiple AIs in parallel to generate and compare a large number of proposals, then refining the result with feedback from friends and a professional web designer. At the hackathon, we also let AI handle most of the mockups and implementation so that humans could focus on creativity and conversation. I keep exploring the value of collaborating with AI through personal projects.
+
+[Machine Learning & Algorithms]
+Using PyTorch, I developed a program that automatically detects faces resembling a specified person with deep-learning-based face recognition. I am currently building an Enigma cipher-breaking machine, implementing and comparing search algorithms such as hill climbing, simulated annealing, and genetic algorithms. I was also accepted into a research lab earlier than usual as a special case, where I study combining knowledge distillation with ESN to reduce computational cost while preserving model performance.
+
+[Always Learning]
+In my first year, I learned programming by building about 30 programs and apps in Python, while studying the fundamentals of algorithms through university lectures and AtCoder. In my second year, I released five web apps built with Next.js (TypeScript) — two of them grew out of Othello and chess programs I originally wrote in Java for a university course. I have friends use what I build and keep improving it based on their feedback. Coming from a humanities background, I struggled with mathematics, but I learned LaTeX to ask AI structured questions, leaned on friends, and earned the top grade in every mathematics course.
+
+[How I Met IT & Where I'm Heading]
+My first encounter with IT was as a schoolkid, admiring a corporate mainframe I saw in a video game. In high school, I learned about ERP and was deeply moved by the idea of integrating a company's people, goods, money, and information to optimize the whole. Making companies more efficient through IT, and supporting the happiness of the people working there — that is what I aim for as an aspiring IT consultant and PM.
