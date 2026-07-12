@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { useLanguage } from "../contexts/LanguageContext";
 
 const books = [
@@ -213,6 +214,7 @@ const books = [
     publisher: "新星出版社",
     color: "#e8d5f0",
     textColor: "#6a1b9a",
+    cover: "/covers/kabu-nyumon.jpg",
   },
   // 21. 80パターンで英語が止まらない！
   {
@@ -253,6 +255,8 @@ const books = [
     publisher: "日本実業出版社",
     color: "#fce4ec",
     textColor: "#880e4f",
+    // 書影利用は版元ドットコムで「利用可」だが、実書影データが未登録
+    // （白いプレースホルダーのみ）のためCSSカードで表示している
   },
   // 26. 毒の科学 毒と人間のかかわり
   {
@@ -293,6 +297,7 @@ const books = [
     publisher: "新潮社",
     color: "#4fc3f7",
     textColor: "#1a237e",
+    cover: "/covers/tokyoto-dojoto.jpg",
   },
   // 30. ピエロ伝道者
   {
@@ -392,6 +397,7 @@ interface Book {
   color: string;
   textColor: string;
   url?: string;
+  cover?: string;
 }
 
 function BookCard({ book, index }: { book: Book; index: number }) {
@@ -410,61 +416,87 @@ function BookCard({ book, index }: { book: Book; index: number }) {
         book.url ? "cursor-pointer" : ""
       }`}
     >
-      {/* 本の本体 */}
-      <div
-        className="relative w-full h-full rounded-r-md shadow-lg transition-all duration-300 group-hover:shadow-2xl overflow-hidden flex flex-col"
-        style={{
-          backgroundColor: book.color,
-          boxShadow:
-            "5px 5px 15px rgba(0,0,0,0.15), inset 1px 0px 2px rgba(255,255,255,0.3)",
-        }}
-      >
-        {/* 背表紙の立体感 */}
-        <div className="absolute top-0 left-0 w-5 h-full bg-gradient-to-r from-white/30 via-black/5 to-transparent z-10 pointer-events-none"></div>
-        <div className="absolute top-0 left-0 w-[1px] h-full bg-black/10 z-20"></div>
-
-        {/* コンテンツエリア */}
-        <div className="p-4 z-0 flex flex-col h-full relative">
-          <div className="flex-1">
-            {/* タイトル */}
-            <h3
-              className="font-bold leading-tight mb-2 line-clamp-4 text-sm"
-              style={{ color: book.textColor }}
-            >
-              {book.title}
-            </h3>
-            {/* サブタイトル */}
-            {book.subtitle && (
-              <p
-                className="text-[10px] leading-tight opacity-80 line-clamp-2 mb-2"
-                style={{ color: book.textColor }}
-              >
-                {book.subtitle}
-              </p>
-            )}
+      {book.cover ? (
+        /*
+         * 実書影カード。
+         * 書影は出版社が許諾する公式画像のみ使用（版元ドットコム「利用可」／
+         * 新潮社の紹介利用条件）。利用条件により、トリミングになる
+         * object-cover や画像への装飾の重ね掛けは不可。書誌情報の併記が必須。
+         */
+        <div className="relative w-full h-full rounded-md shadow-lg transition-all duration-300 group-hover:shadow-2xl overflow-hidden flex flex-col bg-white border border-gray-100">
+          <div className="relative flex-1 m-2 mb-1">
+            <Image
+              src={book.cover}
+              alt={`${book.title} 表紙`}
+              fill
+              sizes="(max-width: 640px) 45vw, (max-width: 1024px) 25vw, 220px"
+              className="object-contain"
+            />
           </div>
-
-          {/* 著者名 */}
-          <div className="mt-auto">
-            <p
-              className="text-[10px] opacity-70"
-              style={{ color: book.textColor }}
-            >
-              {book.author}
-            </p>
-            {/* 出版社 */}
-            <p
-              className="text-[9px] opacity-50 mt-1"
-              style={{ color: book.textColor }}
-            >
-              {book.publisher}
-            </p>
-          </div>
+          {/* 書誌情報（書影利用条件として明記必須） */}
+          <p className="px-2 pb-2 text-center text-[9px] leading-tight text-gray-500 line-clamp-2">
+            {book.author}『{book.title}』（{book.publisher}刊）
+          </p>
         </div>
-      </div>
+      ) : (
+        <>
+          {/* 本の本体 */}
+          <div
+            className="relative w-full h-full rounded-r-md shadow-lg transition-all duration-300 group-hover:shadow-2xl overflow-hidden flex flex-col"
+            style={{
+              backgroundColor: book.color,
+              boxShadow:
+                "5px 5px 15px rgba(0,0,0,0.15), inset 1px 0px 2px rgba(255,255,255,0.3)",
+            }}
+          >
+            {/* 背表紙の立体感 */}
+            <div className="absolute top-0 left-0 w-5 h-full bg-gradient-to-r from-white/30 via-black/5 to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute top-0 left-0 w-[1px] h-full bg-black/10 z-20"></div>
 
-      {/* 本の厚み */}
-      <div className="absolute top-[2px] left-0 w-[4px] h-[98%] bg-black/20 rounded-l-sm -z-10 translate-x-[-2px]"></div>
+            {/* コンテンツエリア */}
+            <div className="p-4 z-0 flex flex-col h-full relative">
+              <div className="flex-1">
+                {/* タイトル */}
+                <h3
+                  className="font-bold leading-tight mb-2 line-clamp-4 text-sm"
+                  style={{ color: book.textColor }}
+                >
+                  {book.title}
+                </h3>
+                {/* サブタイトル */}
+                {book.subtitle && (
+                  <p
+                    className="text-[10px] leading-tight opacity-80 line-clamp-2 mb-2"
+                    style={{ color: book.textColor }}
+                  >
+                    {book.subtitle}
+                  </p>
+                )}
+              </div>
+
+              {/* 著者名 */}
+              <div className="mt-auto">
+                <p
+                  className="text-[10px] opacity-70"
+                  style={{ color: book.textColor }}
+                >
+                  {book.author}
+                </p>
+                {/* 出版社 */}
+                <p
+                  className="text-[9px] opacity-50 mt-1"
+                  style={{ color: book.textColor }}
+                >
+                  {book.publisher}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* 本の厚み */}
+          <div className="absolute top-[2px] left-0 w-[4px] h-[98%] bg-black/20 rounded-l-sm -z-10 translate-x-[-2px]"></div>
+        </>
+      )}
     </Wrapper>
   );
 }
