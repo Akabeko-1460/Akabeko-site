@@ -13,7 +13,6 @@ const books = [
     publisher: "",
     color: "#f0f4ff",
     textColor: "#1a3a8a",
-    url: "https://www.amazon.co.jp/%E4%B8%96%E7%95%8C%E4%B8%80%E3%82%8F%E3%81%8B%E3%82%8A%E3%82%84%E3%81%99%E3%81%84SAP%E3%81%AE%E6%95%99%E7%A7%91%E6%9B%B8-%E5%85%A5%E9%96%80%E7%B7%A8-%E3%81%A8%E3%81%8F/dp/4798065196/ref=sr_1_5?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&sr=8-5",
   },
   // 2. リーダブルコード
   {
@@ -24,7 +23,6 @@ const books = [
     publisher: "オライリー",
     color: "#8ecae6",
     textColor: "#1a3a52",
-    url: "https://www.amazon.co.jp/dp/4873115655",
   },
   // 2. 20字に削ぎ落とせ
   {
@@ -35,7 +33,6 @@ const books = [
     publisher: "朝日新聞出版",
     color: "#ffffff",
     textColor: "#333333",
-    url: "https://www.amazon.co.jp/dp/4023317985",
   },
   // 3. ゼロ秒思考
   {
@@ -46,7 +43,6 @@ const books = [
     publisher: "ダイヤモンド社",
     color: "#ffffff",
     textColor: "#1a1a1a",
-    url: "https://www.amazon.co.jp/dp/447802099X",
   },
   // 4. ゼロ秒思考 行動編
   {
@@ -57,7 +53,6 @@ const books = [
     publisher: "ダイヤモンド社",
     color: "#ffffff",
     textColor: "#1a1a1a",
-    url: "https://www.amazon.co.jp/dp/4478068208",
   },
   // 5. ロジカル・シンキング練習帳
   {
@@ -68,7 +63,6 @@ const books = [
     publisher: "東洋経済新聞社",
     color: "#e6d5b8",
     textColor: "#3d3d3d",
-    url: "https://www.amazon.co.jp/dp/4492534245",
   },
   // 6. コンサル一年目が学ぶこと
   {
@@ -79,7 +73,6 @@ const books = [
     publisher: "ディスカヴァー",
     color: "#1a4ba0",
     textColor: "#ffffff",
-    url: "https://www.amazon.co.jp/dp/4799315323",
   },
   // 7. 頭のいい人が話す前に考えていること
   {
@@ -90,7 +83,6 @@ const books = [
     publisher: "ダイヤモンド社",
     color: "#87ceeb",
     textColor: "#ffffff",
-    url: "https://www.amazon.co.jp/dp/4478116695",
   },
   // 8. 論点思考
   {
@@ -101,7 +93,6 @@ const books = [
     publisher: "東洋経済新報社",
     color: "#ffffff",
     textColor: "#c0392b",
-    url: "https://www.amazon.co.jp/dp/4492556559",
   },
   // 9. パーフェクトな意思決定
   {
@@ -112,7 +103,6 @@ const books = [
     publisher: "ダイヤモンド社",
     color: "#2563eb",
     textColor: "#ffffff",
-    url: "https://www.amazon.co.jp/%E3%83%91%E3%83%BC%E3%83%95%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AA%E6%84%8F%E6%80%9D%E6%B1%BA%E5%AE%9A-%E2%94%80%E2%94%80-%E3%80%8C%E6%B1%BA%E3%82%81%E3%82%8B%E7%9E%AC%E9%96%93%E3%80%8D%E3%81%AE%E6%80%9D%E8%80%83%E6%B3%95-%E5%AE%89%E8%97%A4%E5%BA%83%E5%A4%A7/dp/4478120730/ref=sr_1_1?adgrpid=167737772559&hvadid=770127144174&hvdev=c&hvexpln=0&hvlocphy=1009041&hvnetw=g&hvocijid=4058122378894565606--&hvqmt=e&hvrand=4058122378894565606&hvtargid=kwd-2367744620550&hydadcr=2754_13844176&jp-ad-ap=0&mcid=c09751fda6bb37238418a61e97889c87&sr=8-1",
   },
   // 10. リーダーの仮面
   {
@@ -123,7 +113,6 @@ const books = [
     publisher: "ダイヤモンド社",
     color: "#1e3a5f",
     textColor: "#e8e8e8",
-    url: "https://www.amazon.co.jp/dp/4478110514",
   },
   // 11. プロジェクトマネジメントの基本が全部わかる本
   {
@@ -134,7 +123,6 @@ const books = [
     publisher: "翔泳社",
     color: "#f8f8f8",
     textColor: "#00a99d",
-    url: "https://www.amazon.co.jp/dp/4798177415",
   },
   // 12. イシューからはじめよ
   {
@@ -145,7 +133,6 @@ const books = [
     publisher: "英治出版",
     color: "#d4c5a9",
     textColor: "#2d2926",
-    url: "https://www.amazon.co.jp/dp/4862763561",
   },
   // 13. ルドルフとイッパイアッテナ
   {
@@ -156,7 +143,6 @@ const books = [
     publisher: "講談社",
     color: "#c0392b",
     textColor: "#ffffff",
-    url: "https://www.amazon.co.jp/dp/4061335057",
   },
   // 14. ルドルフともだちひとりだち
   {
@@ -167,7 +153,6 @@ const books = [
     publisher: "講談社",
     color: "#e91e8c",
     textColor: "#ffffff",
-    url: "https://www.amazon.co.jp/dp/406133509X",
   },
   // 15. ルドルフとスノーホワイト
   {
@@ -178,7 +163,6 @@ const books = [
     publisher: "講談社",
     color: "#b8c5d6",
     textColor: "#2c3e50",
-    url: "https://www.amazon.co.jp/dp/4061335227",
   },
   // 16. ロジカルな話し方超入門
   {
@@ -189,7 +173,6 @@ const books = [
     publisher: "ディスカヴァー",
     color: "#fff8e1",
     textColor: "#1976d2",
-    url: "https://www.amazon.co.jp/dp/4799324683",
   },
   // 17. 言葉にできるは武器になる。
   {
@@ -200,7 +183,6 @@ const books = [
     publisher: "日本経済新聞出版",
     color: "#2e86ab",
     textColor: "#ffffff",
-    url: "https://www.amazon.co.jp/dp/4532320755",
   },
   // 18. マインドフルネス瞑想入門
   {
@@ -211,7 +193,6 @@ const books = [
     publisher: "WAVE出版",
     color: "#87ceeb",
     textColor: "#2c3e50",
-    url: "https://www.amazon.co.jp/dp/4872907310",
   },
   // 19. 確実内定
   {
@@ -222,7 +203,6 @@ const books = [
     publisher: "KADOKAWA",
     color: "#fff176",
     textColor: "#333333",
-    url: "https://www.amazon.co.jp/dp/4046068221",
   },
   // 20. マンガでわかる最強の株入門
   {
@@ -233,7 +213,6 @@ const books = [
     publisher: "新星出版社",
     color: "#e8d5f0",
     textColor: "#6a1b9a",
-    url: "https://www.amazon.co.jp/dp/4405102961",
   },
   // 21. 80パターンで英語が止まらない！
   {
@@ -244,7 +223,6 @@ const books = [
     publisher: "高橋書店",
     color: "#fff8f0",
     textColor: "#e91e63",
-    url: "https://www.amazon.co.jp/dp/4471113402",
   },
   // 22. 世界のエリートが学んでいる教養書必読100冊を1冊にまとめてみた
   {
@@ -255,7 +233,6 @@ const books = [
     publisher: "KADOKAWA",
     color: "#3e2723",
     textColor: "#ffd54f",
-    url: "https://www.amazon.co.jp/dp/4046055529",
   },
   // 24. スティグリッツ入門経済学 第4版
   {
@@ -266,7 +243,6 @@ const books = [
     publisher: "東洋経済新報社",
     color: "#f5f0e1",
     textColor: "#5d4e37",
-    url: "https://www.amazon.co.jp/dp/4492314199",
   },
   // 25. フースラーメソード入門
   {
@@ -277,7 +253,6 @@ const books = [
     publisher: "日本実業出版社",
     color: "#fce4ec",
     textColor: "#880e4f",
-    url: "https://www.amazon.co.jp/%E3%83%95%E3%83%BC%E3%82%B9%E3%83%A9%E3%83%BC%E3%83%A1%E3%82%BD%E3%83%BC%E3%83%89%E5%85%A5%E9%96%80%E3%80%88DVD%E4%BB%98%E3%80%89-%E6%AD%A6%E7%94%B0-%E6%A2%B5%E5%A3%B0/dp/4534054742/ref=sr_1_1?adgrpid=55840466320&hvadid=770241692141&hvdev=c&hvexpln=0&hvlocphy=1009041&hvnetw=g&hvocijid=4840738854155583043--&hvqmt=e&hvrand=4840738854155583043&hvtargid=kwd-296697090711&hydadcr=20004_13684346&jp-ad-ap=0&mcid=2b363c83aa74311ba941c8f5b1945252&sr=8-1",
   },
   // 26. 毒の科学 毒と人間のかかわり
   {
@@ -288,7 +263,6 @@ const books = [
     publisher: "ナツメ社",
     color: "#e8f5e9",
     textColor: "#1b5e20",
-    url: "https://www.amazon.co.jp/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%BC%B7%E3%82%AB%E3%83%A9%E3%83%BC%E5%9B%B3%E8%A7%A3-%E6%AF%92%E3%81%AE%E7%A7%91%E5%AD%A6-%E6%AF%92%E3%81%A8%E4%BA%BA%E9%96%93%E3%81%AE%E3%81%8B%E3%81%8B%E3%82%8F%E3%82%8A-%E8%88%B9%E5%B1%B1-%E4%BF%A1%E6%AC%A1/dp/4816354093/ref=sr_1_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&sr=8-1",
   },
   // 27. 元素楽章
   {
@@ -299,7 +273,6 @@ const books = [
     publisher: "化学同人",
     color: "#ede7f6",
     textColor: "#4a148c",
-    url: "https://www.amazon.co.jp/%E5%85%83%E7%B4%A0%E6%A5%BD%E7%AB%A0-%E6%93%AC%E4%BA%BA%E5%8C%96%E3%81%A7%E3%82%8F%E3%81%8B%E3%82%8B%E5%85%83%E7%B4%A0%E3%81%AE%E4%B8%96%E7%95%8C-%E6%8F%9A%E3%81%92%E9%B6%8F%E3%80%85/dp/4759823565/ref=sr_1_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&sr=8-1",
   },
   // 28. 世界でいちばん素敵な元素の教室
   {
@@ -310,7 +283,6 @@ const books = [
     publisher: "三才ブックス",
     color: "#e3f2fd",
     textColor: "#0d47a1",
-    url: "https://www.amazon.co.jp/%E4%B8%96%E7%95%8C%E3%81%A7%E3%81%84%E3%81%A1%E3%81%B0%E3%82%93%E7%B4%A0%E6%95%B5%E3%81%AA%E5%85%83%E7%B4%A0%E3%81%AE%E6%95%99%E5%AE%A4-%E4%B8%96%E7%95%8C%E3%81%A7%E3%81%84%E3%81%A1%E3%81%B0%E3%82%93%E7%B4%A0%E6%95%B5%E3%81%AA%E6%95%99%E5%AE%A4-%E6%A0%97%E5%B1%B1%E6%81%AD%E7%9B%B4-%E5%B1%B1%E5%BD%A2%E5%A4%A7%E5%AD%A6/dp/4866730137/ref=sr_1_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&sr=8-1",
   },
   // 29. 東京都同情塔
   {
@@ -321,7 +293,6 @@ const books = [
     publisher: "新潮社",
     color: "#4fc3f7",
     textColor: "#1a237e",
-    url: "https://www.amazon.co.jp/dp/4103555114",
   },
   // 30. ピエロ伝道者
   {
@@ -409,7 +380,6 @@ const books = [
     publisher: "講談社英語文庫",
     color: "#1a237e",
     textColor: "#ffd740",
-    url: "https://www.amazon.co.jp/%E6%98%9F%E3%81%AE%E7%8E%8B%E5%AD%90%E3%81%95%E3%81%BE-Little-Prince%E3%80%90%E8%AC%9B%E8%AB%87%E7%A4%BE%E8%8B%B1%E8%AA%9E%E6%96%87%E5%BA%AB%E3%80%91-%E3%82%B5%E3%83%B3-%E3%83%86%E3%82%B0%E3%82%B8%E3%83%A5%E3%83%9A%E3%83%AA/dp/4770027958",
   },
 ];
 
@@ -421,19 +391,24 @@ interface Book {
   publisher: string;
   color: string;
   textColor: string;
-  url: string;
+  url?: string;
 }
 
 function BookCard({ book, index }: { book: Book; index: number }) {
+  const Wrapper = book.url ? motion.a : motion.div;
+  const linkProps = book.url
+    ? { href: book.url, target: "_blank", rel: "noopener noreferrer" }
+    : {};
+
   return (
-    <motion.a
-      href={book.url}
-      target="_blank"
-      rel="noopener noreferrer"
+    <Wrapper
+      {...linkProps}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.03 }}
-      className="group relative w-full aspect-[3/4] cursor-pointer transition-transform duration-300 hover:-translate-y-2"
+      className={`group relative w-full aspect-[3/4] transition-transform duration-300 hover:-translate-y-2 ${
+        book.url ? "cursor-pointer" : ""
+      }`}
     >
       {/* 本の本体 */}
       <div
@@ -490,7 +465,7 @@ function BookCard({ book, index }: { book: Book; index: number }) {
 
       {/* 本の厚み */}
       <div className="absolute top-[2px] left-0 w-[4px] h-[98%] bg-black/20 rounded-l-sm -z-10 translate-x-[-2px]"></div>
-    </motion.a>
+    </Wrapper>
   );
 }
 
