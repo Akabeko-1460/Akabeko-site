@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useLanguage } from "../contexts/LanguageContext";
 import { ExternalLink } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 // Animation variants
@@ -27,7 +28,40 @@ const staggerContainer = {
 };
 
 // Life content data
-const lifeContent = [
+type LifeItem = {
+  id: string;
+  title: string;
+  titleJa: string;
+  titleEn: string;
+  description: string;
+  descriptionEn: string;
+  url: string;
+  emoji: string;
+  icon?: string;
+  gradient: string;
+  bgGradient: string;
+  accentColor: string;
+  hoverColor: string;
+};
+
+const lifeContent: LifeItem[] = [
+  {
+    id: "kairos",
+    title: "Kairos",
+    titleJa: "BGM生成タイマー",
+    titleEn: "Generative BGM Pomodoro",
+    description:
+      "機械的に区切られた時間（Chronos）を、質の高い集中と回復の時間（Kairos）へ。タスク毎に最適なBGMを生成するポモドーロタイマー。",
+    descriptionEn:
+      "Turning mechanically divided time (Chronos) into quality focus and recovery (Kairos). A Pomodoro timer whose generative BGM shifts with your focus and break phases.",
+    url: "https://kairos-two-pi.vercel.app/",
+    emoji: "⏱️",
+    icon: "/icons/kairos-icon.png",
+    gradient: "from-gray-900 via-black to-gray-800",
+    bgGradient: "from-gray-50 to-slate-100",
+    accentColor: "text-gray-900",
+    hoverColor: "group-hover:text-black",
+  },
   {
     id: "strawberry-life",
     title: "StrawberryLife",
@@ -145,9 +179,19 @@ export default function LifePage() {
                       className={`flex items-center justify-center p-8 md:p-12 bg-gradient-to-br ${item.gradient} text-white w-full md:w-[180px] flex-shrink-0`}
                     >
                       <div className="text-center">
-                        <span className="text-6xl md:text-7xl block drop-shadow-lg">
-                          {item.emoji}
-                        </span>
+                        {item.icon ? (
+                          <Image
+                            src={item.icon}
+                            alt={item.title}
+                            width={112}
+                            height={112}
+                            className="w-20 h-20 md:w-28 md:h-28 drop-shadow-lg"
+                          />
+                        ) : (
+                          <span className="text-6xl md:text-7xl block drop-shadow-lg">
+                            {item.emoji}
+                          </span>
+                        )}
                       </div>
                     </div>
 
