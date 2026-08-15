@@ -63,6 +63,23 @@ const lifeContent: LifeItem[] = [
     hoverColor: "group-hover:text-black",
   },
   {
+    id: "enigma-decoder",
+    title: "ENIGMA",
+    titleJa: "エニグマ暗号ターミナル",
+    titleEn: "Enigma Cipher Terminal",
+    description:
+      "エニグマM3の暗号を仲間と作って送り合い、暗号文だけを手がかりに解読するWebターミナル。頻度分析と辞書照合による解析までブラウザ内で完結します。",
+    descriptionEn:
+      "A web terminal for exchanging Enigma M3 ciphers with friends and cracking them from the ciphertext alone. Frequency analysis and dictionary matching all run in your browser.",
+    url: "https://enigma-decoder.vercel.app/",
+    emoji: "🔐",
+    icon: "/icons/enigma-dial.png",
+    gradient: "from-slate-900 via-cyan-950 to-slate-800",
+    bgGradient: "from-cyan-50 to-slate-100",
+    accentColor: "text-cyan-700",
+    hoverColor: "group-hover:text-cyan-800",
+  },
+  {
     id: "strawberry-life",
     title: "StrawberryLife",
     titleJa: "いちごタルト日記",
