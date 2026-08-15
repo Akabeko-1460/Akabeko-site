@@ -53,7 +53,7 @@ const lifeContent: LifeItem[] = [
     description:
       "機械的に区切られた時間（Chronos）を、質の高い集中と回復の時間（Kairos）へ。タスク毎に最適なBGMを生成するポモドーロタイマー。",
     descriptionEn:
-      "Turning mechanically divided time (Chronos) into quality focus and recovery (Kairos). A Pomodoro timer whose generative BGM shifts with your focus and break phases.",
+      "Turning mechanically divided time (Chronos) into quality focus and recovery (Kairos). A Pomodoro timer that generates the BGM best suited to each task.",
     url: "https://kairos-two-pi.vercel.app/",
     emoji: "⏱️",
     icon: "/icons/kairos-icon.png",
@@ -67,10 +67,8 @@ const lifeContent: LifeItem[] = [
     title: "ENIGMA",
     titleJa: "エニグマ暗号ターミナル",
     titleEn: "Enigma Cipher Terminal",
-    description:
-      "エニグマM3の暗号を仲間と作って送り合い、暗号文だけを手がかりに解読するWebターミナル。頻度分析と辞書照合による解析までブラウザ内で完結します。",
-    descriptionEn:
-      "A web terminal for exchanging Enigma M3 ciphers with friends and cracking them from the ciphertext alone. Frequency analysis and dictionary matching all run in your browser.",
+    description: "エニグマ暗号解読機&シミュレーター",
+    descriptionEn: "An Enigma cipher decoder & simulator.",
     url: "https://enigma-decoder.vercel.app/",
     emoji: "🔐",
     icon: "/icons/enigma-dial.png",
