@@ -53,7 +53,7 @@ const lifeContent: LifeItem[] = [
     description:
       "機械的に区切られた時間（Chronos）を、質の高い集中と回復の時間（Kairos）へ。タスク毎に最適なBGMを生成するポモドーロタイマー。",
     descriptionEn:
-      "Turning mechanically divided time (Chronos) into quality focus and recovery (Kairos). A Pomodoro timer whose generative BGM shifts with your focus and break phases.",
+      "Turning mechanically divided time (Chronos) into quality focus and recovery (Kairos). A Pomodoro timer that generates the BGM best suited to each task.",
     url: "https://kairos-two-pi.vercel.app/",
     emoji: "⏱️",
     icon: "/icons/kairos-icon.png",
@@ -61,6 +61,21 @@ const lifeContent: LifeItem[] = [
     bgGradient: "from-gray-50 to-slate-100",
     accentColor: "text-gray-900",
     hoverColor: "group-hover:text-black",
+  },
+  {
+    id: "enigma-decoder",
+    title: "ENIGMA",
+    titleJa: "エニグマ暗号ターミナル",
+    titleEn: "Enigma Cipher Terminal",
+    description: "エニグマ暗号解読機&シミュレーター",
+    descriptionEn: "An Enigma cipher decoder & simulator.",
+    url: "https://enigma-decoder.vercel.app/",
+    emoji: "🔐",
+    icon: "/icons/enigma-dial.png",
+    gradient: "from-slate-900 via-cyan-950 to-slate-800",
+    bgGradient: "from-cyan-50 to-slate-100",
+    accentColor: "text-cyan-700",
+    hoverColor: "group-hover:text-cyan-800",
   },
   {
     id: "strawberry-life",
