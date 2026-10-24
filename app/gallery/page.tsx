@@ -143,7 +143,7 @@ const lifeContent: LifeItem[] = [
   },
 ];
 
-export default function LifePage() {
+export default function GalleryPage() {
   const { t, language } = useLanguage();
 
   return (

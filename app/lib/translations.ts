@@ -49,7 +49,7 @@ export const translations = {
     "books.subtitle": "私が読ませてもらった書籍たち。",
 
     // Life page
-    "life.title": "Life & Gallery",
+    "life.title": "Gallery",
     "life.status": "製作中",
     "life.coming": "Coming Soon...",
 
@@ -121,7 +121,7 @@ export const translations = {
     "books.subtitle": "Books I have read.",
 
     // Life page
-    "life.title": "Life & Gallery",
+    "life.title": "Gallery",
     "life.status": "Under Construction",
     "life.coming": "Coming Soon...",
 
