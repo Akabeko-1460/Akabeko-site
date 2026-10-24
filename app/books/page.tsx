@@ -507,10 +507,12 @@ export default function BooksPage() {
   return (
     <div className="pt-24 pb-20 bg-warm-bg min-h-screen">
       <div className="container-custom">
-        <h1 className="text-4xl font-bold mb-4 text-center">
-          {t("books.title")}
-        </h1>
-        <p className="text-center text-gray-500 mb-12">{t("books.subtitle")}</p>
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold mb-4 border-b-4 border-bain-red inline-block pb-2">
+            {t("books.title")}
+          </h1>
+          <p className="text-gray-500 mt-4">{t("books.subtitle")}</p>
+        </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-6 gap-y-10">
           {books.map((book, idx) => (
