@@ -176,14 +176,13 @@ export default function LoadingScreen() {
 
   return (
     <div
-      className={`fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#fffaf0] transition-opacity duration-500 ${
+      className={`fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#fffaf0] dark:bg-warm-bg transition-opacity duration-500 ${
         isLoaded ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
     >
       {/* 3D赤べこ */}
       <div className="w-full h-[40vh] md:h-[50vh]">
         <Canvas shadows camera={{ position: [0, 2, 6], fov: 45 }}>
-          <color attach="background" args={["#fffaf0"]} />
           <ambientLight intensity={0.7} />
           <spotLight
             position={[10, 10, 10]}
@@ -202,12 +201,12 @@ export default function LoadingScreen() {
       {/* ロード進捗表示 */}
       <div className="flex flex-col items-center gap-4 mt-4">
         {/* パーセンテージ */}
-        <div className="text-4xl md:text-5xl font-bold text-[#FF1010]">
+        <div className="text-4xl md:text-5xl font-bold text-[#FF1010] dark:text-bain-red-light">
           {Math.round(progress)}%
         </div>
 
         {/* プログレスバー */}
-        <div className="w-64 md:w-80 h-2 bg-gray-200 rounded-full overflow-hidden">
+        <div className="w-64 md:w-80 h-2 bg-gray-200 dark:bg-stone-700 rounded-full overflow-hidden">
           <div
             className="h-full bg-[#FF1010] rounded-full transition-all duration-150 ease-out"
             style={{ width: `${progress}%` }}
@@ -215,7 +214,7 @@ export default function LoadingScreen() {
         </div>
 
         {/* ローディングテキスト */}
-        <p className="text-gray-500 text-sm">Loading...</p>
+        <p className="text-gray-500 dark:text-stone-400 text-sm">Loading...</p>
       </div>
     </div>
   );

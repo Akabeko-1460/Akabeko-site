@@ -84,7 +84,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-black text-white py-20 overflow-hidden">
+    <footer className="bg-black dark:bg-warm-bg text-white dark:text-text-main [--contact-focus-color:var(--color-bain-red)] dark:[--contact-focus-color:var(--color-bain-red-light)] py-20 overflow-hidden">
       <motion.div
         className="container-custom text-center"
         initial="hidden"
@@ -93,13 +93,13 @@ export default function Footer() {
         variants={containerVariants}
       >
         <motion.h3
-          className="text-3xl font-bold mb-4 tracking-widest text-white"
+          className="text-3xl font-bold mb-4 tracking-widest text-white dark:text-text-main"
           variants={itemVariants}
         >
           {t("footer.contact")}
         </motion.h3>
         <motion.p
-          className="text-[#C6CBD2] text-sm mb-12"
+          className="text-[#C6CBD2] dark:text-stone-300 text-sm mb-12"
           variants={itemVariants}
         >
           {t("footer.contact.subtitle")}
@@ -126,7 +126,7 @@ export default function Footer() {
               ✉️
             </motion.div>
             <motion.h4
-              className="text-2xl font-bold text-white mb-4"
+              className="text-2xl font-bold text-white dark:text-text-main mb-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
@@ -134,7 +134,7 @@ export default function Footer() {
               {t("footer.success.title")}
             </motion.h4>
             <motion.p
-              className="text-gray-400 mb-8"
+              className="text-gray-400 dark:text-stone-400 mb-8"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
@@ -145,7 +145,7 @@ export default function Footer() {
             </motion.p>
             <motion.button
               onClick={() => setStatus("idle")}
-              className="px-8 py-3 border border-bain-red text-white hover:bg-bain-red transition-all duration-300 rounded-sm text-sm tracking-widest"
+              className="px-8 py-3 border border-bain-red dark:border-bain-red-light text-white dark:text-text-main hover:bg-bain-red dark:hover:text-white transition-all duration-300 rounded-sm text-sm tracking-widest"
               whileHover={{
                 scale: 1.05,
                 boxShadow: "0 0 20px rgba(204, 0, 0, 0.4)",
@@ -163,7 +163,7 @@ export default function Footer() {
             <motion.div className="mb-6" variants={itemVariants}>
               <label
                 htmlFor="name"
-                className="block text-xs font-bold text-gray-400 mb-2"
+                className="block text-xs font-bold text-gray-400 dark:text-stone-400 mb-2"
               >
                 {t("footer.form.name")}
               </label>
@@ -174,12 +174,12 @@ export default function Footer() {
                 onChange={(e) =>
                   setFormData({ ...formData, name: e.target.value })
                 }
-                className="w-full bg-gray-900 border border-gray-800 text-white px-4 py-3 focus:outline-none focus:border-bain-red transition-colors rounded-sm"
+                className="w-full bg-gray-900 dark:bg-warm-gray border border-gray-800 dark:border-stone-600 text-white dark:text-text-main px-4 py-3 focus:outline-none focus:border-bain-red dark:focus:border-bain-red-light transition-colors rounded-sm"
                 placeholder={t("footer.form.namePlaceholder")}
                 disabled={status === "sending"}
                 whileFocus={{
                   scale: 1.01,
-                  borderColor: "#cc0000",
+                  borderColor: "var(--contact-focus-color)",
                   boxShadow: "0 0 10px rgba(204, 0, 0, 0.2)",
                 }}
               />
@@ -188,7 +188,7 @@ export default function Footer() {
             <motion.div className="mb-6" variants={itemVariants}>
               <label
                 htmlFor="email"
-                className="block text-xs font-bold text-gray-400 mb-2"
+                className="block text-xs font-bold text-gray-400 dark:text-stone-400 mb-2"
               >
                 {t("footer.form.email")}
               </label>
@@ -199,12 +199,12 @@ export default function Footer() {
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
                 }
-                className="w-full bg-gray-900 border border-gray-800 text-white px-4 py-3 focus:outline-none focus:border-bain-red transition-colors rounded-sm"
+                className="w-full bg-gray-900 dark:bg-warm-gray border border-gray-800 dark:border-stone-600 text-white dark:text-text-main px-4 py-3 focus:outline-none focus:border-bain-red dark:focus:border-bain-red-light transition-colors rounded-sm"
                 placeholder={t("footer.form.emailPlaceholder")}
                 disabled={status === "sending"}
                 whileFocus={{
                   scale: 1.01,
-                  borderColor: "#cc0000",
+                  borderColor: "var(--contact-focus-color)",
                   boxShadow: "0 0 10px rgba(204, 0, 0, 0.2)",
                 }}
               />
@@ -213,7 +213,7 @@ export default function Footer() {
             <motion.div className="mb-8" variants={itemVariants}>
               <label
                 htmlFor="message"
-                className="block text-xs font-bold text-gray-400 mb-2"
+                className="block text-xs font-bold text-gray-400 dark:text-stone-400 mb-2"
               >
                 {t("footer.form.message")}
               </label>
@@ -224,12 +224,12 @@ export default function Footer() {
                 onChange={(e) =>
                   setFormData({ ...formData, message: e.target.value })
                 }
-                className="w-full bg-gray-900 border border-gray-800 text-white px-4 py-3 focus:outline-none focus:border-bain-red transition-colors rounded-sm resize-none"
+                className="w-full bg-gray-900 dark:bg-warm-gray border border-gray-800 dark:border-stone-600 text-white dark:text-text-main px-4 py-3 focus:outline-none focus:border-bain-red dark:focus:border-bain-red-light transition-colors rounded-sm resize-none"
                 placeholder={t("footer.form.messagePlaceholder")}
                 disabled={status === "sending"}
                 whileFocus={{
                   scale: 1.01,
-                  borderColor: "#cc0000",
+                  borderColor: "var(--contact-focus-color)",
                   boxShadow: "0 0 10px rgba(204, 0, 0, 0.2)",
                 }}
               ></motion.textarea>
@@ -237,7 +237,7 @@ export default function Footer() {
 
             {status === "error" && (
               <motion.div
-                className="text-center text-red-500 text-sm mb-4"
+                className="text-center text-red-500 dark:text-bain-red-light text-sm mb-4"
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
               >

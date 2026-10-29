@@ -3,12 +3,21 @@
 @theme {
   --color-bain-red: #cc0000;
   --color-bain-red-dark: #a30000;
+  --color-bain-red-light: #ff7070;
   --color-warm-bg: #fffaf0; /* Floral White for warmth */
   --color-warm-gray: #fcfcfc;
   --color-text-main: #2d2d2d;
 
   --font-sans: "Meiryo", "MS PGothic", "Meiryo UI", sans-serif;
   --font-serif: "Georgia", "Times New Roman", serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-warm-bg: #1a1816;
+    --color-warm-gray: #24211e;
+    --color-text-main: #f5efe6;
+  }
 }
 
 /* Custom Utilities */
@@ -45,6 +54,7 @@ h6 {
 }
 
 html {
+  color-scheme: light dark;
   font-size: 14px;
   scroll-behavior: smooth;
 }
