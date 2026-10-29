@@ -108,15 +108,15 @@ export default function Header() {
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center absolute left-[48%] top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-            <div className="flex items-center gap-8 lg:gap-14">
+            <div className="flex items-center gap-2 lg:gap-6">
               {NAV_LINKS.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-sm font-bold uppercase tracking-wider text-gray-600 hover:text-bain-red transition-colors relative group"
+                  className="inline-block px-3 py-2 text-base font-bold uppercase tracking-wider text-gray-600 hover:text-bain-red transition-colors relative group"
                 >
                   {link.label}
-                  <span className="absolute bottom-[-4px] left-0 w-0 h-0.5 bg-bain-red transition-all group-hover:w-full" />
+                  <span className="absolute bottom-1 left-3 w-0 h-0.5 bg-bain-red transition-all group-hover:w-[calc(100%-1.5rem)]" />
                 </Link>
               ))}
             </div>
