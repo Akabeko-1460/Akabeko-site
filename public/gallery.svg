@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 240" fill="none">
+  <title>A gallery of four abstract paintings in wooden frames</title>
+  <defs>
+    <linearGradient id="wall" x1="240" y1="0" x2="240" y2="240" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#e8e1d5"/>
+      <stop offset="1" stop-color="#fffaf0"/>
+    </linearGradient>
+    <linearGradient id="light" x1="0" y1="0" x2="0" y2="190" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fffaf0" stop-opacity=".7"/>
+      <stop offset="1" stop-color="#fffaf0" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#wall)" d="M0 0h480v240H0z"/>
+  <path fill="url(#light)" d="m146 20-69 174h145L158 20zm176 0-69 174h145L334 20z"/>
+  <path fill="#ddd0bc" d="M0 204h480v36H0z"/>
+  <path stroke="#b8ab98" d="M0 204h480"/>
+  <path stroke="#c5b7a2" d="m112 204-44 36m180-36 4 36m106-36 45 36M0 226h480"/>
+  <path stroke="#8a8278" stroke-width="3" d="M0 18h480"/>
+  <g fill="#66615b">
+    <path d="M140 16h24v9h-24zM316 16h24v9h-24z"/>
+  </g>
+  <!-- Offset silhouettes give each frame a quiet shadow on the wall. -->
+  <g fill="#65574c" opacity=".14">
+    <path d="M77 78h66v102H77zM157 54h100v126H157zM271 73h70v76h-70zM355 92h54v88h-54z"/>
+  </g>
+  <g stroke="#785239" stroke-width="6" fill="#fffaf0">
+    <path d="M75 76h60v96H75zM155 52h94v120h-94zM269 71h64v70h-64zM353 90h48v82h-48z"/>
+  </g>
+  <!-- Mountain and sun, with a generous paper border. -->
+  <path fill="#e6d8c1" d="M85 86h40v76H85z"/>
+  <circle cx="111" cy="103" r="8" fill="#cc0000"/>
+  <path fill="#999b92" d="m85 144 19-28 21 34v12H85z"/>
+  <path fill="#626b66" d="m85 156 13-16 16 22H85z"/>
+  <!-- The largest painting carries the site's red accent. -->
+  <path fill="#eee5d5" d="M167 64h70v96h-70z"/>
+  <path fill="#cc0000" d="M180 126v-28a22 22 0 0 1 44 0v28z"/>
+  <path fill="#ad9274" d="M167 143c23-23 46-20 70-6v23h-70z"/>
+  <path stroke="#fffaf0" stroke-width="3" d="M175 149h54"/>
+  <!-- Two smaller geometric studies balance the salon arrangement. -->
+  <path fill="#dedfd8" d="M279 81h44v50h-44z"/>
+  <circle cx="301" cy="106" r="15" fill="#b39b7e"/>
+  <path fill="#cc0000" d="m301 91 15 30h-30z"/>
+  <path stroke="#fffaf0" stroke-width="2" d="M283 125h36"/>
+  <path fill="#e8d7c2" d="M363 100h28v62h-28z"/>
+  <path fill="#737b74" d="M363 131h14v31h-14z"/>
+  <path fill="#cc0000" d="M377 115h14v30h-14z"/>
+  <circle cx="373" cy="113" r="5" fill="#fffaf0"/>
+  <g stroke="#bba98e" stroke-width="1" opacity=".65">
+    <path d="M72 79v89m66-89v89m14-113v113m100-113v113m14-94v64m70-64v64m14-45v82m54-82v82"/>
+  </g>
+</svg>

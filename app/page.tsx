@@ -45,7 +45,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       {/* Hero Section with 3D */}
       <motion.section
-        className="relative w-full flex flex-col items-center justify-center pt-8 pb-0"
+        className="relative w-full flex flex-col items-center justify-center pt-2 pb-0"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
@@ -54,7 +54,7 @@ export default function Home() {
       </motion.section>
 
       {/* Tech Stack / Introduction */}
-      <section className="py-20 bg-white">
+      <section className="pt-8 pb-20 bg-white">
         <div className="container-custom">
           <motion.div
             className="flex flex-col md:flex-row gap-12 items-center"
