@@ -130,8 +130,13 @@ function AkabekoModel(props: ThreeElements["group"]) {
 
 export default function Akabeko3D() {
   return (
-    <div className="w-full h-[50vh] md:h-[60vh] cursor-pointer">
-      <Canvas shadows camera={{ position: [0, 2, 6], fov: 45 }}>
+    <div className="w-full h-[clamp(260px,42vh,360px)] md:h-[clamp(320px,48vh,480px)] cursor-pointer">
+      <Canvas
+        shadows
+        camera={{ position: [0, 1.8, 5.4], fov: 45 }}
+        // Aim below the body to leave room for the contact shadow.
+        onCreated={({ camera }) => camera.lookAt(0, -0.2, 0)}
+      >
         <color attach="background" args={["#fffaf0"]} />
 
         <ambientLight intensity={0.7} />
