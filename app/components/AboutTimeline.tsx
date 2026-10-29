@@ -10,6 +10,7 @@ const lineVariants = {
     scaleY: 1,
     transition: {
       duration: 0.8,
+      delay: 0.9,
       ease: "easeOut" as const,
     },
   },
@@ -91,7 +92,7 @@ export default function AboutTimeline() {
   return (
     <>
       <motion.h2
-        className="text-2xl font-bold mb-10 text-center relative inline-block left-1/2 transform -translate-x-1/2"
+        className="text-3xl font-bold mb-10 text-left relative w-fit"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -99,7 +100,7 @@ export default function AboutTimeline() {
       >
         {t("about.timeline.title")}
         <motion.span
-          className="absolute -bottom-2 left-0 w-full h-1 bg-bain-red/20"
+          className="absolute -bottom-2 left-0 w-full h-1 bg-bain-red"
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
           viewport={{ once: true }}
@@ -109,9 +110,9 @@ export default function AboutTimeline() {
       </motion.h2>
 
       <div className="relative">
-        {/* Left Line - Animated */}
+        {/* Bridge the heading margin to meet the underline's bottom edge. */}
         <motion.div
-          className="absolute left-8 top-0 bottom-0 w-px bg-gray-300"
+          className="absolute left-8 -ml-px -top-8 bottom-0 w-0.5 bg-gradient-to-b from-bain-red to-bain-red/20"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -137,27 +138,19 @@ export default function AboutTimeline() {
           {historyData.map((item, idx) => (
             <motion.div
               key={idx}
-              className="relative pl-20 mb-12 group"
+              className="relative pl-20 mb-12 group rounded-lg transition-colors duration-200 hover:bg-bain-red/5"
               variants={itemVariants}
             >
               {/* Marker - Animated */}
               <motion.div
-                className="absolute left-8 transform -translate-x-1/2 w-4 h-4 bg-bain-red rounded-full border-4 border-white shadow-sm z-10 mt-1"
+                className="absolute left-8 -ml-2 w-4 h-4 bg-bain-red rounded-full border-4 border-white shadow-sm z-10 mt-1 transition-shadow duration-200 group-hover:shadow-[0_0_15px_rgba(204,0,0,0.5)]"
                 variants={markerVariants}
-                whileHover={{
-                  scale: 1.5,
-                  boxShadow: "0 0 15px rgba(204, 0, 0, 0.5)",
-                }}
               />
 
               {/* Content */}
-              <motion.div
-                className="w-full text-left"
-                whileHover={{ x: 5 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
+              <div className="w-full text-left">
                 <motion.span
-                  className={`text-bain-red font-bold font-serif ${language === "ja" ? "text-base" : "text-xl"} block`}
+                  className={`text-bain-red font-bold font-serif ${language === "ja" ? "text-lg" : "text-2xl"} block`}
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
@@ -167,7 +160,7 @@ export default function AboutTimeline() {
                 </motion.span>
                 {language === "ja" && (
                   <motion.h3
-                    className="text-lg font-bold mt-1 text-gray-800"
+                    className="text-xl font-bold mt-1 text-gray-800 transition-colors duration-200 group-hover:text-bain-red"
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -177,7 +170,7 @@ export default function AboutTimeline() {
                   </motion.h3>
                 )}
                 <motion.p
-                  className="text-gray-500 text-sm mt-2 leading-relaxed"
+                  className="text-gray-500 text-[0.95rem] mt-2 leading-relaxed"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
@@ -185,7 +178,7 @@ export default function AboutTimeline() {
                 >
                   {t(item.descKey)}
                 </motion.p>
-              </motion.div>
+              </div>
             </motion.div>
           ))}
         </motion.div>
