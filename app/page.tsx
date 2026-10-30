@@ -42,7 +42,7 @@ export default function Home() {
   const { t } = useLanguage();
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col">
       {/* Hero Section with 3D */}
       <motion.section
         className="relative w-full flex flex-col items-center justify-center pt-2 pb-0"
@@ -54,7 +54,7 @@ export default function Home() {
       </motion.section>
 
       {/* Tech Stack / Introduction */}
-      <section className="pt-8 pb-20 bg-white flex-grow">
+      <section className="pt-8 pb-12 bg-white">
         <div className="container-custom">
           <motion.div
             className="flex flex-col md:flex-row gap-12 items-center"
