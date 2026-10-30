@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 
@@ -56,46 +56,76 @@ export default function AboutProfile({
   const [isExpanded, setIsExpanded] = useState(false);
   const { language, t } = useLanguage();
   const buttonRef = useRef<HTMLButtonElement>(null);
-  const sectionRef = useRef<HTMLElement>(null);
+  const closingButtonTopRef = useRef<number | null>(null);
+  const scrollFrameRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (scrollFrameRef.current !== null) {
+        cancelAnimationFrame(scrollFrameRef.current);
+      }
+    };
+  }, []);
 
   const detailContent = language === "ja" ? detailContentJa : detailContentEn;
 
-  const handleToggle = () => {
-    if (isExpanded) {
-      // 閉じる場合：セクションの上部にスクロールして維持
-      const sectionTop = sectionRef.current?.getBoundingClientRect().top ?? 0;
-      const scrollTop = window.scrollY;
+  const restoreButtonPosition = () => {
+    if (closingButtonTopRef.current === null || !buttonRef.current) return;
 
-      setIsExpanded(false);
+    const offset =
+      buttonRef.current.getBoundingClientRect().top - closingButtonTopRef.current;
+    window.scrollTo({
+      top: Math.max(0, window.scrollY + offset),
+      behavior: "instant",
+    });
+  };
 
-      // 次フレームでスクロール位置を調整
-      requestAnimationFrame(() => {
-        const newSectionTop =
-          sectionRef.current?.getBoundingClientRect().top ?? 0;
-        const diff = newSectionTop - sectionTop;
-        if (Math.abs(diff) > 10) {
-          window.scrollTo({
-            top: scrollTop + diff,
-            behavior: "instant",
-          });
-        }
-      });
-    } else {
-      setIsExpanded(true);
+  const handleExitComplete = () => {
+    if (closingButtonTopRef.current === null) return;
+    if (scrollFrameRef.current !== null) {
+      cancelAnimationFrame(scrollFrameRef.current);
     }
+
+    // Wait for AnimatePresence to remove the exiting content from the layout.
+    scrollFrameRef.current = requestAnimationFrame(() => {
+      restoreButtonPosition();
+      closingButtonTopRef.current = null;
+      scrollFrameRef.current = null;
+    });
+  };
+
+  const handleToggle = () => {
+    if (scrollFrameRef.current !== null) {
+      cancelAnimationFrame(scrollFrameRef.current);
+      scrollFrameRef.current = null;
+    }
+    closingButtonTopRef.current = null;
+
+    if (isExpanded) {
+      closingButtonTopRef.current =
+        buttonRef.current?.getBoundingClientRect().top ?? null;
+
+      const trackButtonPosition = () => {
+        if (closingButtonTopRef.current === null) return;
+        restoreButtonPosition();
+        scrollFrameRef.current = requestAnimationFrame(trackButtonPosition);
+      };
+      scrollFrameRef.current = requestAnimationFrame(trackButtonPosition);
+    }
+
+    setIsExpanded(!isExpanded);
   };
 
   return (
     <motion.section
-      ref={sectionRef}
-      className="bg-white dark:bg-warm-gray p-8 md:p-12 shadow-sm border-t-4 border-bain-red dark:border-bain-red-light mb-16 flex flex-row items-start md:items-center gap-4 md:gap-8"
+      className="bg-white dark:bg-warm-gray p-8 md:p-12 shadow-sm border-t-4 border-bain-red dark:border-bain-red-light mb-16 grid grid-cols-[auto_1fr] gap-x-3 text-left md:flex md:flex-row md:items-center md:gap-8"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-50px" }}
       variants={containerVariants}
     >
       <motion.div
-        className="relative w-20 h-20 md:w-40 md:h-40 rounded-full bg-gray-200 dark:bg-dark-border overflow-hidden flex-shrink-0 border-4 border-gray-50 dark:border-dark-border cursor-pointer"
+        className="relative row-span-2 w-24 h-24 md:w-40 md:h-40 rounded-full bg-gray-200 dark:bg-dark-border overflow-hidden flex-shrink-0 border-4 border-gray-50 dark:border-dark-border cursor-pointer"
         variants={imageVariants}
         whileHover={{
           scale: 1.05,
@@ -108,11 +138,11 @@ export default function AboutProfile({
       </motion.div>
 
       <motion.div
-        className="flex-1 min-w-0 text-left"
+        className="contents min-w-0 text-left md:block md:flex-1"
         variants={contentVariants}
       >
         <motion.h1
-          className="text-3xl font-bold mb-2"
+          className="col-start-2 self-end min-w-0 text-3xl font-bold mb-2"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -122,7 +152,7 @@ export default function AboutProfile({
         </motion.h1>
 
         <motion.p
-          className="text-bain-red dark:text-bain-red-light font-bold uppercase tracking-widest text-xs mb-4"
+          className="col-start-2 self-start min-w-0 text-bain-red dark:text-bain-red-light font-bold uppercase tracking-widest text-xs md:mb-4"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -132,7 +162,7 @@ export default function AboutProfile({
         </motion.p>
 
         <motion.div
-          className="text-gray-600 dark:text-text-muted leading-relaxed text-sm"
+          className="col-span-2 min-w-0 mt-6 md:mt-0 text-gray-600 dark:text-text-muted leading-relaxed text-sm"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -144,7 +174,7 @@ export default function AboutProfile({
             {t("about.profile.desc2")}
           </p>
 
-          <AnimatePresence mode="wait">
+          <AnimatePresence mode="wait" onExitComplete={handleExitComplete}>
             {isExpanded && (
               <motion.div
                 key="detail-content"
