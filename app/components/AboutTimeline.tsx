@@ -112,7 +112,7 @@ export default function AboutTimeline() {
       <div className="relative">
         {/* Bridge the heading margin to meet the underline's bottom edge. */}
         <motion.div
-          className="absolute left-8 -ml-px -top-8 bottom-0 w-0.5 bg-gradient-to-b from-bain-red to-bain-red/20"
+          className="absolute left-8 -ml-px -top-8 bottom-0 w-0.5 bg-bain-red/30"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -150,7 +150,7 @@ export default function AboutTimeline() {
               {/* Content */}
               <div className="w-full text-left">
                 <motion.span
-                  className={`text-bain-red font-bold font-serif ${language === "ja" ? "text-lg" : "text-2xl"} block`}
+                  className={`text-bain-red font-bold font-serif ${language === "ja" ? "text-base" : "text-xl"} block`}
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
@@ -160,7 +160,7 @@ export default function AboutTimeline() {
                 </motion.span>
                 {language === "ja" && (
                   <motion.h3
-                    className="text-xl font-bold mt-1 text-gray-800 transition-colors duration-200 group-hover:text-bain-red"
+                    className="text-xl font-bold mt-1 text-gray-800"
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
