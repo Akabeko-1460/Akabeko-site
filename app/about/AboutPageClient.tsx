@@ -118,7 +118,7 @@ export default function AboutPageClient({
             {qualifications.map((q, i) => (
               <motion.div
                 key={i}
-                className="bg-white p-4 border-l-4 border-bain-red flex items-center"
+                className="bg-white p-4 border-l-[3px] border-[#bd0f0f] flex items-center"
                 variants={cardVariants}
               >
                 <span className="text-lg font-bold text-gray-700">{q}</span>
