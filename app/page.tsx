@@ -54,7 +54,7 @@ export default function Home() {
       </motion.section>
 
       {/* Tech Stack / Introduction */}
-      <section className="pt-8 pb-20 bg-white">
+      <section className="pt-8 pb-20 bg-white flex-grow">
         <div className="container-custom">
           <motion.div
             className="flex flex-col md:flex-row gap-12 items-center"
