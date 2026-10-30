@@ -14,14 +14,14 @@ function LanguageSwitcher({ className = "" }: { className?: string }) {
 
   return (
     <div
-      className={`flex items-center border border-gray-300 rounded-full overflow-hidden text-xs font-bold ${className}`}
+      className={`flex items-center border border-gray-300 dark:border-dark-border rounded-full overflow-hidden text-xs font-bold ${className}`}
     >
       <button
         onClick={() => setLanguage("ja")}
         className={`px-3 py-1.5 transition-colors ${
           language === "ja"
             ? "bg-bain-red text-white"
-            : "bg-white text-gray-600 hover:bg-gray-100"
+            : "bg-white dark:bg-warm-gray text-gray-600 dark:text-text-muted hover:bg-gray-100 dark:hover:bg-dark-border"
         }`}
       >
         JP
@@ -31,7 +31,7 @@ function LanguageSwitcher({ className = "" }: { className?: string }) {
         className={`px-3 py-1.5 transition-colors ${
           language === "en"
             ? "bg-bain-red text-white"
-            : "bg-white text-gray-600 hover:bg-gray-100"
+            : "bg-white dark:bg-warm-gray text-gray-600 dark:text-text-muted hover:bg-gray-100 dark:hover:bg-dark-border"
         }`}
       >
         EN
@@ -80,14 +80,14 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 bg-warm-bg/95 backdrop-blur-sm transition-shadow duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 bg-warm-bg/95 dark:bg-warm-gray/95 backdrop-blur-sm transition-shadow duration-300 ${
           isScrolled ? "shadow-md" : ""
         }`}
       >
         <div className="container-custom h-20 flex items-center justify-between relative">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group shrink-0">
-            <div className="relative w-10 h-10 overflow-hidden rounded-full border-2 border-transparent group-hover:border-bain-red transition-all">
+            <div className="relative w-10 h-10 overflow-hidden rounded-full border-2 border-transparent group-hover:border-bain-red dark:group-hover:border-bain-red-light transition-all">
               <Image
                 src="/akabeko.jpg"
                 alt="Akabeko Logo"
@@ -98,10 +98,10 @@ export default function Header() {
             <div className="font-serif text-xl font-bold tracking-tight text-text-main">
               {language === "ja" ? (
                 <>
-                  紅<span className="text-black">べこ</span>
+                  紅<span className="text-black dark:text-text-main">べこ</span>
                 </>
               ) : (
-                <span className="text-black">Akabeko</span>
+                <span className="text-black dark:text-text-main">Akabeko</span>
               )}
             </div>
           </Link>
@@ -113,23 +113,23 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="inline-block px-3 py-2 text-[0.9375rem]/6 font-bold uppercase tracking-wider text-gray-600 hover:text-bain-red transition-colors relative group"
+                  className="inline-block px-3 py-2 text-[0.9375rem]/6 font-bold uppercase tracking-wider text-gray-600 dark:text-text-muted hover:text-bain-red dark:hover:text-bain-red-light transition-colors relative group"
                 >
                   {link.label}
-                  <span className="absolute bottom-1 left-3 w-0 h-0.5 bg-bain-red transition-all group-hover:w-[calc(100%-1.5rem)]" />
+                  <span className="absolute bottom-1 left-3 w-0 h-0.5 bg-bain-red dark:bg-bain-red-light transition-all group-hover:w-[calc(100%-1.5rem)]" />
                 </Link>
               ))}
             </div>
           </nav>
 
           {/* Icons / Social / Language */}
-          <div className="flex items-center gap-3 sm:gap-4 text-gray-600">
+          <div className="flex items-center gap-3 sm:gap-4 text-gray-600 dark:text-text-muted">
             <a
               href="https://github.com/Akabeko-1460"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
-              className="hover:text-bain-red transition-colors"
+              className="hover:text-bain-red dark:hover:text-bain-red-light transition-colors"
             >
               <Github size={22} />
             </a>
@@ -140,7 +140,7 @@ export default function Header() {
             <button
               aria-label="Menu"
               aria-expanded={isMobileMenuOpen}
-              className="md:hidden p-2 -mr-2 hover:text-bain-red transition-colors"
+              className="md:hidden p-2 -mr-2 hover:text-bain-red dark:hover:text-bain-red-light transition-colors"
               onClick={() => setIsMobileMenuOpen(true)}
             >
               <Menu size={26} />
@@ -165,7 +165,7 @@ export default function Header() {
 
             {/* ドロワー本体 */}
             <motion.nav
-              className="fixed top-0 right-0 bottom-0 z-[70] w-[80vw] max-w-[320px] md:hidden flex flex-col bg-warm-bg rounded-l-2xl shadow-2xl"
+              className="fixed top-0 right-0 bottom-0 z-[70] w-[80vw] max-w-[320px] md:hidden flex flex-col bg-warm-bg dark:bg-warm-gray rounded-l-2xl shadow-2xl"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
@@ -173,16 +173,16 @@ export default function Header() {
               aria-label="Mobile navigation"
             >
               {/* 赤べこカラーのアクセントライン */}
-              <div className="absolute left-0 top-0 bottom-0 w-1 rounded-l-2xl bg-gradient-to-b from-bain-red via-bain-red/60 to-transparent" />
+              <div className="absolute left-0 top-0 bottom-0 w-1 rounded-l-2xl bg-gradient-to-b from-bain-red via-bain-red/60 to-transparent dark:from-bain-red-light dark:via-bain-red-light/60" />
 
               {/* ヘッダー行 */}
               <div className="flex items-center justify-between px-6 pb-2 pt-[max(1.5rem,env(safe-area-inset-top))]">
-                <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-gray-400">
+                <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-gray-400 dark:text-text-muted">
                   Menu
                 </span>
                 <button
                   aria-label="Close menu"
-                  className="p-2 -mr-2 text-gray-500 hover:text-bain-red transition-colors"
+                  className="p-2 -mr-2 text-gray-500 dark:text-text-muted hover:text-bain-red dark:hover:text-bain-red-light transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   <X size={26} />
@@ -208,20 +208,20 @@ export default function Header() {
                       <Link
                         href={link.href}
                         onClick={() => setIsMobileMenuOpen(false)}
-                        className="group flex items-center gap-4 py-4 border-b border-black/5 active:bg-black/[0.03] transition-colors"
+                        className="group flex items-center gap-4 py-4 border-b border-black/5 dark:border-dark-border active:bg-black/[0.03] dark:active:bg-bain-red/15 transition-colors"
                       >
-                        <span className="text-[11px] font-bold tracking-widest text-bain-red/60">
+                        <span className="text-[11px] font-bold tracking-widest text-bain-red/60 dark:text-bain-red-light">
                           {String(i + 1).padStart(2, "0")}
                         </span>
                         <span
-                          className={`font-serif text-2xl font-bold tracking-wide transition-colors group-hover:text-bain-red ${
-                            isActive ? "text-bain-red" : "text-text-main"
+                          className={`font-serif text-2xl font-bold tracking-wide transition-colors group-hover:text-bain-red dark:group-hover:text-bain-red-light ${
+                            isActive ? "text-bain-red dark:text-bain-red-light" : "text-text-main"
                           }`}
                         >
                           {link.label}
                         </span>
                         {isActive && (
-                          <span className="ml-auto w-1.5 h-1.5 rounded-full bg-bain-red" />
+                          <span className="ml-auto w-1.5 h-1.5 rounded-full bg-bain-red dark:bg-bain-red-light" />
                         )}
                       </Link>
                     </motion.div>
@@ -237,19 +237,19 @@ export default function Header() {
                 exit={{ opacity: 0 }}
                 transition={{ delay: 0.3, duration: 0.3 }}
               >
-                <div className="flex items-center justify-between pt-5 border-t border-black/10">
+                <div className="flex items-center justify-between pt-5 border-t border-black/10 dark:border-dark-border">
                   <LanguageSwitcher />
                   <a
                     href="https://github.com/Akabeko-1460"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="GitHub"
-                    className="flex items-center justify-center w-10 h-10 rounded-full border border-gray-300 text-gray-600 hover:text-white hover:bg-bain-red hover:border-bain-red transition-colors"
+                    className="flex items-center justify-center w-10 h-10 rounded-full border border-gray-300 dark:border-dark-border text-gray-600 dark:text-text-muted hover:text-white hover:bg-bain-red hover:border-bain-red dark:hover:border-bain-red-light transition-colors"
                   >
                     <Github size={20} />
                   </a>
                 </div>
-                <p className="mt-5 font-serif text-xs text-gray-400 tracking-widest">
+                <p className="mt-5 font-serif text-xs text-gray-400 dark:text-text-muted tracking-widest">
                   紅べこ — Akabeko
                 </p>
               </motion.div>
