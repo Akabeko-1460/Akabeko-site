@@ -54,7 +54,7 @@ export default function Home() {
       </motion.section>
 
       {/* Tech Stack / Introduction */}
-      <section className="pt-8 pb-12 bg-white">
+      <section className="pt-8 pb-12 bg-white dark:bg-warm-gray">
         <div className="container-custom">
           <motion.div
             className="flex flex-col md:flex-row gap-12 items-center"
@@ -65,14 +65,14 @@ export default function Home() {
           >
             <motion.div className="w-full md:w-1/2" variants={fadeInLeft}>
               <motion.h3
-                className="text-3xl font-bold mb-6 border-l-4 border-bain-red pl-4"
+                className="text-3xl font-bold mb-6 border-l-4 border-bain-red dark:border-bain-red-light pl-4"
                 variants={fadeInUp}
               >
                 {t("home.greeting.title")}
               </motion.h3>
 
               <motion.p
-                className="text-gray-600 leading-relaxed mb-6"
+                className="text-gray-600 dark:text-text-muted leading-relaxed mb-6"
                 variants={fadeInUp}
               >
                 {t("home.greeting.text1")}
@@ -89,7 +89,7 @@ export default function Home() {
               <motion.div variants={fadeInUp}>
                 <Link
                   href="/about"
-                  className="group inline-flex items-center text-white bg-black px-6 py-3 font-bold uppercase text-xs tracking-wider hover:bg-bain-red transition-all duration-300 relative overflow-hidden btn-shine"
+                  className="group inline-flex items-center text-white bg-black dark:bg-dark-border px-6 py-3 font-bold uppercase text-xs tracking-wider hover:bg-bain-red transition-all duration-300 relative overflow-hidden btn-shine"
                 >
                   <span className="relative z-10 flex items-center">
                     {t("home.moreAbout")}

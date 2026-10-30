@@ -423,7 +423,7 @@ function BookCard({ book, index }: { book: Book; index: number }) {
          * 新潮社の紹介利用条件）。利用条件により、トリミングになる
          * object-cover や画像への装飾の重ね掛けは不可。書誌情報の併記が必須。
          */
-        <div className="relative w-full h-full rounded-md shadow-lg transition-all duration-300 group-hover:shadow-2xl overflow-hidden flex flex-col bg-white border border-gray-100">
+        <div className="relative w-full h-full rounded-md shadow-lg transition-all duration-300 group-hover:shadow-2xl overflow-hidden flex flex-col bg-white dark:bg-warm-gray border border-gray-100 dark:border-dark-border">
           <div className="relative flex-1 m-2 mb-1">
             <Image
               src={book.cover}
@@ -434,7 +434,7 @@ function BookCard({ book, index }: { book: Book; index: number }) {
             />
           </div>
           {/* 書誌情報（書影利用条件として明記必須） */}
-          <p className="px-2 pb-2 text-center text-[9px] leading-tight text-gray-500 line-clamp-2">
+          <p className="px-2 pb-2 text-center text-[9px] leading-tight text-gray-500 dark:text-text-muted line-clamp-2">
             {book.author}『{book.title}』（{book.publisher}刊）
           </p>
         </div>
@@ -442,7 +442,7 @@ function BookCard({ book, index }: { book: Book; index: number }) {
         <>
           {/* 本の本体 */}
           <div
-            className="relative w-full h-full rounded-r-md shadow-lg transition-all duration-300 group-hover:shadow-2xl overflow-hidden flex flex-col"
+            className="relative w-full h-full rounded-r-md shadow-lg dark:outline dark:outline-dark-border transition-all duration-300 group-hover:shadow-2xl overflow-hidden flex flex-col"
             style={{
               backgroundColor: book.color,
               boxShadow:
@@ -508,10 +508,10 @@ export default function BooksPage() {
     <div className="pt-24 pb-20 bg-warm-bg min-h-screen">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold mb-4 border-b-4 border-bain-red inline-block pb-2">
+          <h1 className="text-4xl font-bold mb-4 border-b-4 border-bain-red dark:border-bain-red-light inline-block pb-2">
             {t("books.title")}
           </h1>
-          <p className="text-gray-500 mt-4">{t("books.subtitle")}</p>
+          <p className="text-gray-500 dark:text-text-muted mt-4">{t("books.subtitle")}</p>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-6 gap-y-10">

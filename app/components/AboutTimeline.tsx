@@ -100,7 +100,7 @@ export default function AboutTimeline() {
       >
         {t("about.timeline.title")}
         <motion.span
-          className="absolute -bottom-2 left-0 w-full h-1 bg-bain-red"
+          className="absolute -bottom-2 left-0 w-full h-1 bg-bain-red dark:bg-bain-red-light"
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
           viewport={{ once: true }}
@@ -112,7 +112,7 @@ export default function AboutTimeline() {
       <div className="relative">
         {/* Bridge the heading margin to meet the underline's bottom edge. */}
         <motion.div
-          className="absolute left-8 -ml-px -top-8 bottom-0 w-0.5 bg-bain-red/30"
+          className="absolute left-8 -ml-px -top-8 bottom-0 w-0.5 bg-bain-red/30 dark:bg-bain-red-light/70"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -138,19 +138,19 @@ export default function AboutTimeline() {
           {historyData.map((item, idx) => (
             <motion.div
               key={idx}
-              className="relative pl-20 py-3 mb-6 group rounded-lg transition-colors duration-200 hover:bg-bain-red/5"
+              className="relative pl-20 py-3 mb-6 group rounded-lg transition-colors duration-200 hover:bg-bain-red/5 dark:hover:bg-bain-red/15"
               variants={itemVariants}
             >
               {/* Marker - Animated */}
               <motion.div
-                className="absolute left-8 -ml-2 top-3 w-4 h-4 bg-bain-red rounded-full border-4 border-white shadow-sm z-10 mt-1 transition-shadow duration-200 group-hover:shadow-[0_0_15px_rgba(204,0,0,0.5)]"
+                className="absolute left-8 -ml-2 top-3 w-4 h-4 bg-bain-red dark:bg-bain-red-light rounded-full border-4 border-white dark:border-warm-bg shadow-sm z-10 mt-1 transition-shadow duration-200 group-hover:shadow-[0_0_15px_rgba(204,0,0,0.5)] dark:group-hover:shadow-[0_0_15px_rgba(255,112,112,0.6)]"
                 variants={markerVariants}
               />
 
               {/* Content */}
               <div className="w-full text-left">
                 <motion.span
-                  className={`text-bain-red font-bold font-serif ${language === "ja" ? "text-base" : "text-xl"} block`}
+                  className={`text-bain-red dark:text-bain-red-light font-bold font-serif ${language === "ja" ? "text-base" : "text-xl"} block`}
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
@@ -160,7 +160,7 @@ export default function AboutTimeline() {
                 </motion.span>
                 {language === "ja" && (
                   <motion.h3
-                    className="text-xl font-bold mt-1 text-gray-800"
+                    className="text-xl font-bold mt-1 text-gray-800 dark:text-text-main"
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -170,7 +170,7 @@ export default function AboutTimeline() {
                   </motion.h3>
                 )}
                 <motion.p
-                  className="text-gray-500 text-[0.95rem] mt-2 leading-relaxed"
+                  className="text-gray-500 dark:text-text-muted text-[0.95rem] mt-2 leading-relaxed"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}

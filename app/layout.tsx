@@ -28,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja" suppressHydrationWarning>
+    <html lang="ja" style={{ colorScheme: "light dark" }} suppressHydrationWarning>
       <head>
         <title>紅べこ</title>
         <meta

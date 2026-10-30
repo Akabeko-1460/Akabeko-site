@@ -91,7 +91,7 @@ export default function AboutPageClient({
           >
             {t("about.qualifications.title")}
             <motion.span
-              className="absolute -bottom-2 left-0 w-full h-1 bg-bain-red"
+              className="absolute -bottom-2 left-0 w-full h-1 bg-bain-red dark:bg-bain-red-light"
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
               viewport={{ once: true }}
@@ -118,10 +118,10 @@ export default function AboutPageClient({
             {qualifications.map((q, i) => (
               <motion.div
                 key={i}
-                className="bg-white p-4 border-l-[3px] border-[#bd0f0f] flex items-center"
+                className="bg-white dark:bg-warm-gray p-4 border-l-[3px] border-[#bd0f0f] dark:border-bain-red-light flex items-center"
                 variants={cardVariants}
               >
-                <span className="text-lg font-bold text-gray-700">{q}</span>
+                <span className="text-lg font-bold text-gray-700 dark:text-text-main">{q}</span>
               </motion.div>
             ))}
           </motion.div>
