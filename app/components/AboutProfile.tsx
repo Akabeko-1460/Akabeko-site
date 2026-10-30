@@ -88,14 +88,14 @@ export default function AboutProfile({
   return (
     <motion.section
       ref={sectionRef}
-      className="bg-white dark:bg-warm-gray p-8 md:p-12 shadow-sm border-t-4 border-bain-red dark:border-bain-red-light mb-16 flex flex-col md:flex-row items-center gap-8"
+      className="bg-white dark:bg-warm-gray p-8 md:p-12 shadow-sm border-t-4 border-bain-red dark:border-bain-red-light mb-16 flex flex-row items-start md:items-center gap-4 md:gap-8"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-50px" }}
       variants={containerVariants}
     >
       <motion.div
-        className="relative w-32 h-32 md:w-40 md:h-40 rounded-full bg-gray-200 dark:bg-dark-border overflow-hidden flex-shrink-0 border-4 border-gray-50 dark:border-dark-border cursor-pointer"
+        className="relative w-20 h-20 md:w-40 md:h-40 rounded-full bg-gray-200 dark:bg-dark-border overflow-hidden flex-shrink-0 border-4 border-gray-50 dark:border-dark-border cursor-pointer"
         variants={imageVariants}
         whileHover={{
           scale: 1.05,
@@ -108,7 +108,7 @@ export default function AboutProfile({
       </motion.div>
 
       <motion.div
-        className="flex-1 text-center md:text-left"
+        className="flex-1 min-w-0 text-left"
         variants={contentVariants}
       >
         <motion.h1
