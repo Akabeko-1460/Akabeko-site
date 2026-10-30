@@ -113,7 +113,7 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="inline-block px-3 py-2 text-base font-bold uppercase tracking-wider text-gray-600 hover:text-bain-red transition-colors relative group"
+                  className="inline-block px-3 py-2 text-[0.9375rem]/6 font-bold uppercase tracking-wider text-gray-600 hover:text-bain-red transition-colors relative group"
                 >
                   {link.label}
                   <span className="absolute bottom-1 left-3 w-0 h-0.5 bg-bain-red transition-all group-hover:w-[calc(100%-1.5rem)]" />
