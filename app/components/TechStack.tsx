@@ -22,13 +22,13 @@ import Image from "next/image";
 // Vercelロゴコンポーネント（黒い丸背景に白三角形）
 const VercelLogo = ({ className }: { className?: string }) => (
   <div
-    className={`relative flex items-center justify-center rounded-full bg-black ${
+    className={`relative flex items-center justify-center rounded-full bg-black dark:bg-text-main ${
       className || ""
     }`}
     style={{ width: 32, height: 32 }}
   >
     <svg width="16" height="14" viewBox="0 0 24 21" fill="none">
-      <path d="M12 0L24 21H0L12 0Z" fill="white" />
+      <path d="M12 0L24 21H0L12 0Z" fill="white" className="dark:fill-warm-gray" />
     </svg>
   </div>
 );
@@ -52,7 +52,7 @@ const FirebaseLogo = ({ className }: { className?: string }) => (
 // CSSベースのC言語ロゴコンポーネント（縮小版）
 const CustomCLogo = ({ className }: { className?: string }) => (
   <div
-    className={`relative flex items-center justify-center rounded-full bg-[#3949AB] text-white font-sans font-bold ${
+    className={`relative flex items-center justify-center rounded-full bg-[#3949AB] dark:bg-[#6779d4] text-white dark:text-white font-sans font-bold ${
       className || ""
     }`}
     style={{
@@ -95,22 +95,22 @@ const ReactLogo = ({ className }: { className?: string }) => (
 );
 
 const TECH_ITEMS = [
-  { icon: VercelLogo, name: "Vercel", color: "text-black" },
+  { icon: VercelLogo, name: "Vercel", color: "text-black dark:text-text-main" },
   { icon: FirebaseLogo, name: "Firebase", color: "" },
-  { icon: NextjsLogo, name: "Next.js", color: "text-black" },
+  { icon: NextjsLogo, name: "Next.js", color: "text-black dark:text-text-main" },
   { icon: ReactLogo, name: "React", color: "text-[#61DAFB]" },
   { icon: SiTypescript, name: "TypeScript", color: "text-[#3178C6]" },
   { icon: SiJavascript, name: "JavaScript", color: "text-[#F7DF1E]" },
   { icon: SiPython, name: "Python", color: "text-[#3776AB]" },
-  { icon: SiDjango, name: "Django", color: "text-[#092E20]" },
+  { icon: SiDjango, name: "Django", color: "text-[#092E20] dark:text-[#44B78B]" },
   { icon: SiHtml5, name: "HTML", color: "text-[#E34F26]" },
   { icon: SiCss3, name: "CSS", color: "text-[#1572B6]" },
-  { icon: SiBootstrap, name: "BootStrap", color: "text-[#7952B3]" },
+  { icon: SiBootstrap, name: "BootStrap", color: "text-[#7952B3] dark:text-[#a78bda]" },
   { icon: SiTailwindcss, name: "Tailwind CSS", color: "text-[#06B6D4]" },
-  { icon: SiRust, name: "Rust", color: "text-[#000000]" },
+  { icon: SiRust, name: "Rust", color: "text-[#000000] dark:text-text-main" },
   { icon: FaJava, name: "Java", color: "text-[#007396]" },
   { icon: CustomCLogo, name: "C", color: "text-[#00599C]" },
-  { icon: SiUnity, name: "Unity", color: "text-[#000000]" },
+  { icon: SiUnity, name: "Unity", color: "text-[#000000] dark:text-text-main" },
 ];
 
 // Animation variants
@@ -185,7 +185,7 @@ function TechCard({
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="flex flex-col items-center p-3 bg-white rounded-lg border border-gray-100 shadow-sm cursor-pointer overflow-hidden"
+      className="flex flex-col items-center p-3 bg-white dark:bg-warm-gray rounded-lg border border-gray-100 dark:border-dark-border shadow-sm cursor-pointer overflow-hidden"
       style={{
         boxShadow: "0 2px 8px rgba(0, 0, 0, 0.06)",
       }}
@@ -208,7 +208,7 @@ function TechCard({
           }`}
         />
       </motion.div>
-      <span className="text-[10px] font-bold text-gray-700">{name}</span>
+      <span className="text-[10px] font-bold text-gray-700 dark:text-text-main">{name}</span>
     </motion.div>
   );
 }

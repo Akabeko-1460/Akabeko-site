@@ -3,6 +3,9 @@
 @theme {
   --color-bain-red: #cc0000;
   --color-bain-red-dark: #a30000;
+  --color-bain-red-light: #ff7070;
+  --color-dark-border: #3a3430;
+  --color-text-muted: #b8afa6;
   --color-warm-bg: #fffaf0; /* Floral White for warmth */
   --color-warm-gray: #fcfcfc;
   --color-text-main: #2d2d2d;
@@ -45,6 +48,7 @@ h6 {
 }
 
 html {
+  color-scheme: light dark;
   font-size: 14px;
   scroll-behavior: smooth;
 }
@@ -246,4 +250,45 @@ html {
 ::selection {
   background-color: var(--color-bain-red);
   color: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-warm-bg: #171412;
+    --color-warm-gray: #221e1b;
+    --color-text-main: #ece6df;
+  }
+
+  .btn-shine::after {
+    background: linear-gradient(90deg, transparent, rgba(236, 230, 223, 0.12), transparent);
+  }
+
+  .book-cover {
+    box-shadow: 0 0 0 1px var(--color-dark-border), 3px 3px 8px rgba(0, 0, 0, 0.4);
+  }
+
+  .book:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  }
+
+  .book-technology .book-body,
+  .book-business .book-body,
+  .book-general .book-body,
+  .book-blue .book-body,
+  .book-red .book-body,
+  .book-pink .book-body,
+  .book-dark .book-body {
+    background: var(--color-warm-gray);
+    color: var(--color-text-main);
+  }
+
+  .book-technology .book-band,
+  .book-business .book-band,
+  .book-general .book-band,
+  .book-blue .book-band,
+  .book-pink .book-band,
+  .book-dark .book-band {
+    background: var(--color-dark-border);
+    color: var(--color-text-main);
+  }
 }

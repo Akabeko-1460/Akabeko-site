@@ -137,7 +137,7 @@ export default function Akabeko3D() {
         // Aim below the body to leave room for the contact shadow.
         onCreated={({ camera }) => camera.lookAt(0, -0.2, 0)}
       >
-        <color attach="background" args={["#fffaf0"]} />
+        {/* Transparent canvas follows the page in either color scheme. */}
 
         <ambientLight intensity={0.7} />
         <spotLight

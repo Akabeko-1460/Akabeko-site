@@ -47,7 +47,7 @@ export default function CategoryCards() {
       <motion.div variants={cardVariants}>
         <Link
           href="/gallery"
-          className="group block bg-gray-50 h-[200px] relative overflow-hidden border border-gray-100 transition-all duration-300 hover:shadow-2xl hover:border-bain-red/30"
+          className="group block bg-gray-50 dark:bg-warm-gray h-[200px] relative overflow-hidden border border-gray-100 dark:border-dark-border transition-all duration-300 hover:shadow-2xl hover:border-bain-red/30 dark:hover:border-bain-red-light/60"
         >
           {/* Image Banner Layer */}
           <div className="absolute top-0 left-0 w-full h-[75%] z-0 overflow-hidden">
@@ -56,7 +56,7 @@ export default function CategoryCards() {
               alt="Gallery"
               fill
               unoptimized
-              className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+              className="object-cover dark:brightness-90 transition-transform duration-700 ease-out group-hover:scale-110"
             />
             <motion.div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <div className="absolute inset-0 bg-bain-red opacity-0 group-hover:opacity-15 transition-opacity duration-300" />
@@ -70,7 +70,7 @@ export default function CategoryCards() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
           >
-            <h4 className="text-xl font-bold group-hover:text-bain-red transition-colors duration-300">
+            <h4 className="text-xl font-bold group-hover:text-bain-red dark:group-hover:text-bain-red-light transition-colors duration-300">
               Gallery
             </h4>
           </motion.div>
@@ -80,7 +80,7 @@ export default function CategoryCards() {
             whileHover={{ x: 5 }}
             transition={{ type: "spring", stiffness: 400 }}
           >
-            <ArrowRight className="text-white drop-shadow-md group-hover:text-bain-red transition-colors duration-300" />
+            <ArrowRight className="text-white drop-shadow-md group-hover:text-bain-red dark:group-hover:text-bain-red-light transition-colors duration-300" />
           </motion.div>
         </Link>
       </motion.div>
@@ -88,7 +88,7 @@ export default function CategoryCards() {
       <motion.div variants={cardVariants}>
         <Link
           href="/books"
-          className="group block bg-gray-50 h-[200px] relative overflow-hidden border border-gray-100 transition-all duration-300 hover:shadow-2xl hover:border-bain-red/30"
+          className="group block bg-gray-50 dark:bg-warm-gray h-[200px] relative overflow-hidden border border-gray-100 dark:border-dark-border transition-all duration-300 hover:shadow-2xl hover:border-bain-red/30 dark:hover:border-bain-red-light/60"
         >
           {/* Image Banner Layer */}
           <div className="absolute top-0 left-0 w-full h-[75%] z-0 overflow-hidden">
@@ -110,7 +110,7 @@ export default function CategoryCards() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
           >
-            <h4 className="text-xl font-bold group-hover:text-bain-red transition-colors duration-300">
+            <h4 className="text-xl font-bold group-hover:text-bain-red dark:group-hover:text-bain-red-light transition-colors duration-300">
               Books
             </h4>
           </motion.div>
@@ -120,7 +120,7 @@ export default function CategoryCards() {
             whileHover={{ x: 5 }}
             transition={{ type: "spring", stiffness: 400 }}
           >
-            <ArrowRight className="text-white drop-shadow-md group-hover:text-bain-red transition-colors duration-300" />
+            <ArrowRight className="text-white drop-shadow-md group-hover:text-bain-red dark:group-hover:text-bain-red-light transition-colors duration-300" />
           </motion.div>
         </Link>
       </motion.div>

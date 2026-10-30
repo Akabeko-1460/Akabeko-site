@@ -88,14 +88,14 @@ export default function AboutProfile({
   return (
     <motion.section
       ref={sectionRef}
-      className="bg-white p-8 md:p-12 shadow-sm border-t-4 border-bain-red mb-16 flex flex-col md:flex-row items-center gap-8"
+      className="bg-white dark:bg-warm-gray p-8 md:p-12 shadow-sm border-t-4 border-bain-red dark:border-bain-red-light mb-16 flex flex-col md:flex-row items-center gap-8"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-50px" }}
       variants={containerVariants}
     >
       <motion.div
-        className="relative w-32 h-32 md:w-40 md:h-40 rounded-full bg-gray-200 overflow-hidden flex-shrink-0 border-4 border-gray-50 cursor-pointer"
+        className="relative w-32 h-32 md:w-40 md:h-40 rounded-full bg-gray-200 dark:bg-dark-border overflow-hidden flex-shrink-0 border-4 border-gray-50 dark:border-dark-border cursor-pointer"
         variants={imageVariants}
         whileHover={{
           scale: 1.05,
@@ -122,7 +122,7 @@ export default function AboutProfile({
         </motion.h1>
 
         <motion.p
-          className="text-bain-red font-bold uppercase tracking-widest text-xs mb-4"
+          className="text-bain-red dark:text-bain-red-light font-bold uppercase tracking-widest text-xs mb-4"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -132,7 +132,7 @@ export default function AboutProfile({
         </motion.p>
 
         <motion.div
-          className="text-gray-600 leading-relaxed text-sm"
+          className="text-gray-600 dark:text-text-muted leading-relaxed text-sm"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -163,7 +163,7 @@ export default function AboutProfile({
             <motion.button
               ref={buttonRef}
               onClick={handleToggle}
-              className="flex items-center text-gray-400 font-bold text-xs hover:text-bain-red transition-colors focus:outline-none"
+              className="flex items-center text-gray-400 dark:text-text-muted font-bold text-xs hover:text-bain-red dark:hover:text-bain-red-light transition-colors focus:outline-none"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

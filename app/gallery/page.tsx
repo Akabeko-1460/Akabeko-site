@@ -59,8 +59,8 @@ const lifeContent: LifeItem[] = [
     icon: "/icons/kairos-icon.png",
     gradient: "from-gray-900 via-black to-gray-800",
     bgGradient: "from-gray-50 to-slate-100",
-    accentColor: "text-gray-900",
-    hoverColor: "group-hover:text-black",
+    accentColor: "text-gray-900 dark:text-text-main",
+    hoverColor: "group-hover:text-black dark:group-hover:text-text-main",
   },
   {
     id: "enigma-decoder",
@@ -74,8 +74,8 @@ const lifeContent: LifeItem[] = [
     icon: "/icons/enigma-dial.png",
     gradient: "from-slate-900 via-cyan-950 to-slate-800",
     bgGradient: "from-cyan-50 to-slate-100",
-    accentColor: "text-cyan-700",
-    hoverColor: "group-hover:text-cyan-800",
+    accentColor: "text-cyan-700 dark:text-cyan-300",
+    hoverColor: "group-hover:text-cyan-800 dark:group-hover:text-cyan-200",
   },
   {
     id: "strawberry-life",
@@ -90,8 +90,8 @@ const lifeContent: LifeItem[] = [
     emoji: "🍓",
     gradient: "from-pink-400 via-rose-400 to-red-400",
     bgGradient: "from-pink-50 to-rose-50",
-    accentColor: "text-rose-600",
-    hoverColor: "group-hover:text-rose-700",
+    accentColor: "text-rose-600 dark:text-rose-300",
+    hoverColor: "group-hover:text-rose-700 dark:group-hover:text-rose-200",
   },
   {
     id: "othello-practice",
@@ -106,8 +106,8 @@ const lifeContent: LifeItem[] = [
     emoji: "⚫",
     gradient: "from-emerald-500 via-green-500 to-teal-500",
     bgGradient: "from-emerald-50 to-green-50",
-    accentColor: "text-emerald-600",
-    hoverColor: "group-hover:text-emerald-700",
+    accentColor: "text-emerald-600 dark:text-emerald-300",
+    hoverColor: "group-hover:text-emerald-700 dark:group-hover:text-emerald-200",
   },
   {
     id: "chess-learning",
@@ -122,8 +122,8 @@ const lifeContent: LifeItem[] = [
     emoji: "♟️",
     gradient: "from-blue-500 via-indigo-500 to-sky-500",
     bgGradient: "from-blue-50 to-indigo-50",
-    accentColor: "text-blue-600",
-    hoverColor: "group-hover:text-blue-700",
+    accentColor: "text-blue-600 dark:text-blue-300",
+    hoverColor: "group-hover:text-blue-700 dark:group-hover:text-blue-200",
   },
   {
     id: "hanabi",
@@ -138,8 +138,8 @@ const lifeContent: LifeItem[] = [
     emoji: "🎆",
     gradient: "from-orange-400 via-amber-500 to-red-500",
     bgGradient: "from-orange-50 to-amber-50",
-    accentColor: "text-orange-600",
-    hoverColor: "group-hover:text-orange-700",
+    accentColor: "text-orange-600 dark:text-orange-300",
+    hoverColor: "group-hover:text-orange-700 dark:group-hover:text-orange-200",
   },
 ];
 
@@ -156,10 +156,10 @@ export default function GalleryPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-4xl font-bold mb-4 border-b-4 border-bain-red inline-block pb-2">
+          <h1 className="text-4xl font-bold mb-4 border-b-4 border-bain-red dark:border-bain-red-light inline-block pb-2">
             {t("life.title")}
           </h1>
-          <p className="text-gray-500 mt-4">
+          <p className="text-gray-500 dark:text-text-muted mt-4">
             {language === "ja"
               ? "趣味や日常の記録をまとめています"
               : "A collection of hobbies and daily life records"}
@@ -181,7 +181,7 @@ export default function GalleryPage() {
                 className="group block"
               >
                 <div
-                  className={`relative overflow-hidden rounded-2xl bg-gradient-to-r ${item.bgGradient} border border-pink-100 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1`}
+                  className={`relative overflow-hidden rounded-2xl bg-gradient-to-r ${item.bgGradient} dark:from-warm-gray dark:to-warm-gray border border-pink-100 dark:border-dark-border shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1`}
                 >
                   {/* Decorative gradient bar */}
                   <div
@@ -200,7 +200,7 @@ export default function GalleryPage() {
                             alt={item.title}
                             width={112}
                             height={112}
-                            className="w-20 h-20 md:w-28 md:h-28 drop-shadow-lg"
+                            className="w-20 h-20 md:w-28 md:h-28 drop-shadow-lg dark:outline dark:outline-dark-border dark:rounded-sm"
                           />
                         ) : (
                           <span className="text-6xl md:text-7xl block drop-shadow-lg">
@@ -224,7 +224,7 @@ export default function GalleryPage() {
                           >
                             {item.title}
                           </h2>
-                          <p className="text-sm text-gray-500 mt-1">
+                          <p className="text-sm text-gray-500 dark:text-text-muted mt-1">
                             {language === "ja" ? item.titleJa : item.titleEn}
                           </p>
                         </div>
@@ -233,7 +233,7 @@ export default function GalleryPage() {
                         />
                       </div>
 
-                      <p className="text-gray-600 leading-relaxed mb-4">
+                      <p className="text-gray-600 dark:text-text-muted leading-relaxed mb-4">
                         {language === "ja"
                           ? item.description
                           : item.descriptionEn}
@@ -243,11 +243,11 @@ export default function GalleryPage() {
 
                   {/* Decorative elements */}
                   <div
-                    className="absolute -bottom-6 -right-6 w-24 h-24 bg-pink-200/30 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"
+                    className="absolute -bottom-6 -right-6 w-24 h-24 bg-pink-200/30 dark:bg-bain-red/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"
                     style={{ WebkitFilter: "blur(40px)" }}
                   />
                   <div
-                    className="absolute -top-6 -left-6 w-20 h-20 bg-rose-200/20 rounded-full blur-xl"
+                    className="absolute -top-6 -left-6 w-20 h-20 bg-rose-200/20 dark:bg-bain-red/10 rounded-full blur-xl"
                     style={{ WebkitFilter: "blur(24px)" }}
                   />
                 </div>
@@ -257,13 +257,13 @@ export default function GalleryPage() {
         </motion.div>
         {/* Coming Soon Section */}
         <motion.div
-          className="text-center mt-16 pt-12 border-t border-gray-200"
+          className="text-center mt-16 pt-12 border-t border-gray-200 dark:border-dark-border"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.8 }}
         >
           <div className="text-4xl mb-4">🚀</div>
-          <p className="text-gray-400 text-sm">
+          <p className="text-gray-400 dark:text-text-muted text-sm">
             {language === "ja"
               ? "他のコンテンツも準備中です..."
               : "More content coming soon..."}
