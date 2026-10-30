@@ -138,12 +138,12 @@ export default function AboutTimeline() {
           {historyData.map((item, idx) => (
             <motion.div
               key={idx}
-              className="relative pl-20 mb-12 group rounded-lg transition-colors duration-200 hover:bg-bain-red/5"
+              className="relative pl-20 py-3 mb-6 group rounded-lg transition-colors duration-200 hover:bg-bain-red/5"
               variants={itemVariants}
             >
               {/* Marker - Animated */}
               <motion.div
-                className="absolute left-8 -ml-2 w-4 h-4 bg-bain-red rounded-full border-4 border-white shadow-sm z-10 mt-1 transition-shadow duration-200 group-hover:shadow-[0_0_15px_rgba(204,0,0,0.5)]"
+                className="absolute left-8 -ml-2 top-3 w-4 h-4 bg-bain-red rounded-full border-4 border-white shadow-sm z-10 mt-1 transition-shadow duration-200 group-hover:shadow-[0_0_15px_rgba(204,0,0,0.5)]"
                 variants={markerVariants}
               />
 
